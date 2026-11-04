@@ -2,6 +2,7 @@ package app.pwhs.blockads.ui.trustednetworks
 
 import android.Manifest
 import android.content.pm.PackageManager
+import android.os.Build
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.Column
@@ -26,11 +27,15 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -42,6 +47,7 @@ import androidx.compose.ui.unit.dp
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import app.pwhs.blockads.R
+import app.pwhs.blockads.service.TrustedNetworkManager
 import app.pwhs.blockads.ui.settings.component.SectionHeader
 import app.pwhs.blockads.ui.settings.component.SettingIconBadge
 import app.pwhs.blockads.ui.settings.component.SettingsCard
@@ -59,27 +65,36 @@ fun TrustedNetworksScreen(
     val enabled by viewModel.pauseOnTrustedEnabled.collectAsStateWithLifecycle()
     val useSystemDns by viewModel.useSystemDnsOnTrustedEnabled.collectAsStateWithLifecycle()
     val currentSsid by viewModel.currentSsid.collectAsStateWithLifecycle()
+    val isOnWifi by viewModel.isOnWifi.collectAsStateWithLifecycle()
 
-    val locationLauncher = rememberLauncherForActivityResult(
-        ActivityResultContracts.RequestPermission()
-    ) { granted ->
-        if (granted) {
+    var ssidAccess by remember { mutableStateOf(TrustedNetworkManager.hasSsidAccess(context)) }
+
+    val permissionLauncher = rememberLauncherForActivityResult(
+        ActivityResultContracts.RequestMultiplePermissions()
+    ) {
+        ssidAccess = TrustedNetworkManager.hasSsidAccess(context)
+        if (ssidAccess) {
             viewModel.refreshCurrentSsid()
             viewModel.addCurrentNetwork()
         }
     }
 
-    LaunchedEffect(Unit) { viewModel.refreshCurrentSsid() }
+    LaunchedEffect(Unit) {
+        ssidAccess = TrustedNetworkManager.hasSsidAccess(context)
+        viewModel.refreshCurrentSsid()
+    }
+
+    fun requestSsidPermission() {
+        // Location is the only reliable grant for reading the SSID.
+        permissionLauncher.launch(arrayOf(Manifest.permission.ACCESS_FINE_LOCATION))
+    }
 
     fun addCurrent() {
-        val hasLocation = ContextCompat.checkSelfPermission(
-            context, Manifest.permission.ACCESS_FINE_LOCATION
-        ) == PackageManager.PERMISSION_GRANTED
-        if (hasLocation) {
+        if (TrustedNetworkManager.hasSsidAccess(context)) {
             viewModel.refreshCurrentSsid()
             viewModel.addCurrentNetwork()
         } else {
-            locationLauncher.launch(Manifest.permission.ACCESS_FINE_LOCATION)
+            requestSsidPermission()
         }
     }
 
@@ -109,6 +124,35 @@ fun TrustedNetworksScreen(
                 .padding(horizontal = 16.dp)
         ) {
             Spacer(modifier = Modifier.height(8.dp))
+
+            // Without this the feature fails silently: the SSID cannot be read,
+            // every evaluation sees "not on a trusted network", and nothing ever
+            // pauses. Surface it and offer the fix right here.
+            // Also shown when the permission exists but the SSID still cannot be
+            // read (HyperOS needs the location grant even with Nearby devices).
+            if (!ssidAccess || (isOnWifi && currentSsid == null)) {
+                SettingsCard {
+                    Column(modifier = Modifier.padding(horizontal = 16.dp, vertical = 14.dp)) {
+                        Text(
+                            stringResource(R.string.trusted_networks_permission_missing_title),
+                            style = MaterialTheme.typography.titleSmall,
+                            fontWeight = FontWeight.SemiBold,
+                            color = MaterialTheme.colorScheme.error
+                        )
+                        Spacer(modifier = Modifier.height(4.dp))
+                        Text(
+                            stringResource(R.string.trusted_networks_permission_missing_desc),
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                        Spacer(modifier = Modifier.height(6.dp))
+                        TextButton(onClick = { requestSsidPermission() }) {
+                            Text(stringResource(R.string.trusted_networks_grant_permission))
+                        }
+                    }
+                }
+                Spacer(modifier = Modifier.height(12.dp))
+            }
 
             // Action toggles on trusted networks
             SettingsCard {

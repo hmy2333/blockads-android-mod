@@ -11,7 +11,10 @@ import android.net.ConnectivityManager
 import android.net.Network
 import android.net.NetworkCapabilities
 import android.net.NetworkRequest
+import android.net.wifi.WifiInfo
 import android.net.wifi.WifiManager
+import android.os.Build
+import android.util.Log
 import androidx.core.content.ContextCompat
 import app.pwhs.blockads.data.datastore.AppPreferences
 import kotlinx.coroutines.CoroutineScope
@@ -19,6 +22,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
@@ -66,6 +70,27 @@ class TrustedNetworkManager(
             Timber.e(e, "TrustedNetworkManager register failed")
         }
 
+        // Safety net: Wi-Fi callbacks can fire before the SSID is readable, and
+        // some ROMs then never send another one, leaving the feature stuck in
+        // the state it first evaluated. A cheap periodic re-check fixes both
+        // that and "permission granted later while staying on the same SSID".
+        scope.launch {
+            while (true) {
+                delay(TRUSTED_POLL_INTERVAL_MS)
+                evaluate()
+            }
+        }
+
+        // The VPN being started/stopped is itself a state change that must be
+        // re-evaluated: switching routing mode restarts the service without
+        // touching Wi-Fi, and relying on network callbacks alone missed it.
+        scope.launch {
+            AdBlockVpnService.state.collect { evaluate() }
+        }
+        scope.launch {
+            RootProxyService.state.collect { evaluate() }
+        }
+
         // Re-evaluate when the settings change (toggle flipped or an SSID
         // added/removed) — otherwise enabling the feature while already
         // connected to a trusted network wouldn't pause until the next
@@ -99,11 +124,18 @@ class TrustedNetworkManager(
                         return@withLock
                     }
 
+                    val access = hasSsidAccess(context)
                     val ssid = currentSsid(context)
                     val onTrusted = ssid != null && ssid in trusted
                     val running = AdBlockVpnService.isRunning || RootProxyService.isRunning
                     val pausedByUs = appPrefs.getPausedByTrustedSnapshot()
-                    Timber.d("TrustedNet evaluate: ssid=$ssid trusted=$trusted onTrusted=$onTrusted running=$running pausedByUs=$pausedByUs")
+                    // Logcat-visible in release builds too: without this the
+                    // feature fails silently when the SSID cannot be read.
+                    Log.i(
+                        TAG,
+                        "evaluate ssidAccess=$access ssid=$ssid trusted=$trusted " +
+                            "onTrusted=$onTrusted running=$running pausedByUs=$pausedByUs"
+                    )
 
                     when {
                         // Entered a trusted network while protected → pause.
@@ -185,11 +217,60 @@ class TrustedNetworkManager(
          * Returns the connected Wi-Fi SSID (without surrounding quotes), or null
          * if not on Wi-Fi / unavailable / location permission missing.
          */
+        /**
+         * Whether the SSID can be read at all.
+         *
+         * Only ACCESS_FINE_LOCATION works here. NEARBY_WIFI_DEVICES declared
+         * with neverForLocation makes the system strip the SSID (verified on
+         * HyperOS), so it is deliberately not used.
+         */
+        fun hasSsidAccess(context: Context): Boolean =
+            ContextCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION) ==
+                PackageManager.PERMISSION_GRANTED
+
+        const val TAG = "BlockAdsTrustedNet"
+
+        /** How often the connected SSID is re-checked as a fallback. */
+        private const val TRUSTED_POLL_INTERVAL_MS = 15_000L
+
+        /** Connected to Wi-Fi, regardless of whether the SSID is readable. */
+        fun isOnWifi(context: Context): Boolean = try {
+            val cm = context.applicationContext
+                .getSystemService(Context.CONNECTIVITY_SERVICE) as? ConnectivityManager
+            val caps = cm?.getNetworkCapabilities(cm.activeNetwork)
+            caps?.hasTransport(NetworkCapabilities.TRANSPORT_WIFI) == true
+        } catch (e: Exception) {
+            false
+        }
+
         fun currentSsid(context: Context): String? {
-            // SSID requires location permission on Android 10+.
-            if (ContextCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION)
-                != PackageManager.PERMISSION_GRANTED
-            ) return null
+            if (!hasSsidAccess(context)) {
+                Log.i(TAG, "SSID unavailable: no NEARBY_WIFI_DEVICES / ACCESS_FINE_LOCATION grant")
+                return null
+            }
+            // Prefer NetworkCapabilities.transportInfo: on Android 13+ it works
+            // with NEARBY_WIFI_DEVICES alone, while the deprecated
+            // WifiManager.connectionInfo path keeps returning "<unknown ssid>"
+            // unless the location permission is also granted.
+            try {
+                // Walk every network instead of only the active one: while the
+                // VPN is up, activeNetwork is the VPN, so the Wi-Fi transport
+                // (and its WifiInfo) is invisible from there.
+                val connectivity =
+                    context.applicationContext.getSystemService(Context.CONNECTIVITY_SERVICE) as? ConnectivityManager
+                for (network in connectivity?.allNetworks.orEmpty()) {
+                    val caps = connectivity?.getNetworkCapabilities(network) ?: continue
+                    if (!caps.hasTransport(NetworkCapabilities.TRANSPORT_WIFI)) continue
+                    val info = caps.transportInfo as? WifiInfo
+                    val ssid = info?.ssid?.trim('"')
+                    if (!ssid.isNullOrEmpty() && ssid != "<unknown ssid>") {
+                        return ssid
+                    }
+                }
+            } catch (e: Exception) {
+                Timber.w(e, "currentSsid via NetworkCapabilities failed")
+            }
+
             return try {
                 val wifi = context.applicationContext
                     .getSystemService(Context.WIFI_SERVICE) as? WifiManager ?: return null

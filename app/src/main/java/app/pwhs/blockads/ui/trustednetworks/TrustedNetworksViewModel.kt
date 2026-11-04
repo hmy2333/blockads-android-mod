@@ -26,13 +26,19 @@ class TrustedNetworksViewModel(
     val useSystemDnsOnTrustedEnabled: StateFlow<Boolean> = appPrefs.useSystemDnsOnTrustedEnabled
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), false)
 
-    /** Current connected SSID, or null if not on Wi-Fi / no location permission. */
+    /** Current connected SSID, or null if not on Wi-Fi / SSID not readable. */
     private val _currentSsid = MutableStateFlow<String?>(null)
     val currentSsid: StateFlow<String?> = _currentSsid.asStateFlow()
 
+    /** Whether a Wi-Fi network is connected at all. */
+    private val _isOnWifi = MutableStateFlow(false)
+    val isOnWifi: StateFlow<Boolean> = _isOnWifi.asStateFlow()
+
     /** Refresh the current SSID (call when the screen resumes or permission granted). */
     fun refreshCurrentSsid() {
-        _currentSsid.value = TrustedNetworkManager.currentSsid(getApplication())
+        val app = getApplication<Application>()
+        _isOnWifi.value = TrustedNetworkManager.isOnWifi(app)
+        _currentSsid.value = TrustedNetworkManager.currentSsid(app)
     }
 
     fun setPauseOnTrustedEnabled(enabled: Boolean) {

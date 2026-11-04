@@ -141,6 +141,9 @@
     <string name="exclude_lan_description">在 WireGuard 启用时允许访问本地网络设备（打印机、NAS、本地服务器）</string>
     <string name="settings_hide_from_recents_title">从最近应用中隐藏</string>
     <string name="settings_hide_from_recents_subtitle">将 BlockAds 从最近应用屏幕中隐藏</string>
+    <string name="trusted_networks_permission_missing_title">读不到 Wi-Fi 名称</string>
+    <string name="trusted_networks_permission_missing_desc">「在信任的网络上暂停」需要「位置」权限才能读取当前 Wi-Fi 名称（部分机型仅给「附近的设备」不够）。没有权限时该功能会静默失效。</string>
+    <string name="trusted_networks_grant_permission">授予权限</string>
     <string name="trusted_networks_title">信任的网络</string>
     <string name="trusted_networks_settings_desc">在所选 Wi-Fi 上自动暂停 BlockAds</string>
     <string name="trusted_networks_toggle">在信任的网络上暂停</string>

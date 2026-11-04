@@ -63,6 +63,9 @@
     <string name="settings_add_custom_filter">Add Custom Filter List</string>
     <string name="settings_updating">Updating…</string>
     <string name="settings_update_all">Update All Filters</string>
+    <string name="trusted_networks_permission_missing_title">Unable to read the Wi-Fi name</string>
+    <string name="trusted_networks_permission_missing_desc">Pause-on-trusted-network needs the Location permission to read the current Wi-Fi name (on some ROMs Nearby devices alone is not enough). Without it the feature silently does nothing.</string>
+    <string name="trusted_networks_grant_permission">Grant permission</string>
     <string name="trusted_networks_title">Trusted networks</string>
     <string name="trusted_networks_settings_desc">Auto-pause BlockAds on chosen Wi-Fi networks</string>
     <string name="trusted_networks_toggle">Pause on trusted networks</string>
