@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cert_status_installed">CA 인증서가 설치되어 신뢰할 수 있습니다. 고급 HTTPS 광고 차단이 준비되었습니다.</string>
+    <string name="cert_status_checking">기기 보안 저장소에서 인증서 확인 중…</string>
+    <string name="cert_status_not_installed">HTTPS 웹 연결의 광고를 복호화하고 필터링하려면 BlockAds CA 인증서가 필요합니다.</string>
+    <string name="cert_action_check_again">다시 확인</string>
+    <string name="cert_action_reinstall">재설치</string>
+    <string name="cert_action_install">인증서 설치</string>
+    <string name="device_step_open_settings">시스템 설정 열기</string>
+    <string name="device_step_samsung_security_privacy">\'보안 및 개인정보 보호\' 선택</string>
+    <string name="device_step_samsung_more_security">아래로 스크롤하여 \'기타 보안 설정\' 선택</string>
+    <string name="device_step_samsung_install_from_storage">\'기기 저장공간에서 설치\' 선택</string>
+    <string name="device_step_samsung_ca_cert_confirm">\'CA 인증서\'를 선택하고 \'설치\' 확인</string>
+    <string name="device_step_select_downloaded_cert">다운로드한 BlockAds-RootCA.crt 파일 선택</string>
+    <string name="device_step_samsung_biometrics">\'생체 인식 및 보안\' 선택</string>
+    <string name="device_step_samsung_other_security">\'기타 보안 설정\' 선택</string>
+    <string name="device_step_samsung_ca_cert_warn">\'CA 인증서\' 선택 후 경고 확인</string>
+    <string name="device_step_samsung_other_sec_install_storage">\'기타 보안 설정\' &gt; \'저장공간에서 설치\' 선택</string>
+    <string name="device_step_select_ca_cert">\'CA 인증서\' 선택</string>
+    <string name="device_step_google_security_privacy">\'보안 및 개인정보 보호\' 선택</string>
+    <string name="device_step_google_more_security">\'기타 보안 설정\' 선택</string>
+    <string name="device_step_google_encryption_credentials">\'암호화 및 사용자 인증 정보\' 선택</string>
+    <string name="device_step_google_install_ca_cert">\'인증서 설치\' &gt; \'CA 인증서\' 선택</string>
+    <string name="device_step_google_confirm_and_select">\'설치\'를 누르고 BlockAds-RootCA.crt 선택</string>
+    <string name="device_step_google_security_encryption">\'보안\' &gt; \'암호화 및 사용자 인증 정보\' 선택</string>
+    <string name="device_step_google_install_certificate">\'인증서 설치\' 선택</string>
+    <string name="device_step_google_ca_cert_confirm">\'CA 인증서\' 선택 후 확인</string>
+    <string name="device_step_xiaomi_open_settings">\'설정\' 열기</string>
+    <string name="device_step_xiaomi_passwords_security">\'비밀번호 및 보안\' 선택</string>
+    <string name="device_step_xiaomi_privacy_encryption">\'개인정보 보호\' &gt; \'암호화 및 사용자 인증 정보\' 선택</string>
+    <string name="device_step_xiaomi_install_ca">\'인증서 설치\' &gt; \'CA 인증서\' 선택</string>
+    <string name="device_step_xiaomi_confirm_select">경고 확인 후 BlockAds-RootCA.crt 선택</string>
+    <string name="device_step_oppo_security_more">\'보안\' &gt; \'기타 보안 설정\' 선택</string>
+    <string name="device_step_oppo_credential_storage">\'사용자 인증 정보 저장소\' 선택</string>
+    <string name="device_step_oppo_install_ca">\'저장공간에서 설치\' &gt; \'CA 인증서\' 선택</string>
+    <string name="device_step_vivo_security_encryption">\'보안\' &gt; \'암호화 및 사용자 인증 정보\' 선택</string>
+    <string name="device_step_vivo_install_ca">\'인증서 설치\' &gt; \'CA 인증서\' 선택</string>
+    <string name="device_step_generic_search_certificate">설정 검색창에서 \'인증서\' 검색</string>
+    <string name="device_step_generic_choose_ca">\'CA 인증서\' 또는 \'저장공간에서 설치\' 선택</string>
+    <string name="device_step_generic_confirm">경고 창이 뜨면 \'설치\' 확인</string>
+    <string name="device_step_generic_select_downloads">다운로드 폴더에서 BlockAds-RootCA.crt 선택</string>
+</resources>

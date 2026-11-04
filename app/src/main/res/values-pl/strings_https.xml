@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cert_status_installed">Certyfikat CA zainstalowany i zaufany. Zaawansowane blokowanie HTTPS gotowe.</string>
+    <string name="cert_status_checking">Sprawdzanie certyfikatu w bezpiecznej pamięci urządzenia…</string>
+    <string name="cert_status_not_installed">Certyfikat BlockAds CA jest wymagany do odszyfrowywania i filtrowania reklam HTTPS.</string>
+    <string name="cert_action_check_again">Sprawdź ponownie</string>
+    <string name="cert_action_reinstall">Zainstaluj ponownie</string>
+    <string name="cert_action_install">Zainstaluj certyfikat</string>
+    <string name="device_step_open_settings">Otwórz Ustawienia systemowe</string>
+    <string name="device_step_samsung_security_privacy">Wybierz Bezpieczeństwo i prywatność</string>
+    <string name="device_step_samsung_more_security">Przewiń w dół i wybierz Więcej ustawień bezpieczeństwa</string>
+    <string name="device_step_samsung_install_from_storage">Wybierz Zainstaluj z pamięci urządzenia</string>
+    <string name="device_step_samsung_ca_cert_confirm">Wybierz Certyfikat CA i potwierdź \'Zainstaluj mimo to\'</string>
+    <string name="device_step_select_downloaded_cert">Wybierz pobrany plik BlockAds-RootCA.crt</string>
+    <string name="device_step_samsung_biometrics">Wybierz Biometria i zabezpieczenia</string>
+    <string name="device_step_samsung_other_security">Wybierz Inne ustawienia bezpieczeństwa</string>
+    <string name="device_step_samsung_ca_cert_warn">Wybierz Certyfikat CA i potwierdź ostrzeżenie</string>
+    <string name="device_step_samsung_other_sec_install_storage">Inne ustawienia bezpieczeństwa &gt; Zainstaluj z pamięci</string>
+    <string name="device_step_select_ca_cert">Wybierz Certyfikat CA</string>
+    <string name="device_step_google_security_privacy">Wybierz Bezpieczeństwo i prywatność</string>
+    <string name="device_step_google_more_security">Wybierz Więcej ustawień bezpieczeństwa</string>
+    <string name="device_step_google_encryption_credentials">Wybierz Szyfrowanie i dane logowania</string>
+    <string name="device_step_google_install_ca_cert">Wybierz Zainstaluj certyfikat &gt; Certyfikat CA</string>
+    <string name="device_step_google_confirm_and_select">Dotknij \'Zainstaluj mimo to\' i wybierz BlockAds-RootCA.crt</string>
+    <string name="device_step_google_security_encryption">Bezpieczeństwo &gt; Szyfrowanie i dane logowania</string>
+    <string name="device_step_google_install_certificate">Wybierz Zainstaluj certyfikat</string>
+    <string name="device_step_google_ca_cert_confirm">Wybierz Certyfikat CA i potwierdź</string>
+    <string name="device_step_xiaomi_open_settings">Otwórz Ustawienia</string>
+    <string name="device_step_xiaomi_passwords_security">Wybierz Hasła i bezpieczeństwo</string>
+    <string name="device_step_xiaomi_privacy_encryption">Prywatność &gt; Szyfrowanie i dane logowania</string>
+    <string name="device_step_xiaomi_install_ca">Zainstaluj certyfikat &gt; Certyfikat CA</string>
+    <string name="device_step_xiaomi_confirm_select">Potwierdź ostrzeżenie i wybierz BlockAds-RootCA.crt</string>
+    <string name="device_step_oppo_security_more">Bezpieczeństwo &gt; Więcej ustawień bezpieczeństwa</string>
+    <string name="device_step_oppo_credential_storage">Wybierz Magazyn danych logowania</string>
+    <string name="device_step_oppo_install_ca">Zainstaluj z pamięci &gt; Certyfikat CA</string>
+    <string name="device_step_vivo_security_encryption">Bezpieczeństwo &gt; Szyfrowanie i dane logowania</string>
+    <string name="device_step_vivo_install_ca">Zainstaluj certyfikat &gt; Certyfikat CA</string>
+    <string name="device_step_generic_search_certificate">Wyszukaj \'Certyfikat\' w Ustawieniach</string>
+    <string name="device_step_generic_choose_ca">Wybierz \'Certyfikat CA\' lub \'Zainstaluj z pamięci\'</string>
+    <string name="device_step_generic_confirm">Potwierdź \'Zainstaluj mimo to\', jeśli pojawi się monit</string>
+    <string name="device_step_generic_select_downloads">Wybierz BlockAds-RootCA.crt z folderu Pobrane</string>
+</resources>

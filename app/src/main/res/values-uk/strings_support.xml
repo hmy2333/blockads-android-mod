@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="support_bottom_sheet_title">Потрібна допомога чи хочете повідомити про помилку?</string>
+    <string name="support_bottom_sheet_desc">Якщо виникли проблеми або щось працює не так, як очікувалося, повідомте нашу команду для надання допомоги.</string>
+    <string name="support_error_filter_title">Не вдалося додати фільтр</string>
+    <string name="support_error_filter_desc">Не вдалося завантажити або скомпілювати цей список фільтрів. Посилання може бути недоступним або містити непідтримуваний синтаксис.</string>
+    <string name="support_error_subscription_title">Помилка оновлення підписки</string>
+    <string name="support_channel_telegram_title">Спільнота Telegram</string>
+    <string name="support_channel_telegram_desc">Приєднуйтесь до чату для підтримки в реальному часі від розробників і спільноти</string>
+    <string name="support_channel_github_title">Повідомити на GitHub</string>
+    <string name="support_channel_github_desc">Створіть issue з деталями помилки та діагностикою</string>
+    <string name="support_channel_email_title">Підтримка електронною поштою</string>
+    <string name="support_channel_email_desc">Надішліть деталі помилки безпосередньо на support@pwhs.app</string>
+    <string name="support_copy_details">Скопіювати діагностику</string>
+    <string name="support_copied">Діагностичні дані скопійовано в буфер обміну</string>
+    <string name="support_need_help">Потрібна допомога?</string>
+    <string name="support_close">Закрити</string>
+</resources>

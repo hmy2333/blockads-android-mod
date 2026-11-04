@@ -1,0 +1,6 @@
+• Unified Proxy & VPN mode: AmneziaWG, Shadowsocks 2022, VLESS, VMess, Trojan, Hysteria 2, TUIC & MASQUE with subscription links
+• DNS Stamps (sdns://), DoH3 (HTTP/3) & WebRTC leak protection
+• On-device filter compilation, multi-URL filter merging & custom tags
+• Upgraded HTTPS filtering pipeline with OTA modular rules
+• Android TV: custom DNS, per-app firewall, themes & compact D-pad UI
+• Reset Settings, Support & Bug Report sheet, and stability fixes

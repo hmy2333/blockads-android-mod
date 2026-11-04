@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cert_status_installed">CA 证书已安装并受信任。高级 HTTPS 广告拦截已就绪。</string>
+    <string name="cert_status_checking">正在检查设备安全存储中的证书…</string>
+    <string name="cert_status_not_installed">需要 BlockAds CA 证书来解密和过滤 HTTPS 连接上的广告。</string>
+    <string name="cert_action_check_again">重新检查</string>
+    <string name="cert_action_reinstall">重新安装</string>
+    <string name="cert_action_install">安装证书</string>
+    <string name="device_step_open_settings">打开系统设置</string>
+    <string name="device_step_samsung_security_privacy">选择“安全与隐私”</string>
+    <string name="device_step_samsung_more_security">向下滚动并选择“更多安全设置”</string>
+    <string name="device_step_samsung_install_from_storage">选择“从设备存储安装”</string>
+    <string name="device_step_samsung_ca_cert_confirm">选择“CA 证书”并确认“仍要安装”</string>
+    <string name="device_step_select_downloaded_cert">选择已下载的 BlockAds-RootCA.crt 文件</string>
+    <string name="device_step_samsung_biometrics">选择“生物识别和安全”</string>
+    <string name="device_step_samsung_other_security">选择“其他安全设置”</string>
+    <string name="device_step_samsung_ca_cert_warn">选择“CA 证书”并确认警告</string>
+    <string name="device_step_samsung_other_sec_install_storage">选择“其他安全设置”&gt;“从存储安装”</string>
+    <string name="device_step_select_ca_cert">选择“CA 证书”</string>
+    <string name="device_step_google_security_privacy">选择“安全与隐私”</string>
+    <string name="device_step_google_more_security">选择“更多安全设置”</string>
+    <string name="device_step_google_encryption_credentials">选择“加密与凭据”</string>
+    <string name="device_step_google_install_ca_cert">选择“安装证书”&gt;“CA 证书”</string>
+    <string name="device_step_google_confirm_and_select">点击“仍然安装”并选择 BlockAds-RootCA.crt</string>
+    <string name="device_step_google_security_encryption">选择“安全”&gt;“加密与凭据”</string>
+    <string name="device_step_google_install_certificate">选择“安装证书”</string>
+    <string name="device_step_google_ca_cert_confirm">选择“CA 证书”并确认</string>
+    <string name="device_step_xiaomi_open_settings">打开“设置”</string>
+    <string name="device_step_xiaomi_passwords_security">选择“密码与安全”</string>
+    <string name="device_step_xiaomi_privacy_encryption">选择“系统安全”&gt;“加密与凭据”</string>
+    <string name="device_step_xiaomi_install_ca">选择“安装证书”&gt;“CA 证书”</string>
+    <string name="device_step_xiaomi_confirm_select">确认警告并选择 BlockAds-RootCA.crt</string>
+    <string name="device_step_oppo_security_more">选择“安全”&gt;“更多安全设置”</string>
+    <string name="device_step_oppo_credential_storage">选择“凭据存储”</string>
+    <string name="device_step_oppo_install_ca">选择“从设备存储安装”&gt;“CA 证书”</string>
+    <string name="device_step_vivo_security_encryption">选择“安全”&gt;“加密与凭据”</string>
+    <string name="device_step_vivo_install_ca">选择“安装证书”&gt;“CA 证书”</string>
+    <string name="device_step_generic_search_certificate">在设置搜索栏中搜索“证书”</string>
+    <string name="device_step_generic_choose_ca">选择“CA 证书”或“从存储安装”</string>
+    <string name="device_step_generic_confirm">如有提示，请确认“仍然安装”</string>
+    <string name="device_step_generic_select_downloads">从“下载”文件夹中选择 BlockAds-RootCA.crt</string>
+</resources>

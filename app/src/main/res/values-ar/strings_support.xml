@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="support_bottom_sheet_title">هل تحتاج إلى مساعدة أو تريد الإبلاغ عن خطأ؟</string>
+    <string name="support_bottom_sheet_desc">إذا كنت تواجه مشكلات أو كان هناك شيء لا يعمل كما هو متوقع، أخبر فريقنا حتى نتمكن من مساعدتك.</string>
+    <string name="support_error_filter_title">فشل إضافة الفلتر</string>
+    <string name="support_error_filter_desc">تعذر تنزيل قائمة الفلاتر هذه أو تجميعها. قد يكون الرابط غير متاح أو معطلاً أو يحتوي على صيغة غير مدعومة. يمكنك طلب المساعدة أو الإبلاغ عن ذلك.</string>
+    <string name="support_error_subscription_title">فشل تحديث الاشتراك</string>
+    <string name="support_channel_telegram_title">مجتمع Telegram</string>
+    <string name="support_channel_telegram_desc">انضم إلى الدردشة للحصول على دعم فوري من المطورين والمجتمع</string>
+    <string name="support_channel_github_title">إبلاغ عبر GitHub</string>
+    <string name="support_channel_github_desc">افتح مشكلة مع تفاصيل الخطأ والمعلومات التشخيصية</string>
+    <string name="support_channel_email_title">الدعم عبر البريد الإلكتروني</string>
+    <string name="support_channel_email_desc">أرسل تفاصيل الخطأ مباشرة إلى support@pwhs.app</string>
+    <string name="support_copy_details">نسخ تفاصيل التشخيص</string>
+    <string name="support_copied">تم نسخ تفاصيل التشخيص إلى الحافظة</string>
+    <string name="support_need_help">هل تحتاج مساعدة؟</string>
+    <string name="support_close">إغلاق</string>
+</resources>

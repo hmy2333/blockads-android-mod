@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BlockAds TV</string>
+    <string name="nav_home">首页</string>
+    <string name="nav_filters">过滤器</string>
+    <string name="nav_rules">规则</string>
+    <string name="nav_apps">应用程序</string>
+    <string name="nav_logs">日志</string>
+    <string name="nav_dns">DNS</string>
+    <string name="nav_settings">设置</string>
+    <string name="home_protected">已保护</string>
+    <string name="home_unprotected">未保护</string>
+    <string name="home_protected_desc">您的设备已受到广告保护</string>
+    <string name="home_unprotected_desc">点击按钮以启用广告拦截</string>
+    <string name="home_total_queries">总查询数</string>
+    <string name="home_blocked">已拦截</string>
+    <string name="home_threats">安全威胁</string>
+    <string name="home_block_rate">拦截率</string>
+    <string name="home_uptime">运行时间</string>
+    <string name="home_filter_rules">过滤规则</string>
+    <string name="home_top_blocked_domains">电视上拦截最多的域名</string>
+    <string name="home_no_blocked_domains">暂无被拦截的域名</string>
+    <string name="dns_setup_title">DNS 设置</string>
+    <string name="dns_protocol_standard">标准 DNS (UDP)</string>
+    <string name="dns_protocol_standard_desc">快速的标准解析器</string>
+    <string name="dns_protocol_doh">DNS-over-HTTPS (DoH)</string>
+    <string name="dns_protocol_doh_desc">加密安全，防篡改</string>
+    <string name="dns_resolvers_header">DNS 解析器与自定义配置</string>
+    <string name="dns_custom_server_title">自定义 DNS 服务器</string>
+    <string name="dns_custom_server_desc">配置自定义 DoH、DoH3、DoQ、DoT、ODoH 或 IP</string>
+    <string name="dns_custom_server_hint">支持 DNS Stamp (sdns://)、主机名和快捷模板</string>
+    <string name="dns_custom_configure">配置</string>
+    <string name="dns_custom_dialog_title">自定义 DNS 配置</string>
+    <string name="dns_custom_dialog_desc">配置上游解析服务器和协议</string>
+    <string name="dns_custom_quick_templates">快捷模板</string>
+    <string name="dns_cancel">取消</string>
+    <string name="dns_save_apply">保存</string>
+    <string name="settings_title">设置</string>
+    <string name="settings_desc">配置广告拦截偏好设置</string>
+    <string name="settings_start_on_boot">开机自启</string>
+    <string name="settings_start_on_boot_desc">电视启动时自动开启广告保护</string>
+    <string name="settings_theme_title">主题</string>
+    <string name="settings_theme_desc">选择电视显示主题</string>
+    <string name="settings_theme_dark">深色</string>
+    <string name="settings_theme_oled">OLED / 纯黑</string>
+    <string name="settings_theme_light">浅色</string>
+    <string name="settings_theme_system">跟随系统</string>
+    <string name="settings_language_title">语言</string>
+    <string name="settings_language_desc">更改显示语言</string>
+    <string name="settings_language_system">跟随系统</string>
+    <string name="settings_language_en">English</string>
+    <string name="settings_language_vi">Tiếng Việt</string>
+    <string name="settings_lang_system">跟随系统</string>
+    <string name="settings_lang_en" translatable="false">English</string>
+    <string name="settings_lang_vi" translatable="false">Tiếng Việt</string>
+    <string name="settings_lang_ja" translatable="false">日本語</string>
+    <string name="settings_lang_ko" translatable="false">한국어</string>
+    <string name="settings_lang_zh" translatable="false">中文</string>
+    <string name="settings_lang_th" translatable="false">ไทย</string>
+    <string name="settings_lang_es" translatable="false">Español</string>
+    <string name="settings_lang_ru" translatable="false">Русский</string>
+    <string name="settings_lang_it" translatable="false">Italiano</string>
+    <string name="settings_lang_ar" translatable="false">العربية</string>
+    <string name="settings_lang_tr" translatable="false">Türkçe</string>
+    <string name="settings_lang_pl" translatable="false">Polski</string>
+    <string name="settings_lang_in" translatable="false">Bahasa Indonesia</string>
+    <string name="settings_lang_pt_br" translatable="false">Português (Brasil)</string>
+    <string name="settings_lang_uk" translatable="false">Українська</string>
+    <string name="settings_lang_de" translatable="false">Deutsch</string>
+    <string name="settings_lang_cs" translatable="false">Čeština</string>
+    <string name="settings_lang_iw" translatable="false">עברית</string>
+    <string name="settings_lang_fr" translatable="false">Français</string>
+    <string name="settings_lang_kk" translatable="false">Қазақша</string>
+    <string name="settings_response_type_title">拦截响应类型</string>
+    <string name="settings_update_filters">更新过滤列表</string>
+    <string name="settings_update_filters_desc">点击同步并下载最新规则</string>
+    <string name="settings_about">关于</string>
+</resources>

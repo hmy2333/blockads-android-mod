@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cert_status_installed">Certificado CA instalado e confiável. Bloqueio HTTPS avançado ativado.</string>
+    <string name="cert_status_checking">Verificando certificado no armazenamento seguro do dispositivo…</string>
+    <string name="cert_status_not_installed">O certificado CA BlockAds é necessário para filtrar anúncios HTTPS.</string>
+    <string name="cert_action_check_again">Verificar novamente</string>
+    <string name="cert_action_reinstall">Reinstalar</string>
+    <string name="cert_action_install">Instalar certificado</string>
+    <string name="device_step_open_settings">Abrir Configurações do sistema</string>
+    <string name="device_step_samsung_security_privacy">Selecionar Segurança e privacidade</string>
+    <string name="device_step_samsung_more_security">Rolar para baixo e selecionar Mais configurações de segurança</string>
+    <string name="device_step_samsung_install_from_storage">Selecionar Instalar do armazenamento</string>
+    <string name="device_step_samsung_ca_cert_confirm">Escolher Certificado CA e confirmar \'Instalar assim mesmo\'</string>
+    <string name="device_step_select_downloaded_cert">Selecionar o arquivo BlockAds-RootCA.crt baixado</string>
+    <string name="device_step_samsung_biometrics">Selecionar Biometria e segurança</string>
+    <string name="device_step_samsung_other_security">Selecionar Outras configurações de segurança</string>
+    <string name="device_step_samsung_ca_cert_warn">Selecionar Certificado CA e confirmar aviso</string>
+    <string name="device_step_samsung_other_sec_install_storage">Outras configurações de segurança &gt; Instalar do armazenamento</string>
+    <string name="device_step_select_ca_cert">Selecionar Certificado CA</string>
+    <string name="device_step_google_security_privacy">Selecionar Segurança e privacidade</string>
+    <string name="device_step_google_more_security">Selecionar Mais configurações de segurança</string>
+    <string name="device_step_google_encryption_credentials">Selecionar Criptografia e credenciais</string>
+    <string name="device_step_google_install_ca_cert">Selecionar Instalar um certificado &gt; Certificado CA</string>
+    <string name="device_step_google_confirm_and_select">Toque em \'Instalar assim mesmo\' e selecione BlockAds-RootCA.crt</string>
+    <string name="device_step_google_security_encryption">Selecionar Segurança &gt; Criptografia e credenciais</string>
+    <string name="device_step_google_install_certificate">Selecionar Instalar um certificado</string>
+    <string name="device_step_google_ca_cert_confirm">Selecionar Certificado CA e confirmar</string>
+    <string name="device_step_xiaomi_open_settings">Abrir Configurações</string>
+    <string name="device_step_xiaomi_passwords_security">Selecionar Senhas e segurança</string>
+    <string name="device_step_xiaomi_privacy_encryption">Selecionar Privacidade &gt; Criptografia e credenciais</string>
+    <string name="device_step_xiaomi_install_ca">Selecionar Instalar um certificado &gt; Certificado CA</string>
+    <string name="device_step_xiaomi_confirm_select">Confirmar aviso e selecionar BlockAds-RootCA.crt</string>
+    <string name="device_step_oppo_security_more">Selecionar Segurança &gt; Mais configurações de segurança</string>
+    <string name="device_step_oppo_credential_storage">Selecionar Armazenamento de credenciais</string>
+    <string name="device_step_oppo_install_ca">Instalar do armazenamento &gt; Certificado CA</string>
+    <string name="device_step_vivo_security_encryption">Selecionar Segurança &gt; Criptografia e credenciais</string>
+    <string name="device_step_vivo_install_ca">Selecionar Instalar um certificado &gt; Certificado CA</string>
+    <string name="device_step_generic_search_certificate">Pesquise por \'Certificado\' nas Configurações</string>
+    <string name="device_step_generic_choose_ca">Escolha \'Certificado CA\' ou \'Instalar do armazenamento\'</string>
+    <string name="device_step_generic_confirm">Confirme \'Instalar assim mesmo\' se solicitado</string>
+    <string name="device_step_generic_select_downloads">Selecione BlockAds-RootCA.crt na pasta Downloads</string>
+</resources>

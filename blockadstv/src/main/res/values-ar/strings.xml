@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BlockAds TV</string>
+    <string name="nav_home">الرئيسية</string>
+    <string name="nav_filters">الفلاتر</string>
+    <string name="nav_rules">القواعد</string>
+    <string name="nav_apps">التطبيقات</string>
+    <string name="nav_logs">السجلات</string>
+    <string name="nav_dns">DNS</string>
+    <string name="nav_settings">الإعدادات</string>
+    <string name="home_protected">محمي</string>
+    <string name="home_unprotected">غير محمي</string>
+    <string name="home_protected_desc">جهازك محمي من الإعلانات</string>
+    <string name="home_unprotected_desc">انقر على الزر لتمكين حظر الإعلانات</string>
+    <string name="home_total_queries">إجمالي الاستعلامات</string>
+    <string name="home_blocked">محظور</string>
+    <string name="home_threats">Threats</string>
+    <string name="home_block_rate">معدل الحظر</string>
+    <string name="home_uptime">وقت التشغيل</string>
+    <string name="home_filter_rules">قواعد التصفية</string>
+    <string name="home_top_blocked_domains">Top Blocked Domains on TV</string>
+    <string name="home_no_blocked_domains">No blocked domains yet</string>
+    <string name="dns_setup_title">DNS Setup</string>
+    <string name="dns_protocol_standard">Standard DNS (UDP)</string>
+    <string name="dns_protocol_standard_desc">Fast, standard resolver</string>
+    <string name="dns_protocol_doh">DNS-over-HTTPS (DoH)</string>
+    <string name="dns_protocol_doh_desc">Encrypted, anti-tamper</string>
+    <string name="dns_resolvers_header">DNS Resolvers &amp; Custom Configuration</string>
+    <string name="dns_custom_server_title">Custom DNS Server</string>
+    <string name="dns_custom_server_desc">Configure custom DoH, DoH3, DoQ, DoT, ODoH, or Plain IP</string>
+    <string name="dns_custom_server_hint">Supports DNS Stamp (sdns://), hostnames, and quick templates</string>
+    <string name="dns_custom_configure">Configure</string>
+    <string name="dns_custom_dialog_title">Custom DNS Configuration</string>
+    <string name="dns_custom_dialog_desc">Configure custom upstream resolver and protocol</string>
+    <string name="dns_custom_quick_templates">Quick Templates</string>
+    <string name="dns_cancel">إلغاء</string>
+    <string name="dns_save_apply">حفظ</string>
+    <string name="settings_title">الإعدادات</string>
+    <string name="settings_desc">Configure your ad blocking preferences</string>
+    <string name="settings_start_on_boot">Start on boot</string>
+    <string name="settings_start_on_boot_desc">Automatically start protection when device boots</string>
+    <string name="settings_theme_title">السمة</string>
+    <string name="settings_theme_desc">Select appearance theme for TV</string>
+    <string name="settings_theme_dark">داكن</string>
+    <string name="settings_theme_oled">OLED / Pure Black</string>
+    <string name="settings_theme_light">فاتح</string>
+    <string name="settings_theme_system">النظام</string>
+    <string name="settings_language_title">اللغة</string>
+    <string name="settings_language_desc">Change display language</string>
+    <string name="settings_language_system">Follow System</string>
+    <string name="settings_language_en">English</string>
+    <string name="settings_language_vi">Tiếng Việt</string>
+    <string name="settings_lang_system">النظام</string>
+    <string name="settings_lang_en" translatable="false">English</string>
+    <string name="settings_lang_vi" translatable="false">Tiếng Việt</string>
+    <string name="settings_lang_ja" translatable="false">日本語</string>
+    <string name="settings_lang_ko" translatable="false">한국어</string>
+    <string name="settings_lang_zh" translatable="false">中文</string>
+    <string name="settings_lang_th" translatable="false">ไทย</string>
+    <string name="settings_lang_es" translatable="false">Español</string>
+    <string name="settings_lang_ru" translatable="false">Русский</string>
+    <string name="settings_lang_it" translatable="false">Italiano</string>
+    <string name="settings_lang_ar" translatable="false">العربية</string>
+    <string name="settings_lang_tr" translatable="false">Türkçe</string>
+    <string name="settings_lang_pl" translatable="false">Polski</string>
+    <string name="settings_lang_in" translatable="false">Bahasa Indonesia</string>
+    <string name="settings_lang_pt_br" translatable="false">Português (Brasil)</string>
+    <string name="settings_lang_uk" translatable="false">Українська</string>
+    <string name="settings_lang_de" translatable="false">Deutsch</string>
+    <string name="settings_lang_cs" translatable="false">Čeština</string>
+    <string name="settings_lang_iw" translatable="false">עברית</string>
+    <string name="settings_lang_fr" translatable="false">Français</string>
+    <string name="settings_lang_kk" translatable="false">Қазақша</string>
+    <string name="settings_response_type_title">Block Response Type</string>
+    <string name="settings_update_filters">Update filter lists</string>
+    <string name="settings_update_filters_desc">Tap to sync and download latest filters</string>
+    <string name="settings_about">حول</string>
+</resources>

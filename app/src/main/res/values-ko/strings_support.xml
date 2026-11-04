@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="support_bottom_sheet_title">도움이 필요하거나 오류를 보고하시겠습니까?</string>
+    <string name="support_bottom_sheet_desc">문제가 발생하거나 예상대로 작동하지 않는 경우, 지원팀에 알려주시면 신속히 도와드리겠습니다.</string>
+    <string name="support_error_filter_title">필터 추가 실패</string>
+    <string name="support_error_filter_desc">이 필터 목록을 다운로드하거나 컴파일할 수 없습니다. 링크에 접근할 수 없거나 지원되지 않는 구문이 포함되어 있을 수 있습니다.</string>
+    <string name="support_error_subscription_title">구독 업데이트 실패</string>
+    <string name="support_channel_telegram_title">Telegram 커뮤니티</string>
+    <string name="support_channel_telegram_desc">채팅에 참여하여 개발자 및 커뮤니티의 실시간 지원 받기</string>
+    <string name="support_channel_github_title">GitHub에서 오류 보고</string>
+    <string name="support_channel_github_desc">오류 상세 정보 및 진단 정보와 함께 Issue 등록</string>
+    <string name="support_channel_email_title">이메일 지원</string>
+    <string name="support_channel_email_desc">오류 상세 내용을 support@pwhs.app으로 직접 전송</string>
+    <string name="support_copy_details">진단 정보 복사</string>
+    <string name="support_copied">진단 세부정보가 클립보드에 복사되었습니다</string>
+    <string name="support_need_help">도움이 필요하신가요?</string>
+    <string name="support_close">닫기</string>
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="support_bottom_sheet_title">需要帮助或反馈问题？</string>
+    <string name="support_bottom_sheet_desc">如果您遇到问题或功能未能按预期运行，请告诉我们的团队以便我们为您提供帮助。</string>
+    <string name="support_error_filter_title">添加规则失败</string>
+    <string name="support_error_filter_desc">无法下载或编译此规则列表。链接可能无法访问或包含不支持的语法格式。</string>
+    <string name="support_error_subscription_title">订阅更新失败</string>
+    <string name="support_channel_telegram_title">Telegram 社区</string>
+    <string name="support_channel_telegram_desc">加入群聊获取开发者和社区的实时支持</string>
+    <string name="support_channel_github_title">在 GitHub 上反馈</string>
+    <string name="support_channel_github_desc">提交 Issue 并附带错误详情与诊断信息</string>
+    <string name="support_channel_email_title">邮件支持</string>
+    <string name="support_channel_email_desc">直接将错误详情发送至 support@pwhs.app</string>
+    <string name="support_copy_details">复制诊断信息</string>
+    <string name="support_copied">诊断信息已复制到剪贴板</string>
+    <string name="support_need_help">需要帮助？</string>
+    <string name="support_close">关闭</string>
+</resources>

@@ -1,0 +1,79 @@
+package app.pwhs.blockads.service
+
+import android.content.Context
+import app.pwhs.blockads.data.datastore.AppPreferences
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
+
+/**
+ * Unified service controller that dispatches restart/stop requests
+ * to the correct service based on the current routing mode.
+ *
+ * This avoids the need to check routing mode at every ViewModel callsite.
+ */
+object ServiceController {
+
+    /**
+     * Request a restart of whichever ad-blocking service is currently running.
+     * If Root Proxy mode is active, restarts RootProxyService.
+     * If VPN mode is active, restarts AdBlockVpnService.
+     * Safe to call from any thread.
+     */
+    fun requestRestart(context: Context) {
+        // Check both services — at least one might be running
+        if (RootProxyService.isRunning) {
+            RootProxyService.requestRestart(context)
+        }
+        if (AdBlockVpnService.isRunning) {
+            AdBlockVpnService.requestRestart(context)
+        }
+    }
+
+    /**
+     * Apply the current preferences to whatever is running: restart an active
+     * service, or start one when nothing runs yet. requestRestart alone is a
+     * no-op while the VPN is stopped, which is why the proxy screen's connect
+     * button used to change state without ever bringing the tunnel up.
+     */
+    fun requestApply(context: Context) {
+        if (RootProxyService.isRunning || AdBlockVpnService.isRunning) {
+            requestRestart(context)
+        } else {
+            requestStart(context)
+        }
+    }
+
+    /**
+     * Start the VPN or Root Proxy depending on AppPreferences.
+     */
+    fun requestStart(context: Context) {
+        CoroutineScope(Dispatchers.IO).launch {
+            val appPrefs = AppPreferences(context)
+            val routingMode = appPrefs.routingMode.first()
+
+            if (routingMode == AppPreferences.ROUTING_MODE_ROOT) {
+                RootProxyService.start(context)
+            } else {
+                AdBlockVpnService.start(context)
+            }
+        }
+    }
+
+    /**
+     * Stop whichever service is currently running.
+     */
+    fun requestStop(context: Context) =
+        requestStop(context, AdBlockVpnService.state.value, RootProxyService.state.value)
+
+    internal fun requestStop(context: Context, vpnState: VpnState, rootState: VpnState) {
+        if (rootState == VpnState.RUNNING) {
+            RootProxyService.stop(context)
+        }
+        if (vpnState == VpnState.RUNNING) {
+            AdBlockVpnService.stop(context)
+        }
+    }
+}

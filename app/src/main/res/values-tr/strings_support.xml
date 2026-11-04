@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="support_bottom_sheet_title">Yardım mı lazım yoksa hata mı bildirmek istiyorsunuz?</string>
+    <string name="support_bottom_sheet_desc">Sorun yaşıyorsanız veya bir şeyler beklendiği gibi çalışmıyorsa, size yardımcı olabilmemiz için ekibimize bildirin.</string>
+    <string name="support_error_filter_title">Filtre Eklenemedi</string>
+    <string name="support_error_filter_desc">Bu filtre listesi indirilemedi veya derlenemedi. Bağlantı erişilemez olabilir veya desteklenmeyen sözdizimi içeriyor olabilir.</string>
+    <string name="support_error_subscription_title">Abonelik Güncellemesi Başarısız</string>
+    <string name="support_channel_telegram_title">Telegram Topluluğu</string>
+    <string name="support_channel_telegram_desc">Geliştiriciden ve topluluktan gerçek zamanlı destek için sohbete katılın</string>
+    <string name="support_channel_github_title">GitHub\'da Bildir</string>
+    <string name="support_channel_github_desc">Hata ayrıntıları ve tanılama bilgileriyle bir sorun açın</string>
+    <string name="support_channel_email_title">E-posta Desteği</string>
+    <string name="support_channel_email_desc">Hata ayrıntılarını doğrudan support@pwhs.app adresine gönderin</string>
+    <string name="support_copy_details">Tanılamayı Kopyala</string>
+    <string name="support_copied">Tanılama ayrıntıları panoya kopyalandı</string>
+    <string name="support_need_help">Yardım mı lazım?</string>
+    <string name="support_close">Kapat</string>
+</resources>

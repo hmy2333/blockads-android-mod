@@ -1,0 +1,9 @@
+# Supplyfile configuration for Google Play Store upload
+# Disables updating title, descriptions (metadata), screenshots, and images
+
+package_name "app.pwhs.blockads"
+json_key "fastlane/play-store-key.json"
+
+skip_upload_metadata true
+skip_upload_screenshots true
+skip_upload_images true

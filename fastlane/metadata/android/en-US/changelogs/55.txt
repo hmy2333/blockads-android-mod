@@ -1,0 +1,6 @@
+• Real-time download & upload speed cards with sparklines
+• Starred filters category & domain rules import dialog
+• 'All' filter list tab with active filters sorted first
+• Fixed IPv6 UDP checksum & dual-stack DNS resolution
+• Improved VPN notification handling & teardown stability
+• Documented GeoIP asset provenance & build reproducibility

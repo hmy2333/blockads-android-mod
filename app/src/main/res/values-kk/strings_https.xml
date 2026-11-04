@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cert_status_installed">CA сертификаты орнатылды және сенімді. Кеңейтілген HTTPS жарнамасын бұғаттау дайын.</string>
+    <string name="cert_status_checking">Құрылғының қауіпсіз қоймасындағы сертификат тексерілуде…</string>
+    <string name="cert_status_not_installed">HTTPS қосылымдарындағы жарнамаларды сүзу үшін BlockAds CA сертификаты қажет.</string>
+    <string name="cert_action_check_again">Қайта тексеру</string>
+    <string name="cert_action_reinstall">Қайта орнату</string>
+    <string name="cert_action_install">Сертификатты орнату</string>
+    <string name="device_step_open_settings">Жүйелік параметрлерді ашыңыз</string>
+    <string name="device_step_samsung_security_privacy">«Қауіпсіздік және құпиялылық» тармағын таңдаңыз</string>
+    <string name="device_step_samsung_more_security">Төмен жылжып, «Қосымша қауіпсіздік параметрлері» тармағын таңдаңыз</string>
+    <string name="device_step_samsung_install_from_storage">«Құрылғы жадынан орнату» тармағын таңдаңыз</string>
+    <string name="device_step_samsung_ca_cert_confirm">«CA сертификаты» таңдап, «Бәрібір орнату» пәрменін растаңыз</string>
+    <string name="device_step_select_downloaded_cert">Жүктелген BlockAds-RootCA.crt файлын таңдаңыз</string>
+    <string name="device_step_samsung_biometrics">«Биометрия және қауіпсіздік» тармағын таңдаңыз</string>
+    <string name="device_step_samsung_other_security">«Басқа қауіпсіздік параметрлері» тармағын таңдаңыз</string>
+    <string name="device_step_samsung_ca_cert_warn">«CA сертификаты» таңдап, ескертуді растаңыз</string>
+    <string name="device_step_samsung_other_sec_install_storage">Басқа қауіпсіздік параметрлері &gt; Жадтан орнату</string>
+    <string name="device_step_select_ca_cert">«CA сертификаты» таңдаңыз</string>
+    <string name="device_step_google_security_privacy">«Қауіпсіздік және құпиялылық» тармағын таңдаңыз</string>
+    <string name="device_step_google_more_security">«Қосымша қауіпсіздік параметрлері» тармағын таңдаңыз</string>
+    <string name="device_step_google_encryption_credentials">«Шифрлау және тіркелгі деректері» тармағын таңдаңыз</string>
+    <string name="device_step_google_install_ca_cert">«Сертификатты орнату» &gt; «CA сертификаты» тармағын таңдаңыз</string>
+    <string name="device_step_google_confirm_and_select">«Бәрібір орнату» түймесін басып, BlockAds-RootCA.crt таңдаңыз</string>
+    <string name="device_step_google_security_encryption">Қауіпсіздік &gt; Шифрлау және тіркелгі деректері</string>
+    <string name="device_step_google_install_certificate">«Сертификатты орнату» тармағын таңдаңыз</string>
+    <string name="device_step_google_ca_cert_confirm">«CA сертификаты» таңдап, растаңыз</string>
+    <string name="device_step_xiaomi_open_settings">«Параметрлерді» ашыңыз</string>
+    <string name="device_step_xiaomi_passwords_security">«Құпия сөздер және қауіпсіздік» тармағын таңдаңыз</string>
+    <string name="device_step_xiaomi_privacy_encryption">Құпиялылық &gt; Шифрлау және тіркелгі деректері</string>
+    <string name="device_step_xiaomi_install_ca">Сертификатты орнату &gt; CA сертификаты</string>
+    <string name="device_step_xiaomi_confirm_select">Ескертуді растап, BlockAds-RootCA.crt таңдаңыз</string>
+    <string name="device_step_oppo_security_more">Қауіпсіздік &gt; Қосымша қауіпсіздік параметрлері</string>
+    <string name="device_step_oppo_credential_storage">«Тіркелгі деректерін сақтау орны» тармағын таңдаңыз</string>
+    <string name="device_step_oppo_install_ca">Жадтан орнату &gt; CA сертификаты</string>
+    <string name="device_step_vivo_security_encryption">Қауіпсіздік &gt; Шифрлау және тіркелгі деректері</string>
+    <string name="device_step_vivo_install_ca">Сертификатты орнату &gt; CA сертификаты</string>
+    <string name="device_step_generic_search_certificate">Параметрлерді іздеу жолағында «Сертификат» деп іздеңіз</string>
+    <string name="device_step_generic_choose_ca">«CA сертификаты» немесе «Жадтан орнату» таңдаңыз</string>
+    <string name="device_step_generic_confirm">Сұралса, «Бәрібір орнату» пәрменін растаңыз</string>
+    <string name="device_step_generic_select_downloads">«Жүктеулер» қалтасынан BlockAds-RootCA.crt таңдаңыз</string>
+</resources>

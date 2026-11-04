@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Browser Navigation & Bottom Bar -->
+    <string name="browser_omnibox_hint">Tìm kiếm hoặc nhập URL</string>
+    <string name="browser_action_navigate_back">Quay lại</string>
+    <string name="browser_action_home">Trang chủ</string>
+    <string name="browser_action_pip">Phát video nổi</string>
+    <string name="browser_action_menu">Menu</string>
+    <string name="browser_action_close">Đóng</string>
+
+    <!-- Browser Home / Shortcuts -->
+    <string name="browser_home_protecting">Đang bảo vệ</string>
+    <string name="browser_home_hero_tagline">Chặn quảng cáo • Phát video trong nền</string>
+    <string name="browser_home_search_hint">Tìm kiếm hoặc nhập địa chỉ web…</string>
+    <string name="browser_home_banner_title">Chặn quảng cáo &amp; Phát video nền</string>
+    <string name="browser_home_banner_subtitle">Tự động lọc sạch video ads, popups &amp; hỗ trợ phát nổi PiP</string>
+
+    <!-- Search Suggestion Sheet -->
+    <string name="browser_search_input_hint">Nhập từ khóa hoặc địa chỉ web…</string>
+    <string name="browser_search_visit_site">Truy cập trang web</string>
+    <string name="browser_search_with_engine">Tìm kiếm với %1$s</string>
+    <string name="browser_search_popular_shortcuts">Lối tắt phổ biến</string>
+
+    <!-- Bento Menu Sheet -->
+    <string name="browser_bento_privacy_header">Bảo vệ riêng tư &amp; lọc nội dung</string>
+    <string name="browser_blocked_badge">ĐÃ CHẶN</string>
+    <string name="browser_check_rule_updates">Cập nhật rules</string>
+    <string name="browser_ads_and_trackers">Quảng cáo &amp; Theo dõi</string>
+    <string name="browser_rule_stats_format">Rule v%1$d • %2$s</string>
+    <string name="browser_rule_stats_domains">%1$d tên miền</string>
+    <string name="browser_rule_stats_local_db">Local DB</string>
+
+    <string name="browser_adblock_title">Chặn Quảng cáo</string>
+    <string name="browser_status_active">Đang kích hoạt</string>
+    <string name="browser_status_paused">Đã tạm dừng</string>
+
+    <string name="browser_popup_title">Chặn Popup</string>
+
+    <string name="browser_desktop_title">Giao diện Máy tính</string>
+    <string name="browser_desktop_active">Đang dùng User-Agent máy tính</string>
+    <string name="browser_desktop_inactive">Giao diện di động</string>
+
+    <string name="browser_pip_mode_pip">Cửa sổ nổi (PiP)</string>
+    <string name="browser_pip_mode_audio">Phát âm thanh trong nền</string>
+    <string name="browser_pip_desc_pip">Tự động mở video nổi khi thoát ra màn hình chính</string>
+    <string name="browser_pip_desc_audio">Chỉ phát âm thanh qua thanh thông báo khi thoát</string>
+
+    <string name="browser_pip_card_title">Phát Video nổi (PiP)</string>
+    <string name="browser_pip_card_subtitle">Xem video thu nhỏ khi đa nhiệm ứng dụng khác</string>
+    <string name="browser_pip_card_btn">BẬT</string>
+
+    <string name="browser_action_clear_cache">Xóa cache</string>
+    <string name="browser_action_share">Chia sẻ</string>
+    <string name="browser_action_open_external">Mở ngoài</string>
+
+    <string name="browser_pick_element_title">Chặn phần tử trang</string>
+    <string name="browser_pick_element_desc">Chạm để ẩn quảng cáo hoặc thành phần khó chịu</string>
+    <string name="browser_manage_rules_title">Quản lý quy tắc chặn phần tử</string>
+    <string name="browser_manage_rules_desc">Xem và xóa các phần tử bạn đã chặn</string>
+    <string name="browser_exit_title">Đóng trình duyệt</string>
+
+    <!-- Browser WebView & ViewModel Toasts -->
+    <string name="browser_download_desc">Đang tải tệp %1$s…</string>
+    <string name="browser_download_started">Bắt đầu tải: %1$s</string>
+    <string name="browser_open_external_error">Không thể mở ứng dụng ngoài</string>
+    <string name="browser_element_blocked_on">Đã chặn phần tử trên %1$s</string>
+    <string name="browser_rules_updated_format">Đã cập nhật bộ lọc lên phiên bản v%1$d (%2$d tên miền)</string>
+    <string name="browser_rules_already_latest">Bộ lọc trình duyệt đã ở phiên bản mới nhất (v%1$d)</string>
+    <string name="browser_rules_update_error">Không thể tải bản cập nhật: %1$s</string>
+    <string name="browser_rules_update_error_network">Lỗi kết nối</string>
+    <string name="browser_data_cleared">Đã xóa cookie &amp; bộ nhớ đệm</string>
+    <string name="browser_data_clear_error">Lỗi khi xóa dữ liệu: %1$s</string>
+
+    <!-- Element Rules Screen -->
+    <string name="element_rules_title">Quy tắc chặn phần tử</string>
+    <string name="element_rules_search_hint">Tìm tên miền hoặc bộ chọn…</string>
+    <string name="element_rules_clear">Xóa</string>
+    <string name="element_rules_search">Tìm kiếm</string>
+    <string name="element_rules_delete_all_title">Xóa tất cả quy tắc?</string>
+    <string name="element_rules_delete_all_desc">Tất cả các phần tử đã chặn trên %1$s sẽ được hiển thị lại.</string>
+    <string name="element_rules_delete">Xóa</string>
+    <string name="element_rules_cancel">Hủy</string>
+    <string name="element_rules_hiding_count">Đang ẩn %1$d phần tử</string>
+    <string name="element_rules_domains_count">Áp dụng trên %1$d trang web khác nhau</string>
+    <string name="element_rules_delete_domain_content_desc">Xóa tất cả cho tên miền này</string>
+    <string name="element_rules_delete_rule_content_desc">Xóa quy tắc</string>
+    <string name="element_rules_empty_searching">Không tìm thấy quy tắc</string>
+    <string name="element_rules_empty_normal">Chưa có quy tắc chặn phần tử</string>
+    <string name="element_rules_empty_searching_desc">Thử tìm kiếm với từ khóa khác</string>
+    <string name="element_rules_empty_normal_desc">Khi duyệt web, mở menu và chọn \"Chặn phần tử trang\" để chọn và ẩn bất kỳ quảng cáo hoặc phần tử nào.</string>
+    <string name="element_rules_toast_deleted">Đã xóa quy tắc</string>
+    <string name="element_rules_toast_deleted_all">Đã xóa tất cả quy tắc của %1$s</string>
+</resources>

@@ -1,0 +1,31 @@
+# What this module is
+
+BlockAds is an open-source, on-device ad-blocking application for Android.
+The app allows users to filter network traffic via a local VPN tunnel or Root proxy, block tracking domains, inspect DNS logs, manage custom filter rules, and browse the web with an ad-free in-app browser supporting background video playback.
+
+## Audience & tone
+
+Direct, clear, concise for mobile UI navigation bars and setting screens.
+- `vi` uses "bạn", not "quý khách".
+- `de` uses standard UI tone (direct infinitive or "Sie").
+
+## Do not translate
+
+- BlockAds
+- VPN
+- DNS
+
+## Glossary
+
+| term | locale | translation |
+| --- | --- | --- |
+| browser | vi | Trình duyệt |
+| browser | zh | 浏览器 |
+
+## Notes per locale
+
+- `ar` — RTL, and CLDR wants all six plural quantities
+- `in` — Android's legacy code for Indonesian — never write `id` in the CSV
+- `iw` — Android's legacy code for Hebrew — never write `he`
+- `pt-BR` — Brazilian Portuguese
+- `zh` — Simplified Chinese

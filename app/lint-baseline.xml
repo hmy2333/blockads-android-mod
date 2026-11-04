@@ -1,0 +1,1968 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="6" by="lint 9.2.1" type="baseline" client="gradle" dependencies="false" name="AGP (9.2.1)" variant="all" version="9.2.1">
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 26, or core library desugaring (current min is 24): `java.util.Base64#getDecoder`"
+        errorLine1="            java.util.Base64.getDecoder().decode(clean)"
+        errorLine2="                             ~~~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/utils/ProxyLinkParser.kt"
+            line="322"
+            column="30"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 26, or core library desugaring (current min is 24): `java.util.Base64.Decoder#decode`"
+        errorLine1="            java.util.Base64.getDecoder().decode(clean)"
+        errorLine2="                                          ~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/utils/ProxyLinkParser.kt"
+            line="322"
+            column="43"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 26, or core library desugaring (current min is 24): `java.util.Base64#getUrlDecoder`"
+        errorLine1="                java.util.Base64.getUrlDecoder().decode(clean)"
+        errorLine2="                                 ~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/utils/ProxyLinkParser.kt"
+            line="325"
+            column="34"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 26, or core library desugaring (current min is 24): `java.util.Base64.Decoder#decode`"
+        errorLine1="                java.util.Base64.getUrlDecoder().decode(clean)"
+        errorLine2="                                                 ~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/utils/ProxyLinkParser.kt"
+            line="325"
+            column="50"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 26, or core library desugaring (current min is 24): `java.util.Base64#getMimeDecoder`"
+        errorLine1="                    java.util.Base64.getMimeDecoder().decode(clean)"
+        errorLine2="                                     ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/utils/ProxyLinkParser.kt"
+            line="328"
+            column="38"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 26, or core library desugaring (current min is 24): `java.util.Base64.Decoder#decode`"
+        errorLine1="                    java.util.Base64.getMimeDecoder().decode(clean)"
+        errorLine2="                                                      ~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/utils/ProxyLinkParser.kt"
+            line="328"
+            column="55"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 26, or core library desugaring (current min is 24): `java.util.Base64#getDecoder`"
+        errorLine1="                java.util.Base64.getDecoder().decode(text)"
+        errorLine2="                                 ~~~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/utils/SubscriptionImporter.kt"
+            line="116"
+            column="34"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 26, or core library desugaring (current min is 24): `java.util.Base64.Decoder#decode`"
+        errorLine1="                java.util.Base64.getDecoder().decode(text)"
+        errorLine2="                                              ~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/utils/SubscriptionImporter.kt"
+            line="116"
+            column="47"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 26, or core library desugaring (current min is 24): `java.util.Base64#getUrlDecoder`"
+        errorLine1="                    java.util.Base64.getUrlDecoder().decode(text)"
+        errorLine2="                                     ~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/utils/SubscriptionImporter.kt"
+            line="119"
+            column="38"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 26, or core library desugaring (current min is 24): `java.util.Base64.Decoder#decode`"
+        errorLine1="                    java.util.Base64.getUrlDecoder().decode(text)"
+        errorLine2="                                                     ~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/utils/SubscriptionImporter.kt"
+            line="119"
+            column="54"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 26, or core library desugaring (current min is 24): `java.util.Base64#getDecoder`"
+        errorLine1="            java.util.Base64.getDecoder().decode(clean)"
+        errorLine2="                             ~~~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/utils/WireGuardConfigParser.kt"
+            line="324"
+            column="30"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 26, or core library desugaring (current min is 24): `java.util.Base64.Decoder#decode`"
+        errorLine1="            java.util.Base64.getDecoder().decode(clean)"
+        errorLine2="                                          ~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/utils/WireGuardConfigParser.kt"
+            line="324"
+            column="43"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 26, or core library desugaring (current min is 24): `java.util.Base64#getUrlDecoder`"
+        errorLine1="                java.util.Base64.getUrlDecoder().decode(clean)"
+        errorLine2="                                 ~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/utils/WireGuardConfigParser.kt"
+            line="327"
+            column="34"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 26, or core library desugaring (current min is 24): `java.util.Base64.Decoder#decode`"
+        errorLine1="                java.util.Base64.getUrlDecoder().decode(clean)"
+        errorLine2="                                                 ~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/utils/WireGuardConfigParser.kt"
+            line="327"
+            column="50"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 26, or core library desugaring (current min is 24): `java.util.Base64#getMimeDecoder`"
+        errorLine1="                    java.util.Base64.getMimeDecoder().decode(clean)"
+        errorLine2="                                     ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/utils/WireGuardConfigParser.kt"
+            line="330"
+            column="38"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 26, or core library desugaring (current min is 24): `java.util.Base64.Decoder#decode`"
+        errorLine1="                    java.util.Base64.getMimeDecoder().decode(clean)"
+        errorLine2="                                                      ~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/utils/WireGuardConfigParser.kt"
+            line="330"
+            column="55"/>
+    </issue>
+
+    <issue
+        id="OldTargetApi"
+        message="Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the `android.os.Build.VERSION_CODES` javadoc for details."
+        errorLine1="        targetSdk = 36"
+        errorLine2="        ~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="49"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="UnusedAttribute"
+        message="Attribute `localeConfig` is only used in API level 33 and higher (current min is 24)"
+        errorLine1="        android:localeConfig=&quot;@xml/locales_config&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="30"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="UnusedAttribute"
+        message="Attribute `shortcutId` is only used in API level 25 and higher (current min is 24)"
+        errorLine1="        android:shortcutId=&quot;toggle_vpn&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/xml/shortcuts.xml"
+            line="6"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="UnusedAttribute"
+        message="Attribute `shortcutLongLabel` is only used in API level 25 and higher (current min is 24)"
+        errorLine1="        android:shortcutLongLabel=&quot;@string/shortcut_toggle_vpn&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/xml/shortcuts.xml"
+            line="7"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="UnusedAttribute"
+        message="Attribute `shortcutShortLabel` is only used in API level 25 and higher (current min is 24)"
+        errorLine1="        android:shortcutShortLabel=&quot;@string/shortcut_toggle_vpn_short&quot;>"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/xml/shortcuts.xml"
+            line="8"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="UnusedAttribute"
+        message="Attribute `maxResizeWidth` is only used in API level 31 and higher (current min is 24)"
+        errorLine1="    android:maxResizeWidth=&quot;250dp&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/xml/widget_info.xml"
+            line="9"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnusedAttribute"
+        message="Attribute `maxResizeHeight` is only used in API level 31 and higher (current min is 24)"
+        errorLine1="    android:maxResizeHeight=&quot;110dp&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/xml/widget_info.xml"
+            line="10"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnusedAttribute"
+        message="Attribute `previewLayout` is only used in API level 31 and higher (current min is 24)"
+        errorLine1="    android:previewLayout=&quot;@layout/widget_collapsed&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/xml/widget_info.xml"
+            line="11"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnusedAttribute"
+        message="Attribute `targetCellWidth` is only used in API level 31 and higher (current min is 24)"
+        errorLine1="    android:targetCellWidth=&quot;1&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/xml/widget_info.xml"
+            line="15"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnusedAttribute"
+        message="Attribute `targetCellHeight` is only used in API level 31 and higher (current min is 24)"
+        errorLine1="    android:targetCellHeight=&quot;1&quot; />"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/xml/widget_info.xml"
+            line="16"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="AppBundleLocaleChanges"
+        message="Found dynamic locale changes, but did not find corresponding Play Core library calls for downloading languages and splitting by language is not disabled in the `bundle` configuration"
+        errorLine1="        config.setLocales(LocaleList(locale))"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/utils/LocaleHelper.kt"
+            line="74"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="BatteryLife"
+        message="Use of `REQUEST_IGNORE_BATTERY_OPTIMIZATIONS` violates the Play Store Content Policy regarding acceptable use cases, as described in https://developer.android.com/training/monitoring-device-state/doze-standby.html"
+        errorLine1="    val intent = Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS).apply {"
+        errorLine2="                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/ui/home/component/HomeBackgroundVpnTipCard.kt"
+            line="362"
+            column="34"/>
+    </issue>
+
+    <issue
+        id="BatteryLife"
+        message="Use of `REQUEST_IGNORE_BATTERY_OPTIMIZATIONS` violates the Play Store Content Policy regarding acceptable use cases, as described in https://developer.android.com/training/monitoring-device-state/doze-standby.html"
+        errorLine1="        val intent1 = Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS).apply {"
+        errorLine2="                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/ui/onboarding/OnboardingScreen.kt"
+            line="134"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="VectorRaster"
+        message="Limit vector icons sizes to 200×200 to keep icon drawing fast; see https://developer.android.com/studio/write/vector-asset-studio#when for more"
+        errorLine1="    android:width=&quot;400dp&quot;"
+        errorLine2="                   ~~~~~">
+        <location
+            file="src/main/res/drawable/ic_launcher_foreground.xml"
+            line="2"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="VectorRaster"
+        message="Limit vector icons sizes to 200×200 to keep icon drawing fast; see https://developer.android.com/studio/write/vector-asset-studio#when for more"
+        errorLine1="    android:width=&quot;512dp&quot;"
+        errorLine2="                   ~~~~~">
+        <location
+            file="src/main/res/drawable/ic_reddit.xml"
+            line="2"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="VectorRaster"
+        message="Limit vector icons sizes to 200×200 to keep icon drawing fast; see https://developer.android.com/studio/write/vector-asset-studio#when for more"
+        errorLine1="    android:width=&quot;512dp&quot;"
+        errorLine2="                   ~~~~~">
+        <location
+            file="src/main/res/drawable/ic_telegram.xml"
+            line="2"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="AndroidGradlePluginVersion"
+        message="A newer version of Gradle than 9.4.1 is available: 9.8.2"
+        errorLine1="distributionUrl=https\://services.gradle.org/distributions/gradle-9.4.1-bin.zip"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="$HOME/AndroidStudioProjects/blockads-android/gradle/wrapper/gradle-wrapper.properties"
+            line="4"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="AndroidGradlePluginVersion"
+        message="A newer version of com.android.application than 9.2.1 is available: 9.5.0"
+        errorLine1="agp = &quot;9.2.1&quot;"
+        errorLine2="      ~~~~~~~">
+        <location
+            file="$HOME/AndroidStudioProjects/blockads-android/gradle/libs.versions.toml"
+            line="2"
+            column="7"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.lifecycle:lifecycle-runtime-ktx than 2.10.0 is available: 2.11.0"
+        errorLine1="lifecycleRuntimeKtx = &quot;2.10.0&quot;"
+        errorLine2="                      ~~~~~~~~">
+        <location
+            file="$HOME/AndroidStudioProjects/blockads-android/gradle/libs.versions.toml"
+            line="10"
+            column="23"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.lifecycle:lifecycle-viewmodel-compose than 2.10.0 is available: 2.11.0"
+        errorLine1="lifecycleRuntimeKtx = &quot;2.10.0&quot;"
+        errorLine2="                      ~~~~~~~~">
+        <location
+            file="$HOME/AndroidStudioProjects/blockads-android/gradle/libs.versions.toml"
+            line="10"
+            column="23"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.lifecycle:lifecycle-runtime-compose than 2.10.0 is available: 2.11.0"
+        errorLine1="lifecycleRuntimeCompose = &quot;2.10.0&quot;"
+        errorLine2="                          ~~~~~~~~">
+        <location
+            file="$HOME/AndroidStudioProjects/blockads-android/gradle/libs.versions.toml"
+            line="30"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="NewerVersionAvailable"
+        message="A newer version of org.jetbrains.kotlin.plugin.compose than 2.3.10 is available: 2.4.21"
+        errorLine1="kotlin = &quot;2.3.10&quot;"
+        errorLine2="         ~~~~~~~~">
+        <location
+            file="$HOME/AndroidStudioProjects/blockads-android/gradle/libs.versions.toml"
+            line="4"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="NewerVersionAvailable"
+        message="A newer version of org.jetbrains.kotlin.plugin.serialization than 2.3.10 is available: 2.4.21"
+        errorLine1="kotlin = &quot;2.3.10&quot;"
+        errorLine2="         ~~~~~~~~">
+        <location
+            file="$HOME/AndroidStudioProjects/blockads-android/gradle/libs.versions.toml"
+            line="4"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="ModifierParameter"
+        message="Modifier parameter should be the first optional parameter"
+        errorLine1="    modifier: Modifier = Modifier"
+        errorLine2="    ~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/ui/dnsprovider/component/ActiveDnsHeroCard.kt"
+            line="52"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="ModifierParameter"
+        message="Modifier parameter should be the first optional parameter"
+        errorLine1="    modifier: Modifier = Modifier"
+        errorLine2="    ~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/ui/domainrules/dialog/AddFilterRuleDialog.kt"
+            line="341"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="ModifierParameter"
+        message="Modifier parameter should be the first optional parameter"
+        errorLine1="    modifier: Modifier = Modifier"
+        errorLine2="    ~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/ui/settings/component/ApplicationsSection.kt"
+            line="23"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="ModifierParameter"
+        message="Modifier parameter should be the first optional parameter"
+        errorLine1="    modifier: Modifier = Modifier"
+        errorLine2="    ~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/ui/browser/component/BrowserBentoMenuSheet.kt"
+            line="72"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="ModifierParameter"
+        message="Modifier parameter should be the first optional parameter"
+        errorLine1="    modifier: Modifier = Modifier"
+        errorLine2="    ~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/ui/browser/component/BrowserBottomOmnibox.kt"
+            line="66"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="ModifierParameter"
+        message="Modifier parameter should be the first optional parameter"
+        errorLine1="    modifier: Modifier = Modifier"
+        errorLine2="    ~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/ui/browser/BrowserScreen.kt"
+            line="80"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="ModifierParameter"
+        message="Modifier parameter should be the first optional parameter"
+        errorLine1="    modifier: Modifier = Modifier"
+        errorLine2="    ~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/ui/browser/component/BrowserShortcuts.kt"
+            line="78"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="ModifierParameter"
+        message="Modifier parameter should be the first optional parameter"
+        errorLine1="    modifier: Modifier = Modifier"
+        errorLine2="    ~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/ui/browser/component/BrowserWebView.kt"
+            line="50"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="ModifierParameter"
+        message="Modifier parameter should be the first optional parameter"
+        errorLine1="    modifier: Modifier = Modifier"
+        errorLine2="    ~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/ui/logs/component/DomainDetailBottomSheet.kt"
+            line="63"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="ModifierParameter"
+        message="Modifier parameter should be the first optional parameter"
+        errorLine1="    modifier: Modifier = Modifier"
+        errorLine2="    ~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/ui/domainrules/component/DomainItem.kt"
+            line="55"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="ModifierParameter"
+        message="Modifier parameter should be the first optional parameter"
+        errorLine1="    modifier: Modifier = Modifier"
+        errorLine2="    ~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/ui/domainrules/dialog/EditFilterRuleDialog.kt"
+            line="13"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="ModifierParameter"
+        message="Modifier parameter should be the first optional parameter"
+        errorLine1="    modifier: Modifier = Modifier"
+        errorLine2="    ~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/ui/browser/elementrules/ElementRulesScreen.kt"
+            line="74"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="ModifierParameter"
+        message="Modifier parameter should be the first optional parameter"
+        errorLine1="    modifier: Modifier = Modifier"
+        errorLine2="    ~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/ui/filter/component/FilterListCard.kt"
+            line="72"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="ModifierParameter"
+        message="Modifier parameter should be the first optional parameter"
+        errorLine1="    modifier: Modifier = Modifier"
+        errorLine2="    ~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/ui/domainrules/dialog/FilterRuleFormComponents.kt"
+            line="34"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="ModifierParameter"
+        message="Modifier parameter should be the first optional parameter"
+        errorLine1="    modifier: Modifier = Modifier"
+        errorLine2="    ~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/ui/domainrules/dialog/FilterRuleFormComponents.kt"
+            line="64"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="ModifierParameter"
+        message="Modifier parameter should be the first optional parameter"
+        errorLine1="    modifier: Modifier = Modifier,"
+        errorLine2="    ~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/ui/httpsfiltering/HttpsFilteringScreen.kt"
+            line="66"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="ModifierParameter"
+        message="Modifier parameter should be the first optional parameter"
+        errorLine1="    modifier: Modifier = Modifier"
+        errorLine2="    ~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/ui/home/component/PowerButton.kt"
+            line="52"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="ModifierParameter"
+        message="Modifier parameter should be the first optional parameter"
+        errorLine1="    modifier: Modifier = Modifier"
+        errorLine2="    ~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/ui/proxyvpn/component/ProxyNodesTabContent.kt"
+            line="78"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="ModifierParameter"
+        message="Modifier parameter should be the first optional parameter"
+        errorLine1="    modifier: Modifier = Modifier,"
+        errorLine2="    ~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/ui/proxyvpn/ProxyVpnScreen.kt"
+            line="83"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="ModifierParameter"
+        message="Modifier parameter should be the first optional parameter"
+        errorLine1="    modifier: Modifier = Modifier"
+        errorLine2="    ~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/ui/home/component/TopBlockedSection.kt"
+            line="33"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="ModifierParameter"
+        message="Modifier parameter should be the first optional parameter"
+        errorLine1="    modifier: Modifier = Modifier"
+        errorLine2="    ~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/ui/statistics/destinations/TrafficDestinationsSection.kt"
+            line="57"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="ModifierParameter"
+        message="Modifier parameter should be the first optional parameter"
+        errorLine1="    modifier: Modifier = Modifier"
+        errorLine2="    ~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/ui/proxyvpn/component/WindscribeHeroCard.kt"
+            line="75"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="ModifierParameter"
+        message="Modifier parameter should be the first optional parameter"
+        errorLine1="    modifier: Modifier = Modifier"
+        errorLine2="    ~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/ui/proxyvpn/component/WireGuardTabContent.kt"
+            line="70"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Repeated word &quot;passo&quot; in message: possible typo"
+        errorLine1="    &lt;string name=&quot;https_wizard_install_instructions_title&quot;>Guida passo passo&lt;/string>"
+        errorLine2="                                                                 ~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-it/strings_filters.xml"
+            line="140"
+            column="66"/>
+    </issue>
+
+    <issue
+        id="LogNotTimber"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;"
+        errorLine1="            Log.e(&quot;FileLoggingTree&quot;, &quot;Failed to write local log&quot;, e)"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/utils/FileLoggingTree.kt"
+            line="53"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="PluralsCandidate"
+        message="Formatting %d followed by words (&quot;domains&quot;): This should probably be a plural rather than a string"
+        errorLine1="    &lt;string name=&quot;browser_rule_stats_domains&quot;>%1$d domains&lt;/string>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings_browser.xml"
+            line="30"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="PluralsCandidate"
+        message="Formatting %d followed by words (&quot;domains&quot;): This should probably be a plural rather than a string"
+        errorLine1="    &lt;string name=&quot;browser_rules_updated_format&quot;>Filter rules updated to v%1$d (%2$d domains)&lt;/string>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings_browser.xml"
+            line="67"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="PluralsCandidate"
+        message="Formatting %d followed by words (&quot;element&quot;): This should probably be a plural rather than a string"
+        errorLine1="    &lt;string name=&quot;element_rules_hiding_count&quot;>Hiding %1$d element(s)&lt;/string>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings_browser.xml"
+            line="83"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="PluralsCandidate"
+        message="Formatting %d followed by words (&quot;website&quot;): This should probably be a plural rather than a string"
+        errorLine1="    &lt;string name=&quot;element_rules_domains_count&quot;>Applied across %1$d website(s)&lt;/string>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings_browser.xml"
+            line="84"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="PluralsCandidate"
+        message="Formatting %d followed by words (&quot;domains&quot;): This should probably be a plural rather than a string"
+        errorLine1="    &lt;string name=&quot;filter_updated&quot;>Filter list updated: %d domains&lt;/string>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings_filters.xml"
+            line="3"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="PluralsCandidate"
+        message="Formatting %d followed by words (&quot;domains&quot;): This should probably be a plural rather than a string"
+        errorLine1="    &lt;string name=&quot;filter_update_success_message&quot;>Successfully updated %d domains&lt;/string>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings_filters.xml"
+            line="39"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="PluralsCandidate"
+        message="Formatting %d followed by words (&quot;apps&quot;): This should probably be a plural rather than a string"
+        errorLine1="    &lt;string name=&quot;firewall_count&quot;>%d apps blocked&lt;/string>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings_filters.xml"
+            line="58"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="PluralsCandidate"
+        message="Formatting %d followed by words (&quot;active&quot;): This should probably be a plural rather than a string"
+        errorLine1="    &lt;string name=&quot;filter_setup_active_count&quot;>%1$d active&lt;/string>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings_filters.xml"
+            line="86"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="PluralsCandidate"
+        message="Formatting %d followed by words (&quot;filter&quot;): This should probably be a plural rather than a string"
+        errorLine1="    &lt;string name=&quot;filter_merge_badge&quot;>Merging %1$d filter lists into one&lt;/string>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings_filters.xml"
+            line="157"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="PluralsCandidate"
+        message="Formatting %d followed by words (&quot;selected&quot;): This should probably be a plural rather than a string"
+        errorLine1="    &lt;string name=&quot;log_bulk_selected&quot;>%d selected&lt;/string>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings_logs.xml"
+            line="30"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="PluralsCandidate"
+        message="Formatting %d followed by words (&quot;queries&quot;): This should probably be a plural rather than a string"
+        errorLine1="    &lt;string name=&quot;stats_destinations_queries_count&quot;>%d queries&lt;/string>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings_logs.xml"
+            line="57"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="PluralsCandidate"
+        message="Formatting %d followed by words (&quot;blocked&quot;): This should probably be a plural rather than a string"
+        errorLine1="    &lt;string name=&quot;stats_block_reasons_blocked_count&quot;>%d blocked&lt;/string>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings_logs.xml"
+            line="64"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="PluralsCandidate"
+        message="Formatting %d followed by words (&quot;apps&quot;): This should probably be a plural rather than a string"
+        errorLine1="    &lt;string name=&quot;app_management_subtitle&quot;>%d apps&lt;/string>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings_settings.xml"
+            line="158"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="PluralsCandidate"
+        message="Formatting %d followed by words (&quot;apps&quot;): This should probably be a plural rather than a string"
+        errorLine1="    &lt;string name=&quot;app_management_subtitle_filtered&quot;>%1$d of %2$d apps&lt;/string>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings_settings.xml"
+            line="159"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="PluralsCandidate"
+        message="Formatting %d followed by words (&quot;ads&quot;): This should probably be a plural rather than a string"
+        errorLine1="    &lt;string name=&quot;daily_summary_text&quot;>Today we blocked %1$d ads for you!&lt;/string>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings_settings.xml"
+            line="178"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="PluralsCandidate"
+        message="Formatting %d followed by words (&quot;ads&quot;): This should probably be a plural rather than a string"
+        errorLine1="    &lt;string name=&quot;vpn_notification_stats_today&quot;>%1$d ads blocked today | Uptime %2$s&lt;/string>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings_vpn.xml"
+            line="39"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="ExportedReceiver"
+        message="Exported receiver does not require permission"
+        errorLine1="        &lt;receiver"
+        errorLine2="         ~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="129"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 24"
+        errorLine1="                val isLocked = Build.VERSION.SDK_INT >= Build.VERSION_CODES.N &amp;&amp;"
+        errorLine2="                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/service/BootReceiver.kt"
+            line="29"
+            column="32"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 24"
+        errorLine1="        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/ui/browser/media/BrowserMediaService.kt"
+            line="184"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 24"
+        errorLine1="    private val deContext: Context = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {"
+        errorLine2="                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/data/datastore/DirectBootPreferences.kt"
+            line="17"
+            column="42"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 24"
+        errorLine1="        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/utils/LogcatExporter.kt"
+            line="59"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 24"
+        errorLine1="            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/ui/proxyvpn/delegate/ProxyNetworkInfoDelegate.kt"
+            line="67"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        message="This field leaks a context object"
+        errorLine1="    private val context: Context,"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/ui/home/HomeViewModel.kt"
+            line="57"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UseCompoundDrawables"
+        message="This tag and its children can be replaced by one `&lt;TextView/>` and a compound drawable"
+        errorLine1="    &lt;LinearLayout"
+        errorLine2="     ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/widget_expanded.xml"
+            line="12"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="AutoboxingStateCreation"
+        message="Prefer `mutableIntStateOf` instead of `mutableStateOf`"
+        errorLine1="    var filterOption by remember { mutableStateOf(0) }"
+        errorLine2="                                   ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/ui/appmanagement/AppManagementScreen.kt"
+            line="74"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.purple_200` appears to be unused"
+        errorLine1="    &lt;color name=&quot;purple_200&quot;>#FFBB86FC&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="3"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.purple_500` appears to be unused"
+        errorLine1="    &lt;color name=&quot;purple_500&quot;>#FF6200EE&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="4"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.purple_700` appears to be unused"
+        errorLine1="    &lt;color name=&quot;purple_700&quot;>#FF3700B3&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="5"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.teal_200` appears to be unused"
+        errorLine1="    &lt;color name=&quot;teal_200&quot;>#FF03DAC5&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="6"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.teal_700` appears to be unused"
+        errorLine1="    &lt;color name=&quot;teal_700&quot;>#FF018786&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="7"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.black` appears to be unused"
+        errorLine1="    &lt;color name=&quot;black&quot;>#FF000000&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="8"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.ic_dns` appears to be unused"
+        errorLine1="&lt;vector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="^">
+        <location
+            file="src/main/res/drawable/ic_dns.xml"
+            line="1"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.ic_edit` appears to be unused"
+        errorLine1="&lt;vector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="^">
+        <location
+            file="src/main/res/drawable/ic_edit.xml"
+            line="1"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.ic_launcher_background` appears to be unused"
+        errorLine1="&lt;vector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="^">
+        <location
+            file="src/main/res/drawable/ic_launcher_background.xml"
+            line="2"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.ic_pip` appears to be unused"
+        errorLine1="&lt;vector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="^">
+        <location
+            file="src/main/res/drawable/ic_pip.xml"
+            line="1"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.ic_power` appears to be unused"
+        errorLine1="&lt;vector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="^">
+        <location
+            file="src/main/res/drawable/ic_power.xml"
+            line="2"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;geoip_status_downloading&quot;>Aktualizace...&lt;/string>"
+        errorLine2="                                            ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-cs/strings_settings.xml"
+            line="226"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;geoip_status_downloading&quot;>Wird aktualisiert...&lt;/string>"
+        errorLine2="                                            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-de/strings_settings.xml"
+            line="226"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;geoip_status_downloading&quot;>Actualizando...&lt;/string>"
+        errorLine2="                                            ~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-es/strings_settings.xml"
+            line="226"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;geoip_status_downloading&quot;>Mise à jour en cours...&lt;/string>"
+        errorLine2="                                            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-fr/strings_settings.xml"
+            line="226"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;geoip_status_downloading&quot;>Aggiornamento in corso...&lt;/string>"
+        errorLine2="                                            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-it/strings_settings.xml"
+            line="226"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;geoip_status_downloading&quot;>מעדכן...&lt;/string>"
+        errorLine2="                                            ~~~~~~~~">
+        <location
+            file="src/main/res/values-iw/strings_settings.xml"
+            line="226"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;geoip_status_downloading&quot;>Жаңартылуда...&lt;/string>"
+        errorLine2="                                            ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-kk/strings_settings.xml"
+            line="226"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;geoip_status_downloading&quot;>Aktualizowanie...&lt;/string>"
+        errorLine2="                                            ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-pl/strings_settings.xml"
+            line="226"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;geoip_status_downloading&quot;>Atualizando...&lt;/string>"
+        errorLine2="                                            ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-pt-rBR/strings_settings.xml"
+            line="226"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;geoip_status_downloading&quot;>Обновление...&lt;/string>"
+        errorLine2="                                            ~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-ru/strings_settings.xml"
+            line="226"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;geoip_status_downloading&quot;>Оновлення...&lt;/string>"
+        errorLine2="                                            ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-uk/strings_settings.xml"
+            line="226"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;geoip_status_downloading&quot;>جاري التحديث...&lt;/string>"
+        errorLine2="                                            ~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-ar/strings_settings.xml"
+            line="227"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;geoip_status_downloading&quot;>Güncelleniyor...&lt;/string>"
+        errorLine2="                                            ~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-tr/strings_settings.xml"
+            line="227"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;geoip_status_downloading&quot;>Đang cập nhật...&lt;/string>"
+        errorLine2="                                            ~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-vi/strings_settings.xml"
+            line="236"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;outline_dialog_desc&quot;>Vložte přístupový klíč Outline (ss://...) pro připojení přes šifrovanou proxy.&lt;/string>"
+        errorLine2="                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-cs/strings_settings.xml"
+            line="257"
+            column="40"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;outline_dialog_desc&quot;>Fügen Sie einen Outline-Zugriffsschlüssel (ss://...) ein, um sich über einen verschlüsselten Proxy zu verbinden.&lt;/string>"
+        errorLine2="                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-de/strings_settings.xml"
+            line="257"
+            column="40"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;outline_dialog_desc&quot;>Pega una clave de acceso de Outline (ss://...) para conectarte a través de un proxy cifrado.&lt;/string>"
+        errorLine2="                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-es/strings_settings.xml"
+            line="257"
+            column="40"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;outline_dialog_desc&quot;>Collez une clé d\&apos;accès Outline (ss://...) pour vous connecter via un proxy chiffré.&lt;/string>"
+        errorLine2="                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-fr/strings_settings.xml"
+            line="257"
+            column="40"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;outline_dialog_desc&quot;>Tempel kunci akses Outline (ss://...) untuk terhubung melalui proksi terenkripsi.&lt;/string>"
+        errorLine2="                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-in/strings_settings.xml"
+            line="257"
+            column="40"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;outline_dialog_desc&quot;>Incolla una chiave di accesso Outline (ss://...) per connetterti tramite un proxy crittografato.&lt;/string>"
+        errorLine2="                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-it/strings_settings.xml"
+            line="257"
+            column="40"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;outline_dialog_desc&quot;>הדבק מפתח גישה של Outline ‏(ss://...) כדי להתחבר דרך פרוקסי מוצפן.&lt;/string>"
+        errorLine2="                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-iw/strings_settings.xml"
+            line="257"
+            column="40"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;outline_dialog_desc&quot;>暗号化プロキシ経由で接続するには、Outlineアクセスキー（ss://...）を貼り付けてください。&lt;/string>"
+        errorLine2="                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-ja/strings_settings.xml"
+            line="257"
+            column="40"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;outline_dialog_desc&quot;>Шифрланған прокси арқылы қосылу үшін Outline кіру кілтін (ss://...) қойыңыз.&lt;/string>"
+        errorLine2="                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-kk/strings_settings.xml"
+            line="257"
+            column="40"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;outline_dialog_desc&quot;>암호화된 프록시를 통해 연결하려면 Outline 액세스 키(ss://...)를 붙여넣으세요.&lt;/string>"
+        errorLine2="                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-ko/strings_settings.xml"
+            line="257"
+            column="40"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;outline_dialog_desc&quot;>Wklej klucz dostępu Outline (ss://...), aby połączyć się przez zaszyfrowane proxy.&lt;/string>"
+        errorLine2="                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-pl/strings_settings.xml"
+            line="257"
+            column="40"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;outline_dialog_desc&quot;>Cole uma chave de acesso do Outline (ss://...) para conectar por meio de um proxy criptografado.&lt;/string>"
+        errorLine2="                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-pt-rBR/strings_settings.xml"
+            line="257"
+            column="40"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;outline_dialog_desc&quot;>Вставьте ключ доступа Outline (ss://...) для подключения через зашифрованный прокси.&lt;/string>"
+        errorLine2="                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-ru/strings_settings.xml"
+            line="257"
+            column="40"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;outline_dialog_desc&quot;>วางคีย์การเข้าถึง Outline (ss://...) เพื่อเชื่อมต่อผ่านพร็อกซีที่เข้ารหัส&lt;/string>"
+        errorLine2="                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-th/strings_settings.xml"
+            line="257"
+            column="40"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;outline_dialog_desc&quot;>Вставте ключ доступу Outline (ss://...), щоб підключитися через зашифрований проксі.&lt;/string>"
+        errorLine2="                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-uk/strings_settings.xml"
+            line="257"
+            column="40"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;outline_dialog_desc&quot;>粘贴Outline访问密钥（ss://...）以通过加密代理连接。&lt;/string>"
+        errorLine2="                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-zh/strings_settings.xml"
+            line="257"
+            column="40"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;outline_dialog_desc&quot;>الصق مفتاح وصول Outline ‏(ss://...) للاتصال عبر وكيل مشفر.&lt;/string>"
+        errorLine2="                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-ar/strings_settings.xml"
+            line="258"
+            column="40"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;outline_dialog_desc&quot;>Şifrelenmiş bir proxy üzerinden bağlanmak için bir Outline erişim anahtarı (ss://...) yapıştırın.&lt;/string>"
+        errorLine2="                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-tr/strings_settings.xml"
+            line="258"
+            column="40"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;geoip_status_downloading&quot;>Updating...&lt;/string>"
+        errorLine2="                                            ~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings_settings.xml"
+            line="283"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;outline_dialog_desc&quot;>Dán mã truy cập Outline (ss://...) để kết nối qua máy chủ proxy được mã hóa.&lt;/string>"
+        errorLine2="                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-vi/strings_settings.xml"
+            line="286"
+            column="40"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;outline_dialog_desc&quot;>Paste an Outline access key (ss://...) to connect through an encrypted proxy.&lt;/string>"
+        errorLine2="                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings_settings.xml"
+            line="314"
+            column="40"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;vpn_notification_no_internet_text&quot;>في انتظار الاتصال بالشبكة...&lt;/string>"
+        errorLine2="                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-ar/strings_vpn.xml"
+            line="83"
+            column="54"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;vpn_notification_no_internet_text&quot;>Čekání na síťové připojení...&lt;/string>"
+        errorLine2="                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-cs/strings_vpn.xml"
+            line="83"
+            column="54"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;vpn_notification_no_internet_text&quot;>Warten auf Netzwerkverbindung...&lt;/string>"
+        errorLine2="                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-de/strings_vpn.xml"
+            line="83"
+            column="54"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;vpn_notification_no_internet_text&quot;>Esperando conectividad de red...&lt;/string>"
+        errorLine2="                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-es/strings_vpn.xml"
+            line="83"
+            column="54"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;vpn_notification_no_internet_text&quot;>En attente d\&apos;une connexion réseau...&lt;/string>"
+        errorLine2="                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-fr/strings_vpn.xml"
+            line="83"
+            column="54"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;vpn_notification_no_internet_text&quot;>Menunggu konektivitas jaringan...&lt;/string>"
+        errorLine2="                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-in/strings_vpn.xml"
+            line="83"
+            column="54"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;vpn_notification_no_internet_text&quot;>In attesa di connettività di rete...&lt;/string>"
+        errorLine2="                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-it/strings_vpn.xml"
+            line="83"
+            column="54"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;vpn_notification_no_internet_text&quot;>ממתין לחיבור רשת...&lt;/string>"
+        errorLine2="                                                     ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-iw/strings_vpn.xml"
+            line="83"
+            column="54"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;vpn_notification_no_internet_text&quot;>ネットワーク接続を待機しています...&lt;/string>"
+        errorLine2="                                                     ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-ja/strings_vpn.xml"
+            line="83"
+            column="54"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;vpn_notification_no_internet_text&quot;>Желі байланысы күтілуде...&lt;/string>"
+        errorLine2="                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-kk/strings_vpn.xml"
+            line="83"
+            column="54"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;vpn_notification_no_internet_text&quot;>네트워크 연결 대기 중...&lt;/string>"
+        errorLine2="                                                     ~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-ko/strings_vpn.xml"
+            line="83"
+            column="54"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;vpn_notification_no_internet_text&quot;>Oczekiwanie na łączność sieciową...&lt;/string>"
+        errorLine2="                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-pl/strings_vpn.xml"
+            line="83"
+            column="54"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;vpn_notification_no_internet_text&quot;>Aguardando conectividade de rede...&lt;/string>"
+        errorLine2="                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-pt-rBR/strings_vpn.xml"
+            line="83"
+            column="54"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;vpn_notification_no_internet_text&quot;>Ожидание подключения к сети...&lt;/string>"
+        errorLine2="                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-ru/strings_vpn.xml"
+            line="83"
+            column="54"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;vpn_notification_no_internet_text&quot;>กำลังรอการเชื่อมต่อเครือข่าย...&lt;/string>"
+        errorLine2="                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-th/strings_vpn.xml"
+            line="83"
+            column="54"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;vpn_notification_no_internet_text&quot;>Ağ bağlantısı bekleniyor...&lt;/string>"
+        errorLine2="                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-tr/strings_vpn.xml"
+            line="83"
+            column="54"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;vpn_notification_no_internet_text&quot;>Очікування підключення до мережі...&lt;/string>"
+        errorLine2="                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-uk/strings_vpn.xml"
+            line="83"
+            column="54"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;vpn_notification_no_internet_text&quot;>正在等待网络连接...&lt;/string>"
+        errorLine2="                                                     ~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-zh/strings_vpn.xml"
+            line="83"
+            column="54"/>
+    </issue>
+
+    <issue
+        id="IconXmlAndPng"
+        message="The following images appear both as density independent `.xml` files and as bitmap files: src/main/res/drawable/ic_launcher_foreground.xml, src/main/res/mipmap-hdpi/ic_launcher_foreground.webp">
+        <location
+            file="src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.webp"/>
+        <location
+            file="src/main/res/mipmap-xxhdpi/ic_launcher_foreground.webp"/>
+        <location
+            file="src/main/res/mipmap-xhdpi/ic_launcher_foreground.webp"/>
+        <location
+            file="src/main/res/mipmap-mdpi/ic_launcher_foreground.webp"/>
+        <location
+            file="src/main/res/mipmap-hdpi/ic_launcher_foreground.webp"/>
+        <location
+            file="src/main/res/drawable/ic_launcher_foreground.xml"/>
+    </issue>
+
+    <issue
+        id="MonochromeLauncherIcon"
+        message="The application adaptive icon is missing a monochrome tag"
+        errorLine1="&lt;adaptive-icon xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;>"
+        errorLine2="^">
+        <location
+            file="src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
+            line="2"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="MonochromeLauncherIcon"
+        message="The application adaptive roundIcon is missing a monochrome tag"
+        errorLine1="&lt;adaptive-icon xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;>"
+        errorLine2="^">
+        <location
+            file="src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+            line="2"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UseKtx"
+        message="Use the KTX extension function `SharedPreferences.edit` instead?"
+        errorLine1="                            getSharedPreferences(&quot;browser_settings&quot;, Context.MODE_PRIVATE)"
+        errorLine2="                            ^">
+        <location
+            file="src/main/java/app/pwhs/blockads/ui/browser/BrowserActivity.kt"
+            line="112"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="UseKtx"
+        message="Use the KTX extension function `String.toUri` instead?"
+        errorLine1="            val uri = Uri.parse(displayUrl)"
+        errorLine2="                      ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/ui/browser/component/BrowserBottomOmnibox.kt"
+            line="70"
+            column="23"/>
+    </issue>
+
+    <issue
+        id="UseKtx"
+        message="Use the KTX extension function `Bitmap.scale` instead?"
+        errorLine1="                        Bitmap.createScaledBitmap(rawBmp, w, h, true)"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/ui/browser/media/BrowserMediaService.kt"
+            line="211"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="UseKtx"
+        message="Use the KTX extension function `String.toUri` instead?"
+        errorLine1="                        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(effect.url))"
+        errorLine2="                                                                ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/ui/browser/BrowserScreen.kt"
+            line="200"
+            column="65"/>
+    </issue>
+
+    <issue
+        id="UseKtx"
+        message="Use the KTX extension function `String.toUri` instead?"
+        errorLine1="            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(uiState.displayUrl))"
+        errorLine2="                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/ui/browser/BrowserScreen.kt"
+            line="446"
+            column="53"/>
+    </issue>
+
+    <issue
+        id="UseKtx"
+        message="Use the KTX extension function `String.toUri` instead?"
+        errorLine1="                    val domain = runCatching { Uri.parse(intent.url).host?.removePrefix(&quot;www.&quot;) }.getOrNull()"
+        errorLine2="                                               ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/ui/browser/BrowserViewModel.kt"
+            line="143"
+            column="48"/>
+    </issue>
+
+    <issue
+        id="UseKtx"
+        message="Use the KTX extension function `String.toUri` instead?"
+        errorLine1="                                Uri.parse(url ?: &quot;&quot;).host ?: &quot;&quot;"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/ui/browser/component/BrowserWebView.kt"
+            line="96"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="UseKtx"
+        message="Use the KTX extension function `String.toUri` instead?"
+        errorLine1="                                val host = runCatching { Uri.parse(webView.url ?: uiState.displayUrl).host }.getOrNull().orEmpty()"
+        errorLine2="                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/ui/browser/component/BrowserWebView.kt"
+            line="171"
+            column="58"/>
+    </issue>
+
+    <issue
+        id="UseKtx"
+        message="Use the KTX extension function `SharedPreferences.edit` instead?"
+        errorLine1="        set(value) = prefs.edit().putBoolean(KEY_VPN_ENABLED, value).apply()"
+        errorLine2="                     ~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/data/datastore/DirectBootPreferences.kt"
+            line="29"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="UseKtx"
+        message="Use the KTX extension function `SharedPreferences.edit` instead?"
+        errorLine1="        set(value) = prefs.edit().putBoolean(KEY_AUTO_RECONNECT, value).apply()"
+        errorLine2="                     ~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/data/datastore/DirectBootPreferences.kt"
+            line="33"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="UseKtx"
+        message="Use the KTX extension function `SharedPreferences.edit` instead?"
+        errorLine1="        set(value) = prefs.edit().putString(KEY_ROUTING_MODE, value).apply()"
+        errorLine2="                     ~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/data/datastore/DirectBootPreferences.kt"
+            line="37"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="UseKtx"
+        message="Use the KTX extension function `String.toUri` instead?"
+        errorLine1="    runCatching { android.net.Uri.parse(url) }.getOrNull()?.let { uri ->"
+        errorLine2="                  ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/ui/browser/DownloadFileNameExtractor.kt"
+            line="21"
+            column="19"/>
+    </issue>
+
+    <issue
+        id="UseKtx"
+        message="Use the KTX extension function `String.toUri` instead?"
+        errorLine1="        data = Uri.parse(&quot;package:${context.packageName}&quot;)"
+        errorLine2="               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/ui/home/component/HomeBackgroundVpnTipCard.kt"
+            line="363"
+            column="16"/>
+    </issue>
+
+    <issue
+        id="UseKtx"
+        message="Use the KTX extension function `String.toUri` instead?"
+        errorLine1="        data = Uri.parse(&quot;package:${context.packageName}&quot;)"
+        errorLine2="               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/ui/home/component/HomeBackgroundVpnTipCard.kt"
+            line="363"
+            column="16"/>
+    </issue>
+
+    <issue
+        id="UseKtx"
+        message="Use the KTX extension function `String.toUri` instead?"
+        errorLine1="                data = Uri.parse(&quot;package:${context.packageName}&quot;)"
+        errorLine2="                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/ui/home/component/HomeBackgroundVpnTipCard.kt"
+            line="373"
+            column="24"/>
+    </issue>
+
+    <issue
+        id="UseKtx"
+        message="Use the KTX extension function `String.toUri` instead?"
+        errorLine1="                data = Uri.parse(&quot;package:${context.packageName}&quot;)"
+        errorLine2="                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/ui/home/component/HomeBackgroundVpnTipCard.kt"
+            line="373"
+            column="24"/>
+    </issue>
+
+    <issue
+        id="UseKtx"
+        message="Use the KTX extension function `String.toUri` instead?"
+        errorLine1="                data = Uri.parse(&quot;package:${context.packageName}&quot;)"
+        errorLine2="                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/ui/home/component/HomeBackgroundVpnTipCard.kt"
+            line="390"
+            column="24"/>
+    </issue>
+
+    <issue
+        id="UseKtx"
+        message="Use the KTX extension function `String.toUri` instead?"
+        errorLine1="                data = Uri.parse(&quot;package:${context.packageName}&quot;)"
+        errorLine2="                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/ui/home/component/HomeBackgroundVpnTipCard.kt"
+            line="390"
+            column="24"/>
+    </issue>
+
+    <issue
+        id="UseKtx"
+        message="Use the KTX extension function `String.toUri` instead?"
+        errorLine1="        val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(&quot;https://www.example.com&quot;))"
+        errorLine2="                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/ui/httpsfiltering/HttpsFilteringViewModel.kt"
+            line="326"
+            column="56"/>
+    </issue>
+
+    <issue
+        id="UseKtx"
+        message="Use the KTX extension function `String.toColorInt` instead?"
+        errorLine1="                val primary = Color(android.graphics.Color.parseColor(hex))"
+        errorLine2="                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/ui/theme/Theme.kt"
+            line="107"
+            column="37"/>
+    </issue>
+
+    <issue
+        id="UseKtx"
+        message="Use the KTX extension function `String.toColorInt` instead?"
+        errorLine1="                android.graphics.Color.colorToHSV(android.graphics.Color.parseColor(hex), hsv)"
+        errorLine2="                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/pwhs/blockads/ui/theme/Theme.kt"
+            line="110"
+            column="51"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;0&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;0&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/widget_expanded.xml"
+            line="58"
+            column="17"/>
+    </issue>
+
+</issues>

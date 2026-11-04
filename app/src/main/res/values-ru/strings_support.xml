@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="support_bottom_sheet_title">Нужна помощь или хотите сообщить об ошибке?</string>
+    <string name="support_bottom_sheet_desc">Если у вас возникли проблемы или что-то работает не так, как ожидалось, сообщите нашей команде для получения помощи.</string>
+    <string name="support_error_filter_title">Не удалось добавить фильтр</string>
+    <string name="support_error_filter_desc">Не удалось загрузить или скомпилировать этот список фильтров. Ссылка может быть недоступна или содержит неподдерживаемый синтаксис.</string>
+    <string name="support_error_subscription_title">Ошибка обновления подписки</string>
+    <string name="support_channel_telegram_title">Сообщество в Telegram</string>
+    <string name="support_channel_telegram_desc">Присоединяйтесь к чату для поддержки в реальном времени от разработчиков и сообщества</string>
+    <string name="support_channel_github_title">Сообщить на GitHub</string>
+    <string name="support_channel_github_desc">Создайте issue с подробностями ошибки и диагностикой</string>
+    <string name="support_channel_email_title">Поддержка по эл. почте</string>
+    <string name="support_channel_email_desc">Отправьте подробности ошибки напрямую на support@pwhs.app</string>
+    <string name="support_copy_details">Скопировать диагностику</string>
+    <string name="support_copied">Диагностические данные скопированы в буфер обмена</string>
+    <string name="support_need_help">Нужна помощь?</string>
+    <string name="support_close">Закрыть</string>
+</resources>

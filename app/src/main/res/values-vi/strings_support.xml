@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="support_bottom_sheet_title">Cần hỗ trợ hoặc báo lỗi?</string>
+    <string name="support_bottom_sheet_desc">Nếu bạn gặp lỗi hoặc tính năng chưa hoạt động đúng kỳ vọng, hãy liên hệ với chúng tôi để được hỗ trợ nhanh nhất.</string>
+    <string name="support_error_filter_title">Không thể thêm bộ lọc</string>
+    <string name="support_error_filter_desc">Không thể tải xuống hoặc biên dịch danh sách bộ lọc này. URL có thể không truy cập được, bị chặn hoặc cú pháp chưa được hỗ trợ. Hãy gửi link để chúng tôi hỗ trợ bạn.</string>
+    <string name="support_error_subscription_title">Cập nhật Subscription thất bại</string>
+    <string name="support_channel_telegram_title">Nhóm hỗ trợ Telegram</string>
+    <string name="support_channel_telegram_desc">Nhận hỗ trợ trực tiếp và nhanh chóng từ dev &amp; cộng đồng</string>
+    <string name="support_channel_github_title">Báo lỗi trên GitHub</string>
+    <string name="support_channel_github_desc">Tạo issue chi tiết kèm thông tin lỗi cho lập trình viên</string>
+    <string name="support_channel_email_title">Gửi Email hỗ trợ</string>
+    <string name="support_channel_email_desc">Gửi thông tin lỗi trực tiếp đến support@pwhs.app</string>
+    <string name="support_copy_details">Sao chép thông tin lỗi</string>
+    <string name="support_copied">Đã sao chép thông tin lỗi vào bộ nhớ tạm</string>
+    <string name="support_need_help">Cần hỗ trợ?</string>
+    <string name="support_close">Đóng</string>
+</resources>

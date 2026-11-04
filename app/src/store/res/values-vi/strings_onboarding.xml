@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="onboarding_title_1">Đường hầm mạng Bảo mật &amp; Siêu tốc</string>
+    <string name="onboarding_desc_1">Kết nối DNS bảo mật và đường hầm proxy/WireGuard tốc độ cao chỉ với một chạm. Mã hóa lưu lượng và bảo vệ quyền riêng tư mạng của bạn.\n\n🔒 Cam kết riêng tư: Không thu thập, lưu trữ hay chia sẻ dữ liệu duyệt web của bạn. Mọi xử lý đều diễn ra ngay trên thiết bị.</string>
+    <string name="onboarding_vpn_title">Yêu cầu quyền VPN</string>
+    <string name="onboarding_vpn_desc">ZephyrNG sử dụng dịch vụ VPN của Android để thiết lập đường hầm DNS và proxy bảo mật. Dữ liệu của bạn được định tuyến an toàn theo cấu hình máy chủ bạn chỉ định.</string>
+    <string name="onboarding_notification_desc">Cho phép thông báo để theo dõi trạng thái kết nối và biết khi nào đường hầm đang hoạt động.</string>
+    <string name="onboarding_battery_title">Duy trì kết nối liên tục</string>
+    <string name="onboarding_battery_desc">Bỏ qua tối ưu hóa pin cho ZephyrNG để dịch vụ VPN luôn hoạt động ổn định ở chế độ nền.</string>
+    <string name="onboarding_complete_title">Thiết lập hoàn tất!</string>
+    <string name="onboarding_complete_desc">ZephyrNG đã sẵn sàng. Nhấn \&quot;Bắt đầu\&quot; để quản lý cấu hình DNS và máy chủ proxy của bạn.</string>
+    <string name="onboarding_complete_stats">Nhấn \&quot;Bắt đầu\&quot; để sử dụng</string>
+    <string name="onboarding_crash_report_title">Giúp cải thiện ZephyrNG</string>
+    <string name="onboarding_crash_report_desc">ZephyrNG hoàn toàn tôn trọng quyền riêng tư. Chúng tôi xin phép thu thập báo cáo lỗi ẩn danh để cải thiện ứng dụng.\n\nTùy chọn này hoàn toàn tự nguyện, không chứa thông tin cá nhân và có thể tắt bất cứ lúc nào trong Cài đặt.</string>
+    <string name="onboarding_crash_report_btn_yes">Đồng ý, giúp cải thiện ZephyrNG</string>
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="onboarding_title_1">Fast &amp; Private Network Tunnel</string>
+    <string name="onboarding_desc_1">Connect to custom secure DNS and high-speed WireGuard / Proxy tunnels with one tap. Encrypt your traffic and safeguard your network privacy.\n\n🔒 Privacy promise: We never collect, store, or transmit your network data. All processing happens on your device only.</string>
+    <string name="onboarding_vpn_title">VPN Permission Required</string>
+    <string name="onboarding_vpn_desc">ZephyrNG uses Android\'s VPN service to establish secure DNS and proxy tunnels. No data leaves your device unauthorized — all routing is managed by your configured servers.</string>
+    <string name="onboarding_notification_desc">Allow notifications to see real-time connection status and know when your tunnel is active. Required for the persistent VPN notification on Android 13+.</string>
+    <string name="onboarding_battery_title">Keep Tunnel Running</string>
+    <string name="onboarding_battery_desc">Exclude ZephyrNG from battery optimization so your secure tunnel stays connected in the background and doesn\'t get disconnected by the system.</string>
+    <string name="onboarding_complete_title">You\'re All Set!</string>
+    <string name="onboarding_complete_desc">ZephyrNG is ready. Tap \&quot;Get Started\&quot; to manage your DNS and proxy tunnels.</string>
+    <string name="onboarding_complete_stats">Tap \&quot;Get Started\&quot; to begin</string>
+    <string name="onboarding_crash_report_title">Help Improve ZephyrNG</string>
+    <string name="onboarding_crash_report_desc">ZephyrNG is completely privacy-first. We would like your permission to collect anonymous crash reports to help us fix bugs promptly.\n\nThis is strictly OPT-IN, contains NO personal identifiable information (PII), and can be disabled anytime in Settings.</string>
+    <string name="onboarding_crash_report_btn_yes">Yes, help improve ZephyrNG</string>
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="support_bottom_sheet_title">Butuh Bantuan atau Laporkan Masalah?</string>
+    <string name="support_bottom_sheet_desc">Jika Anda mengalami masalah atau ada yang tidak berfungsi sebagaimana mestinya, beri tahu tim kami agar kami dapat membantu.</string>
+    <string name="support_error_filter_title">Gagal Menambahkan Filter</string>
+    <string name="support_error_filter_desc">Tidak dapat mengunduh atau mengompilasi daftar filter ini. Tautan mungkin tidak dapat diakses atau berisi sintaks yang tidak didukung.</string>
+    <string name="support_error_subscription_title">Pembaruan Langganan Gagal</string>
+    <string name="support_channel_telegram_title">Komunitas Telegram</string>
+    <string name="support_channel_telegram_desc">Gabung obrolan untuk dukungan langsung dari pengembang &amp; komunitas</string>
+    <string name="support_channel_github_title">Laporkan di GitHub</string>
+    <string name="support_channel_github_desc">Buka issue dengan detail kesalahan dan diagnostik</string>
+    <string name="support_channel_email_title">Dukungan Email</string>
+    <string name="support_channel_email_desc">Kirim detail masalah langsung ke support@pwhs.app</string>
+    <string name="support_copy_details">Salin Diagnostik</string>
+    <string name="support_copied">Detail diagnostik disalin ke papan klip</string>
+    <string name="support_need_help">Butuh bantuan?</string>
+    <string name="support_close">Tutup</string>
+</resources>

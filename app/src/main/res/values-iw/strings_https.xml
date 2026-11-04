@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cert_status_installed">אישור ה-CA מותקן ומהימן. סינון HTTPS מתקדם מוכן.</string>
+    <string name="cert_status_checking">בודק אישור באחסון המאובטח של המכשיר…</string>
+    <string name="cert_status_not_installed">אישור BlockAds CA נדרש לפענוח וסינון מודעות בחיבורי HTTPS.</string>
+    <string name="cert_action_check_again">בדוק שוב</string>
+    <string name="cert_action_reinstall">התקן מחדש</string>
+    <string name="cert_action_install">התקן אישור</string>
+    <string name="device_step_open_settings">פתח את הגדרות המערכת</string>
+    <string name="device_step_samsung_security_privacy">בחר אבטחה ופרטיות</string>
+    <string name="device_step_samsung_more_security">גלול מטה ובחר הגדרות אבטחה נוספות</string>
+    <string name="device_step_samsung_install_from_storage">בחר התקן מאחסון המכשיר</string>
+    <string name="device_step_samsung_ca_cert_confirm">בחר אישור CA ואשר \'התקן בכל זאת\'</string>
+    <string name="device_step_select_downloaded_cert">בחר את קובץ BlockAds-RootCA.crt שהורדת</string>
+    <string name="device_step_samsung_biometrics">בחר ביומטריה ואבטחה</string>
+    <string name="device_step_samsung_other_security">בחר הגדרות אבטחה אחרות</string>
+    <string name="device_step_samsung_ca_cert_warn">בחר אישור CA ואשר את האזהרה</string>
+    <string name="device_step_samsung_other_sec_install_storage">הגדרות אבטחה אחרות &gt; התקן מאחסון</string>
+    <string name="device_step_select_ca_cert">בחר אישור CA</string>
+    <string name="device_step_google_security_privacy">בחר אבטחה ופרטיות</string>
+    <string name="device_step_google_more_security">בחר הגדרות אבטחה נוספות</string>
+    <string name="device_step_google_encryption_credentials">בחר הצפנה ואישורים</string>
+    <string name="device_step_google_install_ca_cert">בחר התקן אישור &gt; אישור CA</string>
+    <string name="device_step_google_confirm_and_select">הקש על \'התקן בכל זאת\' ובחר BlockAds-RootCA.crt</string>
+    <string name="device_step_google_security_encryption">אבטחה &gt; הצפנה ואישורים</string>
+    <string name="device_step_google_install_certificate">בחר התקן אישור</string>
+    <string name="device_step_google_ca_cert_confirm">בחר אישור CA ואשר</string>
+    <string name="device_step_xiaomi_open_settings">פתח הגדרות</string>
+    <string name="device_step_xiaomi_passwords_security">בחר סיסמאות ואבטחה</string>
+    <string name="device_step_xiaomi_privacy_encryption">פרטיות &gt; הצפנה ואישורים</string>
+    <string name="device_step_xiaomi_install_ca">התקן אישור &gt; אישור CA</string>
+    <string name="device_step_xiaomi_confirm_select">אשר את האזהרה ובחר BlockAds-RootCA.crt</string>
+    <string name="device_step_oppo_security_more">אבטחה &gt; הגדרות אבטחה נוספות</string>
+    <string name="device_step_oppo_credential_storage">בחר אחסון אישורים</string>
+    <string name="device_step_oppo_install_ca">התקן מאחסון &gt; אישור CA</string>
+    <string name="device_step_vivo_security_encryption">אבטחה &gt; הצפנה ואישורים</string>
+    <string name="device_step_vivo_install_ca">התקן אישור &gt; אישור CA</string>
+    <string name="device_step_generic_search_certificate">חפש \'אישור\' בשורת החיפוש של ההגדרות</string>
+    <string name="device_step_generic_choose_ca">בחר \'אישור CA\' או \'התקן מאחסון\'</string>
+    <string name="device_step_generic_confirm">אשר \'התקן בכל זאת\' אם תתבקש</string>
+    <string name="device_step_generic_select_downloads">בחר BlockAds-RootCA.crt מתיקיית ההורדות</string>
+</resources>

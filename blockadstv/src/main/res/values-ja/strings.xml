@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BlockAds TV</string>
+    <string name="nav_home">ホーム</string>
+    <string name="nav_filters">フィルター</string>
+    <string name="nav_rules">ルール</string>
+    <string name="nav_apps">アプリケーション</string>
+    <string name="nav_logs">ログ</string>
+    <string name="nav_dns">DNS</string>
+    <string name="nav_settings">設定</string>
+    <string name="home_protected">保護中</string>
+    <string name="home_unprotected">保護されていません</string>
+    <string name="home_protected_desc">デバイスは広告から保護されています</string>
+    <string name="home_unprotected_desc">ボタンをタップして広告ブロックを有効にしてください</string>
+    <string name="home_total_queries">総クエリ数</string>
+    <string name="home_blocked">ブロック済み</string>
+    <string name="home_threats">脅威</string>
+    <string name="home_block_rate">ブロック率</string>
+    <string name="home_uptime">稼働時間</string>
+    <string name="home_filter_rules">フィルタールール</string>
+    <string name="home_top_blocked_domains">TVで最もブロックされたドメイン</string>
+    <string name="home_no_blocked_domains">ブロックされたドメインはありません</string>
+    <string name="dns_setup_title">DNS 設定</string>
+    <string name="dns_protocol_standard">標準 DNS (UDP)</string>
+    <string name="dns_protocol_standard_desc">高速な標準リゾルバ</string>
+    <string name="dns_protocol_doh">DNS-over-HTTPS (DoH)</string>
+    <string name="dns_protocol_doh_desc">暗号化された安全な通信</string>
+    <string name="dns_resolvers_header">DNS リゾルバとカスタム設定</string>
+    <string name="dns_custom_server_title">カスタム DNS サーバー</string>
+    <string name="dns_custom_server_desc">DoH、DoH3、DoQ、DoT、ODoH または IP を設定</string>
+    <string name="dns_custom_server_hint">DNS Stamp (sdns://)、ホスト名、テンプレートに対応</string>
+    <string name="dns_custom_configure">設定</string>
+    <string name="dns_custom_dialog_title">カスタム DNS 設定</string>
+    <string name="dns_custom_dialog_desc">上流リゾルバとプロトコルを設定</string>
+    <string name="dns_custom_quick_templates">テンプレート</string>
+    <string name="dns_cancel">キャンセル</string>
+    <string name="dns_save_apply">保存</string>
+    <string name="settings_title">設定</string>
+    <string name="settings_desc">広告ブロックの設定を行います</string>
+    <string name="settings_start_on_boot">起動時に開始</string>
+    <string name="settings_start_on_boot_desc">TV起動時に自動的に保護を開始</string>
+    <string name="settings_theme_title">テーマ</string>
+    <string name="settings_theme_desc">TVのテーマを選択</string>
+    <string name="settings_theme_dark">ダーク</string>
+    <string name="settings_theme_oled">OLED / ピュアブラック</string>
+    <string name="settings_theme_light">ライト</string>
+    <string name="settings_theme_system">システム</string>
+    <string name="settings_language_title">言語</string>
+    <string name="settings_language_desc">表示言語を変更</string>
+    <string name="settings_language_system">システムに従う</string>
+    <string name="settings_language_en">English</string>
+    <string name="settings_language_vi">Tiếng Việt</string>
+    <string name="settings_lang_system">システム</string>
+    <string name="settings_lang_en" translatable="false">English</string>
+    <string name="settings_lang_vi" translatable="false">Tiếng Việt</string>
+    <string name="settings_lang_ja" translatable="false">日本語</string>
+    <string name="settings_lang_ko" translatable="false">한국어</string>
+    <string name="settings_lang_zh" translatable="false">中文</string>
+    <string name="settings_lang_th" translatable="false">ไทย</string>
+    <string name="settings_lang_es" translatable="false">Español</string>
+    <string name="settings_lang_ru" translatable="false">Русский</string>
+    <string name="settings_lang_it" translatable="false">Italiano</string>
+    <string name="settings_lang_ar" translatable="false">العربية</string>
+    <string name="settings_lang_tr" translatable="false">Türkçe</string>
+    <string name="settings_lang_pl" translatable="false">Polski</string>
+    <string name="settings_lang_in" translatable="false">Bahasa Indonesia</string>
+    <string name="settings_lang_pt_br" translatable="false">Português (Brasil)</string>
+    <string name="settings_lang_uk" translatable="false">Українська</string>
+    <string name="settings_lang_de" translatable="false">Deutsch</string>
+    <string name="settings_lang_cs" translatable="false">Čeština</string>
+    <string name="settings_lang_iw" translatable="false">עברית</string>
+    <string name="settings_lang_fr" translatable="false">Français</string>
+    <string name="settings_lang_kk" translatable="false">Қазақша</string>
+    <string name="settings_response_type_title">ブロック応答タイプ</string>
+    <string name="settings_update_filters">フィルターリストを更新</string>
+    <string name="settings_update_filters_desc">最新のフィルターを同期・ダウンロード</string>
+    <string name="settings_about">アプリについて</string>
+</resources>

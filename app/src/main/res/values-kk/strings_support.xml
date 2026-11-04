@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="support_bottom_sheet_title">Көмек керек пе немесе қате туралы хабарлайсыз ба?</string>
+    <string name="support_bottom_sheet_desc">Егер ақаулар туындаса немесе бірдеңе дұрыс істемесе, қолдау көрсетуіміз үшін бізге хабарлаңыз.</string>
+    <string name="support_error_filter_title">Сүзгіні қосу сәтсіз аяқталды</string>
+    <string name="support_error_filter_desc">Бұл сүзгі тізімін жүктеп алу немесе құрастыру мүмкін болмады. Сілтеме қолжетімсіз немесе қолдау көрсетілмейтін синтаксис бар болуы мүмкін.</string>
+    <string name="support_error_subscription_title">Жазылымды жаңарту сәтсіз аяқталды</string>
+    <string name="support_channel_telegram_title">Telegram қауымдастығы</string>
+    <string name="support_channel_telegram_desc">Әзірлеушілер мен қауымдастықтан нақты уақытта көмек алу үшін чатқа қосылыңыз</string>
+    <string name="support_channel_github_title">GitHub арқылы хабарлау</string>
+    <string name="support_channel_github_desc">Қате мәліметтері мен диагностикасы бар мәселе ашыңыз</string>
+    <string name="support_channel_email_title">Электрондық пошта арқылы қолдау</string>
+    <string name="support_channel_email_desc">Қате туралы мәліметтерді тікелей support@pwhs.app мекенжайына жіберіңіз</string>
+    <string name="support_copy_details">Диагностиканы көшіру</string>
+    <string name="support_copied">Диагностика мәліметтері алмасу буферіне көшірілді</string>
+    <string name="support_need_help">Көмек керек пе?</string>
+    <string name="support_close">Жабу</string>
+</resources>

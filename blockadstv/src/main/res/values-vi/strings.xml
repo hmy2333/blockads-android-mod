@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BlockAds TV</string>
+    <string name="nav_home">Trang chủ</string>
+    <string name="nav_filters">Bộ lọc</string>
+    <string name="nav_rules">Quy tắc</string>
+    <string name="nav_apps">Ứng dụng</string>
+    <string name="nav_logs">Nhật ký</string>
+    <string name="nav_dns">DNS</string>
+    <string name="nav_proxy">Proxy</string>
+    <string name="nav_settings">Cài đặt</string>
+
+    <!-- Home -->
+    <string name="home_protected">Đã bảo vệ</string>
+    <string name="home_unprotected">Chưa bảo vệ</string>
+    <string name="home_protected_desc">Bảo vệ đang hoạt động. Quảng cáo và theo dõi đã bị chặn.</string>
+    <string name="home_unprotected_desc">Bảo vệ đã tắt. Bật lên để chặn quảng cáo và mã theo dõi.</string>
+    <string name="home_total_queries">Tổng truy vấn</string>
+    <string name="home_blocked">Đã chặn</string>
+    <string name="home_threats">Mối đe dọa</string>
+    <string name="home_block_rate">Tỷ lệ chặn</string>
+    <string name="home_uptime">Thời gian chạy</string>
+    <string name="home_filter_rules">Quy tắc lọc</string>
+    <string name="home_top_blocked_domains">Tên miền bị chặn nhiều nhất trên TV</string>
+    <string name="home_no_blocked_domains">Chưa có tên miền nào bị chặn</string>
+
+    <!-- DNS -->
+    <string name="dns_setup_title">Cài đặt DNS</string>
+    <string name="dns_protocol_standard">DNS Tiêu chuẩn (UDP)</string>
+    <string name="dns_protocol_standard_desc">Nhanh chóng, phân giải tiêu chuẩn</string>
+    <string name="dns_protocol_doh">DNS-over-HTTPS (DoH)</string>
+    <string name="dns_protocol_doh_desc">Mã hóa bảo mật, chống can thiệp</string>
+    <string name="dns_resolvers_header">Máy chủ DNS &amp; Cấu hình tùy chỉnh</string>
+    <string name="dns_custom_server_title">Máy chủ DNS tùy chỉnh</string>
+    <string name="dns_custom_server_desc">Cấu hình DoH, DoH3, DoQ, DoT, ODoH hoặc IP tùy ý</string>
+    <string name="dns_custom_server_hint">Hỗ trợ DNS Stamp (sdns://), tên miền và mẫu có sẵn</string>
+    <string name="dns_custom_configure">Cấu hình</string>
+    <string name="dns_custom_dialog_title">Cấu hình DNS Tùy chỉnh</string>
+    <string name="dns_custom_dialog_desc">Tùy chỉnh máy chủ phân giải và giao thức DNS</string>
+    <string name="dns_custom_quick_templates">Mẫu gợi ý nhanh</string>
+    <string name="dns_cancel">Hủy</string>
+    <string name="dns_save_apply">Lưu &amp; Áp dụng</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Cài đặt</string>
+    <string name="settings_desc">Tùy chỉnh cấu hình chặn quảng cáo</string>
+    <string name="settings_start_on_boot">Khởi động cùng TV</string>
+    <string name="settings_start_on_boot_desc">Tự động kích hoạt bảo vệ khi TV bật lên</string>
+    <string name="settings_theme_title">Giao diện (Chủ đề)</string>
+    <string name="settings_theme_desc">Chọn chủ đề hiển thị cho TV</string>
+    <string name="settings_theme_dark">Tối (Mặc định)</string>
+    <string name="settings_theme_oled">OLED / Đen tuyền</string>
+    <string name="settings_theme_light">Sáng</string>
+    <string name="settings_theme_system">Theo hệ thống</string>
+    <string name="settings_language_title">Ngôn ngữ</string>
+    <string name="settings_language_desc">Thay đổi ngôn ngữ hiển thị</string>
+    <string name="settings_language_system">Theo hệ thống</string>
+    <string name="settings_language_en">English</string>
+    <string name="settings_language_vi">Tiếng Việt</string>
+    <string name="settings_lang_system">Hệ thống</string>
+    <string name="settings_lang_en">English</string>
+    <string name="settings_lang_vi">Tiếng Việt</string>
+    <string name="settings_lang_ja">日本語</string>
+    <string name="settings_lang_ko">한국어</string>
+    <string name="settings_lang_zh">中文</string>
+    <string name="settings_lang_th">ไทย</string>
+    <string name="settings_lang_es">Español</string>
+    <string name="settings_lang_ru">Русский</string>
+    <string name="settings_lang_it">Italiano</string>
+    <string name="settings_lang_ar">العربية</string>
+    <string name="settings_lang_tr">Türkçe</string>
+    <string name="settings_lang_pl">Polski</string>
+    <string name="settings_lang_in">Bahasa Indonesia</string>
+    <string name="settings_lang_pt_br">Português (Brasil)</string>
+    <string name="settings_lang_uk">Українська</string>
+    <string name="settings_lang_de">Deutsch</string>
+    <string name="settings_lang_cs">Čeština</string>
+    <string name="settings_lang_iw">עברית</string>
+    <string name="settings_lang_fr">Français</string>
+    <string name="settings_lang_kk">Қазақша</string>
+    <string name="settings_response_type_title">Kiểu phản hồi khi chặn</string>
+    <string name="settings_update_filters">Cập nhật danh sách bộ lọc</string>
+    <string name="settings_update_filters_desc">Đồng bộ và tải bộ lọc mới nhất</string>
+    <string name="settings_about">Giới thiệu</string>
+
+    <!-- VPN & Proxy -->
+    <string name="proxy_title">VPN &amp; Proxy</string>
+    <string name="proxy_desc">Cấu hình định tuyến proxy và chế độ root proxy</string>
+    <string name="proxy_mode_title">Chế độ bảo vệ</string>
+    <string name="proxy_mode_direct">VPN Tiêu chuẩn (Chỉ DNS)</string>
+    <string name="proxy_mode_direct_desc">Chặn quảng cáo qua VPN cục bộ, không định tuyến toàn bộ dữ liệu mạng</string>
+    <string name="proxy_mode_proxy_vpn">Proxy VPN</string>
+    <string name="proxy_mode_proxy_vpn_desc">Định tuyến dữ liệu TV qua máy chủ proxy được chọn và chặn quảng cáo</string>
+    <string name="proxy_mode_root">Root Proxy (iptables)</string>
+    <string name="proxy_mode_root_desc">Chuyển hướng cổng DNS 53 bằng iptables, không chiếm khe kết nối VPN của TV</string>
+    <string name="proxy_nodes_title">Danh sách máy chủ Proxy</string>
+    <string name="proxy_no_nodes">Chưa có máy chủ proxy nào. Thêm liên kết hoặc gói đăng ký để định tuyến qua proxy.</string>
+    <string name="proxy_add_node">Thêm liên kết</string>
+    <string name="proxy_add_subscription">Thêm gói đăng ký</string>
+    <string name="proxy_ping_all">Kiểm tra ping</string>
+    <string name="proxy_delete_node">Xóa</string>
+    <string name="proxy_select_node">Chọn</string>
+    <string name="proxy_active_badge">ĐANG DÙNG</string>
+    <string name="proxy_root_not_available">Quyền Root không khả dụng hoặc bị từ chối trên thiết bị này.</string>
+    <string name="proxy_dialog_add_title">Thêm máy chủ Proxy</string>
+    <string name="proxy_dialog_import_title">Nhập gói đăng ký</string>
+    <string name="proxy_dialog_link_hint">Dán URL cấu hình (vless://, vmess://, ss://, trojan://...)</string>
+    <string name="proxy_dialog_sub_hint">Dán URL gói đăng ký</string>
+    <string name="proxy_save">Lưu</string>
+    <string name="proxy_cancel">Hủy</string>
+    <string name="proxy_err_invalid_link">Liên kết proxy không hợp lệ hoặc giao thức không được hỗ trợ</string>
+    <string name="proxy_subscription_success">Đã nhập %1$d máy chủ proxy</string>
+    <string name="settings_mode_title">Chế độ bảo vệ</string>
+</resources>

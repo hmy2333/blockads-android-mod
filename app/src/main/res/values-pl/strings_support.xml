@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="support_bottom_sheet_title">Potrzebujesz pomocy lub chcesz zgłosić błąd?</string>
+    <string name="support_bottom_sheet_desc">Jeśli masz problemy lub coś nie działa zgodnie z oczekiwaniami, daj znać naszemu zespołowi, abyśmy mogli pomóc.</string>
+    <string name="support_error_filter_title">Nie udało się dodać filtra</string>
+    <string name="support_error_filter_desc">Nie można pobrać ani skompilować tej listy filtrów. Link może być niedostępny lub zawierać nieobsługiwaną składnię.</string>
+    <string name="support_error_subscription_title">Aktualizacja subskrypcji nie powiodła się</string>
+    <string name="support_channel_telegram_title">Społeczność Telegram</string>
+    <string name="support_channel_telegram_desc">Dołącz do czatu, aby uzyskać pomoc w czasie rzeczywistym od twórców i społeczności</string>
+    <string name="support_channel_github_title">Zgłoś na GitHubie</string>
+    <string name="support_channel_github_desc">Otwórz zgłoszenie ze szczegółami błędu i diagnostyką</string>
+    <string name="support_channel_email_title">Wsparcie e-mail</string>
+    <string name="support_channel_email_desc">Wyślij szczegóły błędu bezpośrednio na support@pwhs.app</string>
+    <string name="support_copy_details">Kopiuj diagnostykę</string>
+    <string name="support_copied">Szczegóły diagnostyczne skopiowane do schowka</string>
+    <string name="support_need_help">Potrzebujesz pomocy?</string>
+    <string name="support_close">Zamknij</string>
+</resources>

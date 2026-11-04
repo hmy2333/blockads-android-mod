@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="support_bottom_sheet_title">ต้องการความช่วยเหลือหรือรายงานข้อผิดพลาด?</string>
+    <string name="support_bottom_sheet_desc">หากคุณพบปัญหาหรือมีบางอย่างไม่ทำงานตามที่คาดไว้ โปรดแจ้งให้ทีมงานของเราทราบเพื่อให้เราช่วยเหลือคุณ</string>
+    <string name="support_error_filter_title">เพิ่มตัวกรองไม่สำเร็จ</string>
+    <string name="support_error_filter_desc">ไม่สามารถดาวน์โหลดหรือคอมไพล์รายการตัวกรองนี้ได้ ลิงก์อาจไม่สามารถเข้าถึงได้หรือมีไวยากรณ์ที่ไม่รองรับ</string>
+    <string name="support_error_subscription_title">อัปเดตการสมัครสมาชิกไม่สำเร็จ</string>
+    <string name="support_channel_telegram_title">ชุมชน Telegram</string>
+    <string name="support_channel_telegram_desc">เข้าร่วมแชทเพื่อรับการสนับสนุนแบบเรียลไทม์จากผู้พัฒนาและชุมชน</string>
+    <string name="support_channel_github_title">รายงานบน GitHub</string>
+    <string name="support_channel_github_desc">เปิด issue พร้อมรายละเอียดข้อผิดพลาดและการวินิจฉัย</string>
+    <string name="support_channel_email_title">ฝ่ายสนับสนุนทางอีเมล</string>
+    <string name="support_channel_email_desc">ส่งรายละเอียดข้อผิดพลาดโดยตรงไปที่ support@pwhs.app</string>
+    <string name="support_copy_details">คัดลอกการวินิจฉัย</string>
+    <string name="support_copied">คัดลอกรายละเอียดการวินิจฉัยไปยังคลิปบอร์ดแล้ว</string>
+    <string name="support_need_help">ต้องการความช่วยเหลือ?</string>
+    <string name="support_close">ปิด</string>
+</resources>

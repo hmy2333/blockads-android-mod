@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="whitelist_apps_empty">No apps installed</string>
+    <string name="whitelist_tab_user">User Apps</string>
+    <string name="whitelist_tab_system">System Apps</string>
+    <string name="about_title">About</string>
+    <string name="about_description">Free, open-source ad blocker.\nNo data collection. No tracking.</string>
+    <string name="about_github">Source Code (GitHub)</string>
+    <string name="about_website">Website</string>
+    <string name="about_privacy_policy">Privacy Policy</string>
+    <string name="about_contact">Contact Us</string>
+    <string name="about_licenses">Open Source Licenses</string>
+    <string name="about_no_data">🔒 This app does not collect any personal data</string>
+    <string name="settings_language">Language</string>
+    <string name="settings_title">Settings</string>
+    <string name="settings_category_protection">Protection</string>
+    <string name="settings_category_protection_desc">DNS server, protocol, auto-reconnect</string>
+    <string name="settings_category_advanced">Advanced &amp; Proxy</string>
+    <string name="settings_category_advanced_desc">HTTPS filtering, Proxy &amp; VPN, Root mode</string>
+    <string name="settings_category_interface">Interface</string>
+    <string name="settings_category_interface_desc">Theme, language</string>
+    <string name="settings_category_apps">Applications</string>
+    <string name="settings_category_apps_desc">App whitelist, per-app settings</string>
+    <string name="settings_category_filters">Filters</string>
+    <string name="settings_category_filters_desc">Filter management, auto-update, custom rules</string>
+    <string name="settings_category_data">Data</string>
+    <string name="settings_category_data_desc">Export/Import, clear logs</string>
+    <string name="settings_category_info">Information</string>
+    <string name="settings_category_info_desc">About, privacy policy, source code</string>
+    <string name="settings_theme">Theme</string>
+    <string name="settings_theme_system">System</string>
+    <string name="settings_theme_light">Light</string>
+    <string name="settings_show_bottom_nav_labels">Show Bottom Navigation Labels</string>
+    <string name="settings_show_bottom_nav_labels_desc">Display text under icons in the bottom navigation</string>
+    <string name="settings_navigation">Navigation</string>
+    <string name="settings_theme_dark">Dark</string>
+    <string name="settings_theme_oled" translatable="false">OLED</string>
+    <string name="settings_lang_system">System</string>
+    <string name="settings_lang_en" translatable="false">English</string>
+    <string name="settings_lang_vi" translatable="false">Tiếng Việt</string>
+    <string name="settings_lang_ja" translatable="false">日本語</string>
+    <string name="settings_lang_ko" translatable="false">한국어</string>
+    <string name="settings_lang_zh" translatable="false">中文</string>
+    <string name="settings_lang_th" translatable="false">ไทย</string>
+    <string name="settings_lang_es" translatable="false">Español</string>
+    <string name="settings_lang_ru" translatable="false">Русский</string>
+    <string name="settings_lang_it" translatable="false">Italiano</string>
+    <string name="settings_lang_ar" translatable="false">العربية</string>
+    <string name="settings_lang_tr" translatable="false">Türkçe</string>
+    <string name="settings_lang_pl" translatable="false">Polski</string>
+    <string name="settings_lang_in" translatable="false">Bahasa Indonesia</string>
+    <string name="settings_lang_pt_br" translatable="false">Português (Brasil)</string>
+    <string name="settings_lang_uk" translatable="false">Українська</string>
+    <string name="settings_lang_de" translatable="false">Deutsch</string>
+    <string name="settings_lang_cs" translatable="false">Čeština</string>
+    <string name="settings_lang_iw" translatable="false">עברית</string>
+    <string name="settings_lang_fr" translatable="false">Français</string>
+    <string name="settings_lang_kk" translatable="false">Қазақша</string>
+    <string name="settings_accent_color">Accent Color</string>
+    <string name="settings_accent_color_desc">Customize the app\'s primary color</string>
+    <string name="accent_dynamic">Dynamic (Material You)</string>
+    <string name="accent_dynamic_desc">Uses your wallpaper colors</string>
+    <string name="settings_add_custom_filter">Add Custom Filter List</string>
+    <string name="settings_updating">Updating…</string>
+    <string name="settings_update_all">Update All Filters</string>
+    <string name="trusted_networks_title">Trusted networks</string>
+    <string name="trusted_networks_settings_desc">Auto-pause BlockAds on chosen Wi-Fi networks</string>
+    <string name="trusted_networks_toggle">Pause on trusted networks</string>
+    <string name="trusted_networks_desc">BlockAds turns off on these Wi-Fi networks and back on when you leave.</string>
+    <string name="trusted_networks_use_system_dns_toggle">Use system DNS on trusted networks</string>
+    <string name="trusted_networks_use_system_dns_desc">Keep ad blocking active but use the Wi-Fi network\'s local DNS server to resolve internal domains.</string>
+    <string name="trusted_networks_add_current">Add current Wi-Fi network</string>
+    <string name="trusted_networks_no_wifi">Not connected to Wi-Fi (or location permission needed)</string>
+    <string name="trusted_networks_list_header">Trusted Wi-Fi networks</string>
+    <string name="trusted_networks_empty">No trusted networks yet. Add the one you\'re on to pause BlockAds there.</string>
+    <string name="trusted_networks_paused_title">Paused on trusted network</string>
+    <string name="trusted_networks_paused_text">BlockAds is paused on \&quot;%1$s\&quot; — it resumes automatically when you leave this network.</string>
+    <string name="trusted_networks_paused_text_generic">BlockAds is paused on a trusted Wi-Fi network — it resumes automatically when you leave.</string>
+    <string name="settings_whitelist_domains">Whitelisted Domains</string>
+    <string name="settings_export">Export</string>
+    <string name="settings_import">Import</string>
+    <string name="settings_about">About</string>
+    <string name="settings_about_desc">Version, privacy policy, source code</string>
+    <string name="settings_add_filter_title">Add Filter List</string>
+    <string name="settings_add_filter_name">Name</string>
+    <string name="settings_add_filter_url">URL (hosts format)</string>
+    <string name="settings_add">Add</string>
+    <string name="settings_cancel">Cancel</string>
+    <string name="settings_add_domain_hint">Domain (e.g. example.com)</string>
+    <string name="settings_auto_reconnect">Auto-reconnect</string>
+    <string name="settings_auto_reconnect_desc">Restart ad blocker on device boot</string>
+    <string name="settings_safe_search">SafeSearch</string>
+    <string name="settings_safe_search_desc">Force safe search on supported search engines (Google, Bing)</string>
+    <string name="settings_youtube_restricted">YouTube Restricted Mode</string>
+    <string name="settings_youtube_restricted_desc">Filter out mature videos on YouTube, block embedded mature videos on other sites, and hide all comments</string>
+    <string name="settings_fallback_dns">Fallback DNS Server</string>
+    <string name="settings_fallback_dns_placeholder" translatable="false">1.1.1.1</string>
+    <string name="settings_fallback_dns_desc">Fallback DNS is used when your primary DNS server fails. Enter the IP address of a backup DNS server.</string>
+    <string name="settings_fallback_dns_short_desc">Used as backup when primary DNS fails</string>
+    <string name="dns_error_duplicate">Fallback DNS cannot be the same as Custom DNS</string>
+    <string name="dns_category_fallback">Fallback</string>
+    <string name="settings_fallback_dns_not_set">Not set (no backup)</string>
+    <string name="settings_dns_response_type">DNS response type</string>
+    <string name="dns_response_nxdomain" translatable="false">NXDOMAIN</string>
+    <string name="dns_response_nxdomain_desc">Domain does not exist (standard)</string>
+    <string name="dns_response_refused" translatable="false">REFUSED</string>
+    <string name="dns_response_refused_desc">Query refused (better compatibility)</string>
+    <string name="dns_response_custom_ip">Custom IP (0.0.0.0)</string>
+    <string name="dns_response_custom_ip_desc">Return a null route address (default)</string>
+    <string name="settings_clear_logs">Clear All Logs</string>
+    <string name="clear_logs_confirm_message">Are you sure you want to clear all DNS logs? This action cannot be undone.</string>
+    <string name="settings_reset">Reset Settings</string>
+    <string name="settings_reset_confirm_message">Are you sure you want to reset all settings to default? Your customized preferences will be restored to their original defaults.</string>
+    <string name="settings_reset_success">Settings have been reset to default</string>
+    <string name="settings_auto_update_enabled">Enable auto-update</string>
+    <string name="settings_auto_update_enabled_desc">Automatically update filter lists in background</string>
+    <string name="settings_auto_update_frequency">Update frequency</string>
+    <string name="settings_auto_update_frequency_6h">Every 6 hours</string>
+    <string name="settings_auto_update_frequency_12h">Every 12 hours</string>
+    <string name="settings_auto_update_frequency_24h">Every 24 hours</string>
+    <string name="settings_auto_update_frequency_48h">Every 48 hours</string>
+    <string name="settings_auto_update_frequency_manual">Manual only</string>
+    <string name="settings_auto_update_wifi_only">Wi-Fi only</string>
+    <string name="settings_auto_update_wifi_only_desc">Only update when connected to Wi-Fi</string>
+    <string name="settings_auto_update_notification">Update notifications</string>
+    <string name="settings_auto_update_notification_normal">Normal</string>
+    <string name="settings_auto_update_notification_silent">Silent</string>
+    <string name="settings_auto_update_notification_none">None</string>
+    <string name="dns_provider_title">DNS Server</string>
+    <string name="dns_category_standard">Standard</string>
+    <string name="dns_category_privacy">Privacy-focused</string>
+    <string name="dns_category_family">Family-safe</string>
+    <string name="dns_custom_title">Custom DNS</string>
+    <string name="dns_custom_description">Enter your own DNS server addresses</string>
+    <string name="dns_custom_save">Save</string>
+    <string name="dns_custom_cancel">Cancel</string>
+    <string name="dns_doh_badge" translatable="false">DoH</string>
+    <string name="dns_leak_test_title">DNS Leak Test</string>
+    <string name="dns_leak_test_btn">Check DNS Leak</string>
+    <string name="dns_leak_test_desc">Verify that your DNS queries are securely encrypted and not leaking to your ISP</string>
+    <string name="dns_leak_status_secure">Secure (No Leak)</string>
+    <string name="dns_leak_status_leaked">DNS Leak Detected!</string>
+    <string name="dns_leak_status_ecs_leak">Subnet (ECS) Exposure</string>
+    <string name="dns_leak_testing_init">Initializing test session…</string>
+    <string name="dns_leak_testing_probing">Probing DNS resolvers…</string>
+    <string name="dns_leak_testing_analyzing">Analyzing security results…</string>
+    <string name="dns_leak_client_network">Your Network Identity</string>
+    <string name="dns_leak_retest">Run Test Again</string>
+    <string name="dns_security_title">DNS Security (DNSSEC)</string>
+    <string name="dns_security_authenticated">Protected (DNSSEC Validated)</string>
+    <string name="dns_security_not_authenticated">Unvalidated</string>
+    <string name="dns_security_desc">Validates cryptographic signatures to protect against DNS spoofing and cache poisoning.</string>
+    <string name="dns_leak_tab_overview">Overview</string>
+    <string name="dns_leak_tab_dnssec">DNSSEC</string>
+    <string name="dns_leak_tab_resolvers">Resolvers</string>
+    <string name="dns_leak_reserved_ips">Reserved IPs</string>
+    <string name="app_management_title">App Management</string>
+    <string name="app_management_subtitle">%d apps</string>
+    <string name="app_management_subtitle_filtered">%1$d of %2$d apps</string>
+    <string name="app_management_desc">Manage per-app VPN routing and view stats</string>
+    <string name="app_management_search">Search apps…</string>
+    <string name="app_management_refresh">Refresh</string>
+    <string name="app_management_sort">Sort</string>
+    <string name="app_management_sort_name">Sort by Name</string>
+    <string name="app_management_sort_queries">Sort by Queries</string>
+    <string name="app_management_sort_blocked">Sort by Blocked</string>
+    <string name="app_management_queries">Queries: %d</string>
+    <string name="app_management_blocked">Blocked: %d</string>
+    <string name="app_management_system">System</string>
+    <string name="app_management_vpn_toggle">VPN routing for %s</string>
+    <string name="app_management_filter_all">All</string>
+    <string name="app_management_filter_protected">Protected</string>
+    <string name="app_management_filter_whitelisted">Bypassed</string>
+    <string name="app_management_bypass_notice">Bypassed apps connect directly to the internet without filtering or VPN protection.</string>
+    <string name="daily_summary_channel_name">Daily Summary</string>
+    <string name="daily_summary_channel_description">End-of-day ad blocking summary</string>
+    <string name="daily_summary_title">Daily Protection Summary</string>
+    <string name="daily_summary_text">Today we blocked %1$d ads for you!</string>
+    <string name="milestone_channel_name">Milestones</string>
+    <string name="milestone_channel_description">Achievements when you reach ad blocking milestones</string>
+    <string name="milestone_title">🎉 Milestone Reached!</string>
+    <string name="milestone_text">You\'ve blocked %1$s ads! Keep it up!</string>
+    <string name="milestone_sheet_title">Protection Milestone Reached!</string>
+    <string name="milestone_sheet_subtitle">You have successfully blocked %1$s ads and trackers with BlockAds.</string>
+    <string name="milestone_sheet_data_saved">Estimated Data Saved</string>
+    <string name="milestone_sheet_time_saved">Estimated Time Saved</string>
+    <string name="milestone_sheet_action">Awesome!</string>
+    <string name="settings_category_notifications">Notifications</string>
+    <string name="settings_category_notifications_desc">Daily summary, milestones</string>
+    <string name="settings_daily_summary">Daily summary</string>
+    <string name="settings_daily_summary_desc">Show end-of-day blocking summary</string>
+    <string name="settings_milestone_notifications">Milestone notifications</string>
+    <string name="settings_milestone_notifications_desc">Notify when you reach blocking milestones</string>
+    <string name="settings_firewall">Firewall</string>
+    <string name="settings_sponsor">Sponsor Us</string>
+    <string name="settings_sponsor_desc">Support BlockAds development on GitHub</string>
+    <string name="settings_community">Community</string>
+    <string name="settings_reddit" translatable="false">Reddit</string>
+    <string name="settings_reddit_desc">Join our community on Reddit</string>
+    <string name="settings_telegram" translatable="false">Telegram</string>
+    <string name="settings_telegram_desc">Join our chat on Telegram</string>
+    <string name="settings_root_proxy">Root Proxy Mode</string>
+    <string name="settings_root_proxy_desc">Redirect DNS via iptables instead of VPN (requires Root)</string>
+    <string name="settings_privacy_diagnostics_title">Privacy &amp; Diagnostics</string>
+    <string name="settings_privacy_diagnostics_desc">Manage crash reporting and local logs</string>
+    <string name="settings_crash_reporting_title">Anonymous Crash Reporting</string>
+    <string name="settings_crash_reporting_subtitle">Automatically send error logs to help us fix issues. No personal data is included.</string>
+    <string name="settings_export_logs_title">Export Local Logs</string>
+    <string name="settings_export_logs_subtitle">Share offline debug logs directly via Email, Telegram, etc.</string>
+    <string name="settings_export_logs_chooser_title">Share Logs</string>
+    <string name="custom_color_title">Custom Color</string>
+    <string name="split_dns_title">Split DNS Zones</string>
+    <string name="split_dns_description">Comma-separated domain zones to resolve via WireGuard DNS instead of upstream (e.g., internal,local,lan)</string>
+    <string name="exclude_lan_title">Exclude LAN Traffic</string>
+    <string name="exclude_lan_description">Allow access to local network devices (printers, NAS, local servers) while WireGuard is active. Only applies to full-tunnel configs (AllowedIPs = 0.0.0.0/0).</string>
+    <string name="allow_app_bypass_title">Allow Apps to Bypass VPN</string>
+    <string name="allow_app_bypass_description">Let apps that pin a connection to one network (wireless Android Auto, casting, device setup) reach it directly. Everything else still goes through the tunnel.</string>
+    <string name="settings_hide_from_recents_title">Hide from Recent Apps</string>
+    <string name="settings_hide_from_recents_subtitle">Hide BlockAds from the recent apps screen</string>
+
+    <!-- DNS Leak Protection / DoH Bypass -->
+    <string name="dns_category_advanced_security">Advanced DNS Security</string>
+    <string name="dns_block_doh_bypass_title">Block DNS-over-HTTPS (DoH) Bypass</string>
+    <string name="dns_block_doh_bypass_desc">Prevent apps and browsers from bypassing local filtering using encrypted DoH/DoT</string>
+    <string name="dns_block_doh_bypass_notice">Note: If your browser (e.g. Chrome) shows a connection error (DNS_PROBE_FINISHED_BAD_SECURE_CONFIG), set \"Use secure DNS\" in your browser settings to \"Automatic\".</string>
+    <string name="dns_block_webrtc_leak_title">Block WebRTC IP Leak</string>
+    <string name="dns_block_webrtc_leak_desc">Prevent websites and browsers from discovering your real IP and local network addresses via WebRTC STUN</string>
+    <string name="dns_block_webrtc_leak_notice">Note: Blocking WebRTC STUN prevents IP leaks on leak-test and tracking sites, but may affect browser-based real-time video/voice calls (e.g. web Discord, Google Meet).</string>
+
+    <!-- DNS Screen Refactor & ODoH Preparation -->
+    <string name="dns_tab_builtin">Built-in</string>
+    <string name="dns_tab_custom">Custom</string>
+    <string name="dns_active_hero_title">Active DNS Server</string>
+    <string name="dns_protocol_label">Protocol</string>
+    <string name="dns_fallback_label">Fallback DNS</string>
+    <string name="dns_category_all">All</string>
+    <string name="dns_custom_configure_btn">Configure Custom DNS</string>
+    <string name="dns_custom_sheet_title">Custom DNS &amp; Protocols</string>
+    <string name="dns_custom_sheet_desc">Select a protocol and configure your custom upstream DNS server.</string>
+    <string name="dns_custom_target_url">Target URL</string>
+    <string name="dns_custom_relay_url">Relay URL (Optional)</string>
+    <string name="dns_custom_relay_hint">Oblivious HTTP proxy forwarding encrypted queries to the resolver</string>
+    <string name="dns_custom_server_ip">Server Address</string>
+    <string name="dns_custom_presets">Quick Presets</string>
+    <string name="dns_custom_active_badge">Using Custom DNS</string>
+
+    <!-- Profile Rule Creation -->
+    <string name="filter_rule_title">Filter Rule</string>
+    <string name="filter_rule_subtitle">The detail of the filter.</string>
+    <string name="rule_field_type">Type</string>
+    <string name="rule_field_param">Param</string>
+    <string name="rule_field_param_hint">The param for this type of filter.</string>
+    <string name="rule_field_policy">Policy</string>
+    <string name="rule_field_policy_hint">Choose the policy.</string>
+    <string name="config_rule_added">Rule added to profile: %s</string>
+    <string name="rule_param_hint_host_suffix">e.g. example.com (matches *.example.com)</string>
+    <string name="rule_param_hint_host">e.g. ads.example.com (exact host only)</string>
+    <string name="rule_param_hint_host_keyword">e.g. analytics, adservice, tracker</string>
+    <string name="rule_param_hint_ip_cidr">e.g. 192.168.1.0/24 or 10.0.0.1/32</string>
+    <string name="rule_param_hint_ip_cidr6">e.g. 2001:db8::/32</string>
+    <string name="rule_param_hint_geoip">e.g. VN, US, JP (2-letter country code)</string>
+    <string name="rule_param_hint_user_agent">e.g. *Spotify*, *MicroMessenger*</string>
+    <string name="rule_param_hint_final">No parameter needed (matches all remaining)</string>
+
+    <!-- Rule Types Documentation -->
+    <string name="rule_docs_title">Rule Types &amp; Syntax Guide</string>
+    <string name="rule_docs_subtitle">Understand how each rule type and policy evaluates traffic.</string>
+    <string name="rule_docs_action_tooltip">Rule Guide</string>
+    <string name="rule_docs_category_all">All</string>
+    <string name="rule_docs_category_domain">Domain</string>
+    <string name="rule_docs_category_ip">IP &amp; Geo</string>
+    <string name="rule_docs_category_other">Other</string>
+    <string name="rule_docs_category_policy">Policy</string>
+    <string name="rule_docs_example_label">Example:</string>
+    <string name="rule_docs_matches_label">Matches:</string>
+    <string name="rule_docs_not_matches_label">Doesn\'t match:</string>
+    <string name="rule_docs_usage_label">Best for:</string>
+
+    <!-- GeoIP Management -->
+    <string name="settings_geoip_title">GeoIP Database</string>
+    <string name="settings_geoip_subtitle">IP location lookup for destination analytics &amp; routing rules</string>
+    <string name="geoip_status_empty">Not downloaded</string>
+    <string name="geoip_status_downloading">Updating...</string>
+    <string name="geoip_records_count">%s IP ranges</string>
+    <string name="geoip_size_label">File size: %s</string>
+    <string name="geoip_last_updated">Last updated: %s</string>
+    <string name="geoip_never_updated">Never updated</string>
+    <string name="geoip_action_update">Update from Remote</string>
+    <string name="geoip_action_import">Import Local File (.bin / .bin.gz)</string>
+    <string name="geoip_action_import_desc">Select a custom .bin or .bin.gz database</string>
+    <string name="geoip_action_reset">Reset to Default</string>
+    <string name="geoip_action_reset_desc">Delete database and reset to bundled minimal map</string>
+    <string name="geoip_auto_update_title">Weekly Auto-Update</string>
+    <string name="geoip_auto_update_desc">Automatically check and update the database weekly in the background</string>
+    <string name="geoip_custom_url_title">Custom Source URL</string>
+    <string name="geoip_custom_url_desc">Leave empty to use the official release mirror</string>
+    <string name="geoip_custom_url_dialog_title">Edit Source URL</string>
+    <string name="geoip_custom_url_hint">https://example.com/geoip_ipv4.bin.gz</string>
+    <string name="geoip_source_credit">Source: sapics/ip-location-db (CC0 1.0 Universal)</string>
+    <string name="geoip_import_success">Imported %s IP ranges successfully</string>
+    <string name="geoip_import_invalid">Invalid GeoIP database file</string>
+    <string name="geoip_update_success">GeoIP database updated successfully</string>
+    <string name="routing_mode_sheet_title">Routing Mode</string>
+    <string name="routing_mode_sheet_desc">Choose how traffic is routed and filtered on your device.</string>
+    <string name="routing_mode_local_vpn_title">Local VPN</string>
+    <string name="routing_mode_local_vpn_desc" formatted="false">Filter ads directly on-device. No root required, 100% private.</string>
+    <string name="routing_mode_root_proxy_title">Root Proxy</string>
+    <string name="routing_mode_root_proxy_desc">Redirect DNS via iptables without creating a VPN connection.</string>
+    <string name="routing_mode_recommended">Recommended</string>
+    <string name="routing_mode_root_available">Root access available</string>
+    <string name="routing_mode_root_unavailable">Requires root access</string>
+    <string name="routing_mode_no_ss_profile">No Outline key configured</string>
+    <string name="outline_dialog_title">Outline VPN Key</string>
+    <string name="outline_dialog_desc">Paste an Outline access key (ss://...) to connect through an encrypted proxy.</string>
+    <string name="outline_dialog_hint" translatable="false">ss://...</string>
+    <string name="outline_dialog_save">Save &amp; Connect</string>
+    <string name="outline_dialog_paste">Paste from Clipboard</string>
+    <string name="outline_dialog_invalid_key">Invalid Outline / Shadowsocks key</string>
+
+    <!-- Proxy & VPN -->
+    <string name="proxy_vpn_title">Proxy &amp; VPN</string>
+    <string name="proxy_vpn_subtitle">Manage Proxy &amp; VPN servers</string>
+    <string name="routing_mode_proxy_vpn_title">Proxy &amp; VPN</string>
+    <string name="routing_mode_proxy_vpn_desc">Route traffic through a remote Proxy or VPN server.</string>
+    <string name="routing_mode_no_proxy_profile">No server selected</string>
+    <string name="routing_mode_configure_proxy">Configure</string>
+    <string name="shadowsocks_delete_confirm_title">Delete Profile</string>
+    <string name="shadowsocks_delete_confirm_desc">Are you sure you want to delete \"%1$s\"?</string>
+    <string name="proxy_node_empty_title">No proxy nodes added</string>
+    <string name="proxy_node_empty_desc">Add a proxy node link (VLESS, Trojan, Shadowsocks) to route traffic through an encrypted proxy.</string>
+    <string name="proxy_node_add_node">Add Proxy Node</string>
+    <string name="proxy_node_dialog_title">Add Proxy Node / Subscription</string>
+    <string name="proxy_node_dialog_desc">Paste a proxy link (VLESS, TUIC, MASQUE, Trojan, VMess, Shadowsocks, WireGuard, AmneziaWG) or a subscription URL</string>
+    <string name="proxy_node_dialog_hint">vless://, tuic://, masque://, trojan://, ss://, wireguard://, vpn:// or https://…</string>
+    <string name="proxy_node_dialog_invalid">Invalid link or subscription URL. Supported: vless, tuic, masque, trojan, vmess, ss, wireguard, amnezia or http(s):// subscription.</string>
+    <string name="proxy_ping_test_all">Check Ping</string>
+    <string name="proxy_ping_single">Check ping</string>
+    <string name="proxy_ping_timeout">Timeout</string>
+    <string name="proxy_ping_error">Error</string>
+    <string name="proxy_ping_ms">%1$d ms</string>
+    <string name="proxy_sort_default">Default order</string>
+    <string name="proxy_sort_latency">By latency (fastest)</string>
+    <string name="proxy_sort_name">By name</string>
+    <string name="proxy_search_hint">Search nodes or locations…</string>
+    <string name="proxy_filter_all">All</string>
+    <string name="proxy_filter_obfuscated">Stealth</string>
+    <string name="proxy_search_empty">No matching proxy nodes</string>
+    <string name="proxy_hero_status_on">ON</string>
+    <string name="proxy_hero_status_off">OFF</string>
+    <string name="proxy_hero_connected_desc">Encrypted &amp; Protected</string>
+    <string name="proxy_hero_no_server_selected">No server selected</string>
+
+    <!-- Preferred IP Type & VPN Settings -->
+    <string name="vpn_settings_title">VPN Settings</string>
+    <string name="vpn_settings_section_general">General</string>
+    <string name="vpn_settings_section_routing">Routing &amp; Network</string>
+    <string name="vpn_settings_section_security">Security &amp; Leaks</string>
+    <string name="preferred_ip_type_title">Preferred IP Type</string>
+    <string name="preferred_ip_type_desc">Select IP version preference for connection</string>
+    <string name="preferred_ip_type_auto">Auto</string>
+    <string name="preferred_ip_type_ipv4">IPv4</string>
+    <string name="preferred_ip_type_ipv6">IPv6</string>
+
+    <!-- Hero Card Network & IP labels -->
+    <string name="proxy_hero_network_wifi">Wi-Fi</string>
+    <string name="proxy_hero_network_cellular">Cellular</string>
+    <string name="proxy_hero_network_ethernet">Ethernet</string>
+    <string name="proxy_hero_network_disconnected">Offline</string>
+    <string name="proxy_refresh_ip">Refresh IP</string>
+    <string name="proxy_refreshing_ip">Refreshing…</string>
+
+    <!-- Proxy Custom & Edit Config -->
+    <string name="proxy_edit_title">Edit Proxy Config</string>
+    <string name="proxy_add_custom_title">Add Custom Config</string>
+    <string name="proxy_add_choice_title">Add Proxy</string>
+    <string name="proxy_add_choice_import">Import from Link / Clipboard</string>
+    <string name="proxy_add_choice_import_desc">Paste vless://, vmess://, ss://, trojan://, or subscription URL</string>
+    <string name="proxy_add_choice_custom">Manual Custom Configuration</string>
+    <string name="proxy_add_choice_custom_desc">Configure VLESS, VMess, Shadowsocks, Trojan, Hysteria 2, TUIC</string>
+    <string name="proxy_field_remark">Remarks / Profile Name</string>
+    <string name="proxy_field_protocol">Protocol</string>
+    <string name="proxy_field_server">Server Address</string>
+    <string name="proxy_field_port">Server Port</string>
+    <string name="proxy_field_uuid">User ID (UUID)</string>
+    <string name="proxy_field_password">Password</string>
+    <string name="proxy_field_method">Cipher / Encryption Method</string>
+    <string name="proxy_field_alter_id">AlterId</string>
+    <string name="proxy_field_security">Security</string>
+    <string name="proxy_field_flow">Flow</string>
+    <string name="proxy_field_network">Network / Transport</string>
+    <string name="proxy_field_ws_path">WebSocket Path</string>
+    <string name="proxy_field_ws_host">WebSocket Host</string>
+    <string name="proxy_field_sni">SNI (Server Name Indication)</string>
+    <string name="proxy_field_allow_insecure">Allow Insecure TLS</string>
+    <string name="proxy_field_public_key">Public Key (pbk)</string>
+    <string name="proxy_field_short_id">Short ID (sid)</string>
+    <string name="proxy_field_spider_x">SpiderX (spx)</string>
+    <string name="proxy_field_fingerprint">Fingerprint (uTLS)</string>
+    <string name="proxy_field_obfs">Obfuscation (obfs)</string>
+    <string name="proxy_field_obfs_password">Obfs Password</string>
+    <string name="proxy_field_congestion_control">Congestion Control</string>
+    <string name="proxy_field_udp_relay_mode">UDP Relay Mode</string>
+    <string name="proxy_field_generate_uuid">Generate UUID</string>
+    <string name="proxy_section_basic">Basic Information</string>
+    <string name="proxy_section_credentials">Credentials</string>
+    <string name="proxy_section_transport">Stream Settings (Transport)</string>
+    <string name="proxy_section_tls">TLS / Reality</string>
+    <string name="proxy_section_advanced">Custom Configuration (JSON)</string>
+    <string name="proxy_raw_json_toggle">Edit Raw Engine JSON</string>
+    <string name="proxy_copy_link">Copy Share Link</string>
+    <string name="proxy_link_copied">Link copied to clipboard</string>
+    <string name="proxy_save_success">Saved \'%1$s\'</string>
+    <string name="proxy_err_server_required">Server address is required</string>
+    <string name="proxy_err_port_invalid">Invalid port (must be 1–65535)</string>
+    <string name="proxy_err_uuid_required">UUID is required</string>
+    <string name="proxy_err_password_required">Password is required</string>
+    <string name="proxy_err_json_invalid">Invalid JSON format</string>
+
+    <!-- Bottom Navigation Customization -->
+    <string name="settings_bottom_nav_secondary_tab">Secondary Navigation Tab</string>
+    <string name="settings_bottom_nav_secondary_tab_desc">Choose whether to show Filter or VPN in the navigation bar</string>
+    <string name="settings_bottom_nav_tab_auto">Auto (Default)</string>
+    <string name="settings_bottom_nav_tab_filter">Filter Setup</string>
+    <string name="settings_bottom_nav_tab_vpn">VPN &amp; Proxy</string>
+
+    <!-- Rating & Review -->
+    <string name="rate_app_title">Enjoying BlockAds?</string>
+    <string name="rate_app_desc" tools:ignore="PluralsCandidate">BlockAds has blocked over %1$d ads for you. If you find the app helpful, please take a moment to rate us 5 stars on Google Play!</string>
+    <string name="rate_app_action_rate">Rate 5 Stars</string>
+    <string name="rate_app_action_feedback">Send Feedback</string>
+    <string name="rate_app_action_later">Maybe Later</string>
+    <string name="about_rate_app">Rate on Google Play</string>
+</resources>
+

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Certificate Status Card -->
+    <string name="cert_status_installed">Chứng chỉ CA đã được cài đặt và tin cậy. Lọc quảng cáo nâng cao HTTPS đã sẵn sàng.</string>
+    <string name="cert_status_checking">Đang kiểm tra chứng chỉ trong kho lưu trữ an toàn của thiết bị…</string>
+    <string name="cert_status_not_installed">Cần cài đặt chứng chỉ CA BlockAds để giải mã và loại bỏ quảng cáo trên các kết nối web HTTPS.</string>
+    <string name="cert_action_check_again">Kiểm tra lại</string>
+    <string name="cert_action_reinstall">Cài đặt lại</string>
+    <string name="cert_action_install">Cài đặt chứng chỉ</string>
+
+    <!-- Certificate Wizard ViewModel -->
+
+    <!-- Device Installation Steps (DeviceManager) -->
+    <string name="device_step_open_settings">Mở Cài đặt hệ thống (Settings)</string>
+    <string name="device_step_samsung_security_privacy">Chọn Bảo mật và quyền riêng tư (Security and privacy)</string>
+    <string name="device_step_samsung_more_security">Cuộn xuống chọn Cài đặt bảo mật khác (More security settings)</string>
+    <string name="device_step_samsung_install_from_storage">Chọn Cài đặt từ bộ nhớ thiết bị (Install from device storage)</string>
+    <string name="device_step_samsung_ca_cert_confirm">Chọn Chứng chỉ CA (CA certificate) và xác nhận \'Vẫn cài đặt\'</string>
+    <string name="device_step_select_downloaded_cert">Chọn file BlockAds-RootCA.crt vừa tải về</string>
+    <string name="device_step_samsung_biometrics">Chọn Sinh trắc học và bảo mật (Biometrics and security)</string>
+    <string name="device_step_samsung_other_security">Chọn Cài đặt bảo mật khác (Other security settings)</string>
+    <string name="device_step_samsung_ca_cert_warn">Chọn Chứng chỉ CA (CA certificate) và xác nhận cảnh báo</string>
+    <string name="device_step_samsung_other_sec_install_storage">Chọn Cài đặt bảo mật khác &gt; Cài đặt từ bộ nhớ</string>
+    <string name="device_step_select_ca_cert">Chọn Chứng chỉ CA (CA certificate)</string>
+    <string name="device_step_google_security_privacy">Chọn Bảo mật &amp; quyền riêng tư (Security &amp; privacy)</string>
+    <string name="device_step_google_more_security">Chọn Cài đặt bảo mật khác (More security settings)</string>
+    <string name="device_step_google_encryption_credentials">Chọn Mã hóa &amp; thông tin xác thực (Encryption &amp; credentials)</string>
+    <string name="device_step_google_install_ca_cert">Chọn Cài đặt chứng chỉ &gt; Chứng chỉ CA (Install a certificate &gt; CA certificate)</string>
+    <string name="device_step_google_confirm_and_select">Bấm \'Vẫn cài đặt\' và chọn file BlockAds-RootCA.crt</string>
+    <string name="device_step_google_security_encryption">Chọn Bảo mật (Security) &gt; Mã hóa &amp; thông tin xác thực (Encryption &amp; credentials)</string>
+    <string name="device_step_google_install_certificate">Chọn Cài đặt chứng chỉ (Install a certificate)</string>
+    <string name="device_step_google_ca_cert_confirm">Chọn Chứng chỉ CA (CA certificate) và xác nhận</string>
+    <string name="device_step_xiaomi_open_settings">Mở Cài đặt (Settings)</string>
+    <string name="device_step_xiaomi_passwords_security">Chọn Mật khẩu &amp; bảo mật (Passwords &amp; security)</string>
+    <string name="device_step_xiaomi_privacy_encryption">Chọn Quyền riêng tư (Privacy) &gt; Mã hóa &amp; thông tin xác thực</string>
+    <string name="device_step_xiaomi_install_ca">Chọn Cài đặt chứng chỉ &gt; Chứng chỉ CA (CA certificate)</string>
+    <string name="device_step_xiaomi_confirm_select">Xác nhận cảnh báo và chọn file BlockAds-RootCA.crt</string>
+    <string name="device_step_oppo_security_more">Chọn Bảo mật (Security) &gt; Cài đặt bảo mật khác</string>
+    <string name="device_step_oppo_credential_storage">Chọn Lưu trữ thông tin xác thực (Credential storage)</string>
+    <string name="device_step_oppo_install_ca">Chọn Cài đặt từ bộ nhớ thiết bị &gt; Chứng chỉ CA</string>
+    <string name="device_step_vivo_security_encryption">Chọn Bảo mật (Security) &gt; Mã hóa &amp; thông tin xác thực</string>
+    <string name="device_step_vivo_install_ca">Chọn Cài đặt chứng chỉ &gt; Chứng chỉ CA</string>
+    <string name="device_step_generic_search_certificate">Tìm kiếm \'Chứng chỉ\' hoặc \'Certificate\' trong thanh tìm kiếm</string>
+    <string name="device_step_generic_choose_ca">Chọn \'Chứng chỉ CA\' hoặc \'Cài đặt từ bộ nhớ\'</string>
+    <string name="device_step_generic_confirm">Bấm xác nhận \'Vẫn cài đặt\' nếu có cảnh báo</string>
+    <string name="device_step_generic_select_downloads">Chọn file BlockAds-RootCA.crt từ thư mục Downloads</string>
+</resources>

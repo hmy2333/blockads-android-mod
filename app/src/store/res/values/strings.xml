@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">ZephyrNG</string>
+    <string name="app_tagline">NextGen Proxy &amp; Secure Tunnel</string>
+    <string name="nav_proxy">Proxy</string>
+    <string name="home_protected_desc">Your secure DNS tunnel is active</string>
+    <string name="home_unprotected_desc">Tap the button to connect secure DNS</string>
+    <string name="home_block_rate">Filtered Queries</string>
+    <string name="home_filter_rules">Active Rules</string>
+    <string name="home_recent_blocked">Recent Queries</string>
+    <string name="home_top_blocked">Top Queries</string>
+    <string name="test_block_ads">Test DNS Resolution</string>
+    <string name="test_block_link" translatable="false">https://edge-dns.pwhs.app/</string>
+    <string name="vpn_notification_stopping">ZephyrNG is stopping</string>
+    <string name="vpn_paused_title">ZephyrNG paused</string>
+    <string name="vpn_paused_text">DNS tunnel paused for 1 hour. Will resume automatically.</string>
+    <string name="private_dns_warning_text">Android Private DNS bypasses ZephyrNG, so custom DNS routing may not apply. Set Private DNS to Off or Automatic in system settings.</string>
+    <string name="home_tip_feature_wireguard_desc">Connect to high-speed WireGuard and Proxy servers</string>
+    <string name="accessibility_toggle_vpn">Toggle VPN tunnel</string>
+    <string name="accessibility_vpn_active">VPN tunnel is active</string>
+    <string name="accessibility_vpn_inactive">VPN tunnel is inactive</string>
+</resources>

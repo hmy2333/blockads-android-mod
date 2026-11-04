@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_tagline">Đường hầm Proxy &amp; Bảo mật Thế hệ mới</string>
+    <string name="nav_proxy">Proxy</string>
+    <string name="home_protected_desc">Đường hầm DNS bảo mật đang hoạt động</string>
+    <string name="home_unprotected_desc">Nhấn nút để kết nối DNS bảo mật</string>
+    <string name="home_block_rate">Tỉ lệ lọc</string>
+    <string name="home_filter_rules">Quy tắc</string>
+    <string name="home_recent_blocked">Truy vấn gần đây</string>
+    <string name="home_top_blocked">Tên miền hàng đầu</string>
+    <string name="test_block_ads">Kiểm tra phân giải DNS</string>
+    <string name="vpn_notification_stopping">ZephyrNG đang dừng</string>
+    <string name="vpn_paused_title">ZephyrNG đã tạm dừng</string>
+    <string name="vpn_paused_text">Đường hầm DNS tạm dừng trong 1 giờ. Sẽ tự động tiếp tục.</string>
+    <string name="private_dns_warning_text">Private DNS của Android có thể bỏ qua ZephyrNG. Hãy tắt hoặc để Tự động trong Cài đặt hệ thống.</string>
+    <string name="home_tip_feature_wireguard_desc">Kết nối đến máy chủ WireGuard và Proxy tốc độ cao</string>
+    <string name="accessibility_toggle_vpn">Bật/tắt đường hầm VPN</string>
+    <string name="accessibility_vpn_active">Đường hầm VPN đang hoạt động</string>
+    <string name="accessibility_vpn_inactive">Đường hầm VPN không hoạt động</string>
+</resources>

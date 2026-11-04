@@ -1,0 +1,35 @@
+BlockAds Android — unofficial modified build (7.1.0-mod1)
+========================================================
+
+This repository is an unofficial fork of:
+    https://github.com/pass-with-high-score/blockads-android
+
+Upstream: v7.1.0, commit 514cbb4
+Upstream author: Nguyen Quang Minh (nqmgaming) and contributors
+License: GNU General Public License v3.0 (unchanged, see LICENSE)
+
+The modifications in this repository are distributed under the same
+GPL-3.0 terms. See CHANGES.md for the full list of changes.
+
+This fork is NOT affiliated with, endorsed by, or supported by the
+upstream author. Bug reports caused by these modifications belong here,
+not upstream.
+
+Third-party data
+----------------
+app/src/main/assets/preset/geoip_ipv4.bin
+    Taken from the upstream release asset "geoip-database".
+    Data source: https://github.com/sapics/ip-location-db
+    License: CC0 1.0 Universal (public domain dedication).
+
+Removed from this fork
+----------------------
+.github/workflows/*  — upstream CI/CD depends on the upstream release
+    namespace and repository-level secrets; running it here would only
+    fail or pollute this repository's releases.
+
+Not included on purpose
+-----------------------
+- Signing keys (*.jks / *.keystore) and key.properties
+- local.properties (machine-specific SDK paths)
+- Any subscription URLs, tokens or credentials

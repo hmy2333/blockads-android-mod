@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cert_status_installed">شهادة CA مثبتة وموثوقة. حظر إعلانات HTTPS المتقدم جاهز.</string>
+    <string name="cert_status_checking">جارٍ التحقق من الشهادة في التخزين الآمن…</string>
+    <string name="cert_status_not_installed">شهادة BlockAds CA مطلوبة لفك تشفير وتصفية إعلانات HTTPS.</string>
+    <string name="cert_action_check_again">تحقق مجدداً</string>
+    <string name="cert_action_reinstall">إعادة التثبيت</string>
+    <string name="cert_action_install">تثبيت الشهادة</string>
+    <string name="device_step_open_settings">افتح إعدادات النظام</string>
+    <string name="device_step_samsung_security_privacy">اختر الأمان والخصوصية</string>
+    <string name="device_step_samsung_more_security">مرر لأسفل واختر المزيد من ضبط الأمان</string>
+    <string name="device_step_samsung_install_from_storage">اختر التثبيت من وحدة تخزين الجهاز</string>
+    <string name="device_step_samsung_ca_cert_confirm">اختر شهادة CA وأكّد \'التثبيت على أي حال\'</string>
+    <string name="device_step_select_downloaded_cert">اختر ملف BlockAds-RootCA.crt الذي تم تنزيله</string>
+    <string name="device_step_samsung_biometrics">اختر المقاييس الحيوية والحماية</string>
+    <string name="device_step_samsung_other_security">اختر ضبط أمان آخر</string>
+    <string name="device_step_samsung_ca_cert_warn">اختر شهادة CA وأكّد التحذير</string>
+    <string name="device_step_samsung_other_sec_install_storage">ضبط أمان آخر &gt; التثبيت من التخزين</string>
+    <string name="device_step_select_ca_cert">اختر شهادة CA</string>
+    <string name="device_step_google_security_privacy">اختر الأمان والخصوصية</string>
+    <string name="device_step_google_more_security">اختر المزيد من إعدادات الأمان</string>
+    <string name="device_step_google_encryption_credentials">اختر التشفير وبيانات الاعتماد</string>
+    <string name="device_step_google_install_ca_cert">اختر تثبيت شهادة &gt; شهادة CA</string>
+    <string name="device_step_google_confirm_and_select">انقر على \'التثبيت على أي حال\' واختر BlockAds-RootCA.crt</string>
+    <string name="device_step_google_security_encryption">الأمان &gt; التشفير وبيانات الاعتماد</string>
+    <string name="device_step_google_install_certificate">اختر تثبيت شهادة</string>
+    <string name="device_step_google_ca_cert_confirm">اختر شهادة CA وأكّد</string>
+    <string name="device_step_xiaomi_open_settings">افتح الإعدادات</string>
+    <string name="device_step_xiaomi_passwords_security">اختر كلمات المرور والحماية</string>
+    <string name="device_step_xiaomi_privacy_encryption">الخصوصية &gt; التشفير وبيانات الاعتماد</string>
+    <string name="device_step_xiaomi_install_ca">تثبيت شهادة &gt; شهادة CA</string>
+    <string name="device_step_xiaomi_confirm_select">أكّد التحذير واختر BlockAds-RootCA.crt</string>
+    <string name="device_step_oppo_security_more">الأمان &gt; المزيد من إعدادات الأمان</string>
+    <string name="device_step_oppo_credential_storage">اختر تخزين بيانات الاعتماد</string>
+    <string name="device_step_oppo_install_ca">التثبيت من وحدة التخزين &gt; شهادة CA</string>
+    <string name="device_step_vivo_security_encryption">الأمان &gt; التشفير وبيانات الاعتماد</string>
+    <string name="device_step_vivo_install_ca">تثبيت شهادة &gt; شهادة CA</string>
+    <string name="device_step_generic_search_certificate">ابحث عن \'شهادة\' في شريط بحث الإعدادات</string>
+    <string name="device_step_generic_choose_ca">اختر \'شهادة CA\' أو \'تثبيت من التخزين\'</string>
+    <string name="device_step_generic_confirm">أكّد \'التثبيت على أي حال\' إذا ظهرت رسالة مطالبة</string>
+    <string name="device_step_generic_select_downloads">اختر BlockAds-RootCA.crt من مجلد التنزيلات</string>
+</resources>

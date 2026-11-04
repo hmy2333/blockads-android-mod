@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BlockAds TV</string>
+    <string name="nav_home">Inicio</string>
+    <string name="nav_filters">Filtros</string>
+    <string name="nav_rules">Reglas</string>
+    <string name="nav_apps">Aplicaciones</string>
+    <string name="nav_logs">Registros</string>
+    <string name="nav_dns">DNS</string>
+    <string name="nav_settings">Ajustes</string>
+    <string name="home_protected">Protegido</string>
+    <string name="home_unprotected">Sin protección</string>
+    <string name="home_protected_desc">Tu dispositivo está protegido contra anuncios</string>
+    <string name="home_unprotected_desc">Toca el botón para activar el bloqueo de anuncios</string>
+    <string name="home_total_queries">Consultas totales</string>
+    <string name="home_blocked">Bloqueadas</string>
+    <string name="home_threats">Amenazas</string>
+    <string name="home_block_rate">Tasa de bloqueo</string>
+    <string name="home_uptime">Tiempo activo</string>
+    <string name="home_filter_rules">Reglas de filtrado</string>
+    <string name="home_top_blocked_domains">Dominios más bloqueados en TV</string>
+    <string name="home_no_blocked_domains">Aún no hay dominios bloqueados</string>
+    <string name="dns_setup_title">Configuración DNS</string>
+    <string name="dns_protocol_standard">DNS Estándar (UDP)</string>
+    <string name="dns_protocol_standard_desc">Resolutor estándar rápido</string>
+    <string name="dns_protocol_doh">DNS-over-HTTPS (DoH)</string>
+    <string name="dns_protocol_doh_desc">Cifrado y seguro contra manipulaciones</string>
+    <string name="dns_resolvers_header">Servidores DNS y configuración personalizada</string>
+    <string name="dns_custom_server_title">Servidor DNS personalizado</string>
+    <string name="dns_custom_server_desc">Configura DoH, DoH3, DoQ, DoT, ODoH o IP personalizada</string>
+    <string name="dns_custom_server_hint">Admite DNS Stamp (sdns://), nombres de host y plantillas</string>
+    <string name="dns_custom_configure">Configurar</string>
+    <string name="dns_custom_dialog_title">Configuración de DNS personalizada</string>
+    <string name="dns_custom_dialog_desc">Configura el resolutor y protocolo upstream</string>
+    <string name="dns_custom_quick_templates">Plantillas rápidas</string>
+    <string name="dns_cancel">Cancelar</string>
+    <string name="dns_save_apply">Guardar</string>
+    <string name="settings_title">Ajustes</string>
+    <string name="settings_desc">Configura tus preferencias de bloqueo de anuncios</string>
+    <string name="settings_start_on_boot">Iniciar al encender</string>
+    <string name="settings_start_on_boot_desc">Inicia la protección automáticamente al encender la TV</string>
+    <string name="settings_theme_title">Tema</string>
+    <string name="settings_theme_desc">Selecciona el tema de apariencia para la TV</string>
+    <string name="settings_theme_dark">Oscuro</string>
+    <string name="settings_theme_oled">OLED / Negro puro</string>
+    <string name="settings_theme_light">Claro</string>
+    <string name="settings_theme_system">Sistema</string>
+    <string name="settings_language_title">Idioma</string>
+    <string name="settings_language_desc">Cambiar idioma de visualización</string>
+    <string name="settings_language_system">Seguir el sistema</string>
+    <string name="settings_language_en">English</string>
+    <string name="settings_language_vi">Tiếng Việt</string>
+    <string name="settings_lang_system">Sistema</string>
+    <string name="settings_lang_en" translatable="false">English</string>
+    <string name="settings_lang_vi" translatable="false">Tiếng Việt</string>
+    <string name="settings_lang_ja" translatable="false">日本語</string>
+    <string name="settings_lang_ko" translatable="false">한국어</string>
+    <string name="settings_lang_zh" translatable="false">中文</string>
+    <string name="settings_lang_th" translatable="false">ไทย</string>
+    <string name="settings_lang_es" translatable="false">Español</string>
+    <string name="settings_lang_ru" translatable="false">Русский</string>
+    <string name="settings_lang_it" translatable="false">Italiano</string>
+    <string name="settings_lang_ar" translatable="false">العربية</string>
+    <string name="settings_lang_tr" translatable="false">Türkçe</string>
+    <string name="settings_lang_pl" translatable="false">Polski</string>
+    <string name="settings_lang_in" translatable="false">Bahasa Indonesia</string>
+    <string name="settings_lang_pt_br" translatable="false">Português (Brasil)</string>
+    <string name="settings_lang_uk" translatable="false">Українська</string>
+    <string name="settings_lang_de" translatable="false">Deutsch</string>
+    <string name="settings_lang_cs" translatable="false">Čeština</string>
+    <string name="settings_lang_iw" translatable="false">עברית</string>
+    <string name="settings_lang_fr" translatable="false">Français</string>
+    <string name="settings_lang_kk" translatable="false">Қазақша</string>
+    <string name="settings_response_type_title">Tipo de respuesta de bloqueo</string>
+    <string name="settings_update_filters">Actualizar listas de filtros</string>
+    <string name="settings_update_filters_desc">Toca para sincronizar y descargar los filtros más recientes</string>
+    <string name="settings_about">Acerca de la aplicación</string>
+</resources>

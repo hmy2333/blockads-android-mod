@@ -1,0 +1,6 @@
+• Configuration profiles: advanced ruleset matching with .conf support
+• GeoIP database engine for geo-based rules & custom downloads
+• Official DNS provider icons & streamlined provider setup
+• Redesigned Home UI with ambient effects & battery stability tips
+• Two-way sync between DNS settings and active configuration profile
+• Enhanced DNS query logs, diagnostics export & general bug fixes

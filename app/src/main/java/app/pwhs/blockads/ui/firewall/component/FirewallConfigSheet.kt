@@ -1,0 +1,385 @@
+package app.pwhs.blockads.ui.firewall.component
+
+import android.content.Intent
+import android.net.Uri
+import android.provider.Settings
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.navigationBarsPadding
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Info
+import androidx.compose.material.icons.filled.Schedule
+import androidx.compose.material.icons.filled.SignalCellularAlt
+import androidx.compose.material.icons.filled.Wifi
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.ModalBottomSheet
+import androidx.compose.material3.OutlinedButton
+import androidx.compose.material3.Switch
+import androidx.compose.material3.SwitchDefaults
+import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
+import androidx.compose.material3.rememberModalBottomSheetState
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.dp
+import app.pwhs.blockads.R
+import app.pwhs.blockads.data.entities.FirewallRule
+import app.pwhs.blockads.ui.theme.TextSecondary
+import app.pwhs.blockads.ui.common.AppInfoData
+import com.google.accompanist.drawablepainter.rememberDrawablePainter
+import java.util.Locale
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun FirewallConfigSheet(
+    app: AppInfoData,
+    existingRule: FirewallRule?,
+    onSave: (FirewallRule) -> Unit,
+    onDelete: () -> Unit,
+    onDismiss: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    val context = LocalContext.current
+    val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+
+    var blockWifi by remember { mutableStateOf(existingRule?.blockWifi ?: true) }
+    var blockMobileData by remember { mutableStateOf(existingRule?.blockMobileData ?: true) }
+    var scheduleEnabled by remember { mutableStateOf(existingRule?.scheduleEnabled ?: false) }
+    var startHour by remember { mutableIntStateOf(existingRule?.scheduleStartHour ?: 22) }
+    var startMinute by remember { mutableIntStateOf(existingRule?.scheduleStartMinute ?: 0) }
+    var endHour by remember { mutableIntStateOf(existingRule?.scheduleEndHour ?: 6) }
+    var endMinute by remember { mutableIntStateOf(existingRule?.scheduleEndMinute ?: 0) }
+
+    ModalBottomSheet(
+        onDismissRequest = onDismiss,
+        sheetState = sheetState,
+        containerColor = MaterialTheme.colorScheme.background,
+        shape = RoundedCornerShape(topStart = 24.dp, topEnd = 24.dp),
+        modifier = modifier
+    ) {
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .navigationBarsPadding()
+                .verticalScroll(rememberScrollState())
+                .padding(horizontal = 20.dp, vertical = 8.dp)
+        ) {
+            // App Header
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Image(
+                    painter = rememberDrawablePainter(drawable = app.icon),
+                    contentDescription = app.label,
+                    modifier = Modifier
+                        .size(48.dp)
+                        .clip(CircleShape)
+                )
+                Spacer(modifier = Modifier.width(16.dp))
+                Column(modifier = Modifier.weight(1f)) {
+                    Text(
+                        text = app.label,
+                        style = MaterialTheme.typography.titleMedium,
+                        fontWeight = FontWeight.Bold,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis
+                    )
+                    Text(
+                        text = app.packageName,
+                        style = MaterialTheme.typography.bodySmall,
+                        color = TextSecondary,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis
+                    )
+                }
+            }
+
+            Spacer(modifier = Modifier.height(20.dp))
+
+            // Network Block Controls
+            Text(
+                text = stringResource(R.string.firewall_configure),
+                style = MaterialTheme.typography.labelLarge,
+                color = TextSecondary,
+                fontWeight = FontWeight.SemiBold
+            )
+
+            Spacer(modifier = Modifier.height(8.dp))
+
+            ConfigToggleRow(
+                icon = Icons.Default.Wifi,
+                title = stringResource(R.string.firewall_block_wifi),
+                checked = blockWifi,
+                onCheckedChange = { blockWifi = it }
+            )
+
+            Spacer(modifier = Modifier.height(8.dp))
+
+            ConfigToggleRow(
+                icon = Icons.Default.SignalCellularAlt,
+                title = stringResource(R.string.firewall_block_mobile),
+                checked = blockMobileData,
+                onCheckedChange = { blockMobileData = it }
+            )
+
+            Spacer(modifier = Modifier.height(16.dp))
+
+            // Schedule Section
+            Card(
+                colors = CardDefaults.cardColors(
+                    containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f)
+                ),
+                shape = RoundedCornerShape(16.dp),
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Column(modifier = Modifier.padding(16.dp)) {
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Icon(
+                            imageVector = Icons.Default.Schedule,
+                            contentDescription = null,
+                            tint = MaterialTheme.colorScheme.primary,
+                            modifier = Modifier.size(24.dp)
+                        )
+                        Spacer(modifier = Modifier.width(12.dp))
+                        Column(modifier = Modifier.weight(1f)) {
+                            Text(
+                                text = stringResource(R.string.firewall_schedule),
+                                style = MaterialTheme.typography.bodyLarge,
+                                fontWeight = FontWeight.Medium
+                            )
+                            Text(
+                                text = stringResource(R.string.firewall_schedule_desc),
+                                style = MaterialTheme.typography.bodySmall,
+                                color = TextSecondary
+                            )
+                        }
+                        Switch(
+                            checked = scheduleEnabled,
+                            onCheckedChange = { scheduleEnabled = it },
+                            colors = SwitchDefaults.colors(
+                                checkedThumbColor = Color.White,
+                                checkedTrackColor = MaterialTheme.colorScheme.primary
+                            )
+                        )
+                    }
+
+                    AnimatedVisibility(visible = scheduleEnabled) {
+                        Column {
+                            Spacer(modifier = Modifier.height(16.dp))
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                horizontalArrangement = Arrangement.SpaceEvenly
+                            ) {
+                                TimeAdjusterColumn(
+                                    label = stringResource(R.string.firewall_schedule_from),
+                                    hour = startHour,
+                                    minute = startMinute,
+                                    onHourInc = { startHour = (startHour + 1) % 24 },
+                                    onMinuteInc = { startMinute = (startMinute + 30) % 60 }
+                                )
+                                TimeAdjusterColumn(
+                                    label = stringResource(R.string.firewall_schedule_to),
+                                    hour = endHour,
+                                    minute = endMinute,
+                                    onHourInc = { endHour = (endHour + 1) % 24 },
+                                    onMinuteInc = { endMinute = (endMinute + 30) % 60 }
+                                )
+                            }
+                        }
+                    }
+                }
+            }
+
+            Spacer(modifier = Modifier.height(20.dp))
+
+            // Action Buttons
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(12.dp)
+            ) {
+                if (existingRule != null) {
+                    OutlinedButton(
+                        onClick = onDelete,
+                        modifier = Modifier.weight(1f),
+                        shape = RoundedCornerShape(12.dp),
+                        colors = ButtonDefaults.outlinedButtonColors(
+                            contentColor = MaterialTheme.colorScheme.error
+                        )
+                    ) {
+                        Text(stringResource(R.string.firewall_reset_rule))
+                    }
+                }
+
+                Button(
+                    onClick = {
+                        onSave(
+                            FirewallRule(
+                                id = existingRule?.id ?: 0,
+                                packageName = app.packageName,
+                                blockWifi = blockWifi,
+                                blockMobileData = blockMobileData,
+                                scheduleEnabled = scheduleEnabled,
+                                scheduleStartHour = startHour,
+                                scheduleStartMinute = startMinute,
+                                scheduleEndHour = endHour,
+                                scheduleEndMinute = endMinute,
+                                isEnabled = true
+                            )
+                        )
+                    },
+                    modifier = Modifier.weight(1f),
+                    shape = RoundedCornerShape(12.dp)
+                ) {
+                    Text(
+                        text = stringResource(android.R.string.ok),
+                        fontWeight = FontWeight.Bold
+                    )
+                }
+            }
+
+            // Quick shortcut to Android App Info
+            Spacer(modifier = Modifier.height(8.dp))
+            TextButton(
+                onClick = {
+                    val intent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS).apply {
+                        data = Uri.fromParts("package", app.packageName, null)
+                        flags = Intent.FLAG_ACTIVITY_NEW_TASK
+                    }
+                    context.startActivity(intent)
+                },
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Icon(
+                    imageVector = Icons.Default.Info,
+                    contentDescription = null,
+                    modifier = Modifier.size(16.dp)
+                )
+                Spacer(modifier = Modifier.width(6.dp))
+                Text(
+                    text = stringResource(R.string.firewall_app_info),
+                    style = MaterialTheme.typography.bodySmall
+                )
+            }
+        }
+    }
+}
+
+@Composable
+private fun ConfigToggleRow(
+    icon: ImageVector,
+    title: String,
+    checked: Boolean,
+    onCheckedChange: (Boolean) -> Unit
+) {
+    Card(
+        colors = CardDefaults.cardColors(
+            containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f)
+        ),
+        shape = RoundedCornerShape(16.dp),
+        modifier = Modifier.fillMaxWidth()
+    ) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 16.dp, vertical = 12.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Icon(
+                imageVector = icon,
+                contentDescription = null,
+                tint = if (checked) MaterialTheme.colorScheme.error else TextSecondary,
+                modifier = Modifier.size(24.dp)
+            )
+            Spacer(modifier = Modifier.width(12.dp))
+            Text(
+                text = title,
+                style = MaterialTheme.typography.bodyLarge,
+                fontWeight = FontWeight.Medium,
+                modifier = Modifier.weight(1f)
+            )
+            Switch(
+                checked = checked,
+                onCheckedChange = onCheckedChange,
+                colors = SwitchDefaults.colors(
+                    checkedThumbColor = Color.White,
+                    checkedTrackColor = MaterialTheme.colorScheme.error
+                )
+            )
+        }
+    }
+}
+
+@Composable
+private fun TimeAdjusterColumn(
+    label: String,
+    hour: Int,
+    minute: Int,
+    onHourInc: () -> Unit,
+    onMinuteInc: () -> Unit
+) {
+    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+        Text(
+            text = label,
+            style = MaterialTheme.typography.labelMedium,
+            color = TextSecondary
+        )
+        Spacer(modifier = Modifier.height(4.dp))
+        Text(
+            text = String.format(Locale.US, "%02d:%02d", hour, minute),
+            style = MaterialTheme.typography.headlineMedium,
+            fontWeight = FontWeight.Bold,
+            color = MaterialTheme.colorScheme.primary
+        )
+        Row {
+            TextButton(onClick = onHourInc) {
+                Text(
+                    text = stringResource(R.string.firewall_schedule_hour_plus),
+                    style = MaterialTheme.typography.labelSmall
+                )
+            }
+            TextButton(onClick = onMinuteInc) {
+                Text(
+                    text = stringResource(R.string.firewall_schedule_minute_plus),
+                    style = MaterialTheme.typography.labelSmall
+                )
+            }
+        }
+    }
+}

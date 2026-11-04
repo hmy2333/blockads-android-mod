@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cert_status_installed">ติดตั้งใบรับรอง CA และเชื่อถือแล้ว การบล็อกโฆษณา HTTPS ขั้นสูงพร้อมใช้งาน</string>
+    <string name="cert_status_checking">กำลังตรวจสอบใบรับรองในที่จัดเก็บข้อมูลที่ปลอดภัย…</string>
+    <string name="cert_status_not_installed">ต้องใช้ใบรับรอง BlockAds CA เพื่อถอดรหัสและกรองโฆษณาบนการเชื่อมต่อ HTTPS</string>
+    <string name="cert_action_check_again">ตรวจสอบอีกครั้ง</string>
+    <string name="cert_action_reinstall">ติดตั้งใหม่</string>
+    <string name="cert_action_install">ติดตั้งใบรับรอง</string>
+    <string name="device_step_open_settings">เปิดการตั้งค่าระบบ</string>
+    <string name="device_step_samsung_security_privacy">เลือก ความปลอดภัยและความเป็นส่วนตัว</string>
+    <string name="device_step_samsung_more_security">เลื่อนลงและเลือก การตั้งค่าความปลอดภัยอื่นๆ</string>
+    <string name="device_step_samsung_install_from_storage">เลือก ติดตั้งจากที่จัดเก็บในเครื่อง</string>
+    <string name="device_step_samsung_ca_cert_confirm">เลือก ใบรับรอง CA และยืนยัน \'ติดตั้งต่อไป\'</string>
+    <string name="device_step_select_downloaded_cert">เลือกไฟล์ BlockAds-RootCA.crt ที่ดาวน์โหลดไว้</string>
+    <string name="device_step_samsung_biometrics">เลือก ไบโอเมตริกและความปลอดภัย</string>
+    <string name="device_step_samsung_other_security">เลือก การตั้งค่าความปลอดภัยอื่นๆ</string>
+    <string name="device_step_samsung_ca_cert_warn">เลือก ใบรับรอง CA และยืนยันคำเตือน</string>
+    <string name="device_step_samsung_other_sec_install_storage">การตั้งค่าความปลอดภัยอื่นๆ &gt; ติดตั้งจากที่จัดเก็บ</string>
+    <string name="device_step_select_ca_cert">เลือก ใบรับรอง CA</string>
+    <string name="device_step_google_security_privacy">เลือก ความปลอดภัยและความเป็นส่วนตัว</string>
+    <string name="device_step_google_more_security">เลือก การตั้งค่าความปลอดภัยเพิ่มเติม</string>
+    <string name="device_step_google_encryption_credentials">เลือก การเข้ารหัสและข้อมูลประจำตัว</string>
+    <string name="device_step_google_install_ca_cert">เลือก ติดตั้งใบรับรอง &gt; ใบรับรอง CA</string>
+    <string name="device_step_google_confirm_and_select">แตะ \'ติดตั้งต่อไป\' และเลือก BlockAds-RootCA.crt</string>
+    <string name="device_step_google_security_encryption">ความปลอดภัย &gt; การเข้ารหัสและข้อมูลประจำตัว</string>
+    <string name="device_step_google_install_certificate">เลือก ติดตั้งใบรับรอง</string>
+    <string name="device_step_google_ca_cert_confirm">เลือก ใบรับรอง CA และยืนยัน</string>
+    <string name="device_step_xiaomi_open_settings">เปิด การตั้งค่า</string>
+    <string name="device_step_xiaomi_passwords_security">เลือก รหัสผ่านและความปลอดภัย</string>
+    <string name="device_step_xiaomi_privacy_encryption">ความเป็นส่วนตัว &gt; การเข้ารหัสและข้อมูลประจำตัว</string>
+    <string name="device_step_xiaomi_install_ca">ติดตั้งใบรับรอง &gt; ใบรับรอง CA</string>
+    <string name="device_step_xiaomi_confirm_select">ยืนยันคำเตือนและเลือก BlockAds-RootCA.crt</string>
+    <string name="device_step_oppo_security_more">ความปลอดภัย &gt; การตั้งค่าความปลอดภัยเพิ่มเติม</string>
+    <string name="device_step_oppo_credential_storage">เลือก ที่จัดเก็บข้อมูลประจำตัว</string>
+    <string name="device_step_oppo_install_ca">ติดตั้งจากที่จัดเก็บ &gt; ใบรับรอง CA</string>
+    <string name="device_step_vivo_security_encryption">ความปลอดภัย &gt; การเข้ารหัสและข้อมูลประจำตัว</string>
+    <string name="device_step_vivo_install_ca">ติดตั้งใบรับรอง &gt; ใบรับรอง CA</string>
+    <string name="device_step_generic_search_certificate">ค้นหาคำว่า \'ใบรับรอง\' ในการตั้งค่า</string>
+    <string name="device_step_generic_choose_ca">เลือก \'ใบรับรอง CA\' หรือ \'ติดตั้งจากที่จัดเก็บ\'</string>
+    <string name="device_step_generic_confirm">ยืนยัน \'ติดตั้งต่อไป\' หากมีข้อความแจ้งเตือน</string>
+    <string name="device_step_generic_select_downloads">เลือก BlockAds-RootCA.crt จากโฟลเดอร์ดาวน์โหลด</string>
+</resources>

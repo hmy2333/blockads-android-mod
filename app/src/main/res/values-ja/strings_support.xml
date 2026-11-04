@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="support_bottom_sheet_title">お困りですか？バグを報告しますか？</string>
+    <string name="support_bottom_sheet_desc">問題が発生した場合や期待通りに動作しない場合は、開発チームにお知らせください。サポートいたします。</string>
+    <string name="support_error_filter_title">フィルターの追加に失敗しました</string>
+    <string name="support_error_filter_desc">このフィルターリストをダウンロードまたはコンパイルできませんでした。リンクが無効か、未対応の構文が含まれている可能性があります。</string>
+    <string name="support_error_subscription_title">サブスクリプションの更新に失敗しました</string>
+    <string name="support_channel_telegram_title">Telegram コミュニティ</string>
+    <string name="support_channel_telegram_desc">チャットに参加して、開発者やコミュニティからリアルタイムでサポートを受ける</string>
+    <string name="support_channel_github_title">GitHub で報告</string>
+    <string name="support_channel_github_desc">エラーの詳細や診断情報を添付して Issue を作成</string>
+    <string name="support_channel_email_title">メールでのお問い合わせ</string>
+    <string name="support_channel_email_desc">エラーの詳細を直接 support@pwhs.app に送信</string>
+    <string name="support_copy_details">診断情報をコピー</string>
+    <string name="support_copied">診断情報をクリップボードにコピーしました</string>
+    <string name="support_need_help">お困りですか？</string>
+    <string name="support_close">閉じる</string>
+</resources>

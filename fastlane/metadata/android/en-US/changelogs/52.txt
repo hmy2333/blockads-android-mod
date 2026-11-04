@@ -1,0 +1,6 @@
+- Added in-app browser with ad-blocking and element picker
+- Added background media playback and floating video (PiP) support
+- Streamlined browser navigation and quick controls
+- Redesigned 5-step HTTPS CA certificate installation wizard
+- Improved root detection and Magisk/KernelSU installer support
+- Enhanced zero-copy blocklist filtering and connection stability

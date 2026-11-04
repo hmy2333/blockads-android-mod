@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="support_bottom_sheet_title">Potřebujete pomoc nebo nahlásit chybu?</string>
+    <string name="support_bottom_sheet_desc">Pokud narazíte na problémy nebo něco nefunguje podle očekávání, dejte našemu týmu vědět, abychom vám pomohli.</string>
+    <string name="support_error_filter_title">Nepodařilo se přidat filtr</string>
+    <string name="support_error_filter_desc">Tento seznam filtrů se nepodařilo stáhnout nebo zkompilovat. Odkaz může být nedostupný nebo obsahuje nepodporovanou syntaxi.</string>
+    <string name="support_error_subscription_title">Aktualizace odběru se nezdařila</string>
+    <string name="support_channel_telegram_title">Komunita na Telegramu</string>
+    <string name="support_channel_telegram_desc">Připojte se k chatu pro rychlou podporu od vývojáře a komunity</string>
+    <string name="support_channel_github_title">Nahlásit na GitHubu</string>
+    <string name="support_channel_github_desc">Otevřete hlášení s podrobnostmi o chybě a diagnostikou</string>
+    <string name="support_channel_email_title">E-mailová podpora</string>
+    <string name="support_channel_email_desc">Pošlete podrobnosti o chybě přímo na support@pwhs.app</string>
+    <string name="support_copy_details">Kopírovat diagnostiku</string>
+    <string name="support_copied">Diagnostické podrobnosti byly zkopírovány do schránky</string>
+    <string name="support_need_help">Potřebujete pomoc?</string>
+    <string name="support_close">Zavřít</string>
+</resources>

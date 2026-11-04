@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cert_status_installed">Сертификат CA установлен и доверен. Расширенная фильтрация HTTPS готова.</string>
+    <string name="cert_status_checking">Проверка сертификата в защищенном хранилище…</string>
+    <string name="cert_status_not_installed">Сертификат BlockAds CA необходим для фильтрации рекламы в HTTPS-соединениях.</string>
+    <string name="cert_action_check_again">Проверить снова</string>
+    <string name="cert_action_reinstall">Переустановить</string>
+    <string name="cert_action_install">Установить сертификат</string>
+    <string name="device_step_open_settings">Откройте системные настройки</string>
+    <string name="device_step_samsung_security_privacy">Выберите «Безопасность и конфиденциальность»</string>
+    <string name="device_step_samsung_more_security">Прокрутите вниз и выберите «Другие параметры безопасности»</string>
+    <string name="device_step_samsung_install_from_storage">Выберите «Установка из памяти устройства»</string>
+    <string name="device_step_samsung_ca_cert_confirm">Выберите «Сертификат CA» и подтвердите установку</string>
+    <string name="device_step_select_downloaded_cert">Выберите скачанный файл BlockAds-RootCA.crt</string>
+    <string name="device_step_samsung_biometrics">Выберите «Биометрия и безопасность»</string>
+    <string name="device_step_samsung_other_security">Выберите «Другие параметры безопасности»</string>
+    <string name="device_step_samsung_ca_cert_warn">Выберите «Сертификат CA» и подтвердите предупреждение</string>
+    <string name="device_step_samsung_other_sec_install_storage">Другие параметры безопасности &gt; Установка из памяти</string>
+    <string name="device_step_select_ca_cert">Выберите «Сертификат CA»</string>
+    <string name="device_step_google_security_privacy">Выберите «Безопасность и конфиденциальность»</string>
+    <string name="device_step_google_more_security">Выберите «Дополнительные настройки безопасности»</string>
+    <string name="device_step_google_encryption_credentials">Выберите «Шифрование и учетные данные»</string>
+    <string name="device_step_google_install_ca_cert">Выберите «Установка сертификата» &gt; «Сертификат CA»</string>
+    <string name="device_step_google_confirm_and_select">Нажмите «Все равно установить» и выберите BlockAds-RootCA.crt</string>
+    <string name="device_step_google_security_encryption">Безопасность &gt; Шифрование и учетные данные</string>
+    <string name="device_step_google_install_certificate">Выберите «Установка сертификата»</string>
+    <string name="device_step_google_ca_cert_confirm">Выберите «Сертификат CA» и подтвердите</string>
+    <string name="device_step_xiaomi_open_settings">Откройте «Настройки»</string>
+    <string name="device_step_xiaomi_passwords_security">Выберите «Пароли и безопасность»</string>
+    <string name="device_step_xiaomi_privacy_encryption">Конфиденциальность &gt; Шифрование и учетные данные</string>
+    <string name="device_step_xiaomi_install_ca">Установка сертификата &gt; Сертификат CA</string>
+    <string name="device_step_xiaomi_confirm_select">Подтвердите предупреждение и выберите BlockAds-RootCA.crt</string>
+    <string name="device_step_oppo_security_more">Безопасность &gt; Другие настройки безопасности</string>
+    <string name="device_step_oppo_credential_storage">Выберите «Хранилище учетных данных»</string>
+    <string name="device_step_oppo_install_ca">Установить из памяти &gt; Сертификат CA</string>
+    <string name="device_step_vivo_security_encryption">Безопасность &gt; Шифрование и учетные данные</string>
+    <string name="device_step_vivo_install_ca">Установка сертификата &gt; Сертификат CA</string>
+    <string name="device_step_generic_search_certificate">Найдите «Сертификат» в поиске настроек</string>
+    <string name="device_step_generic_choose_ca">Выберите «Сертификат CA» или «Установка из памяти»</string>
+    <string name="device_step_generic_confirm">Подтвердите установку, если появится предупреждение</string>
+    <string name="device_step_generic_select_downloads">Выберите BlockAds-RootCA.crt в папке «Загрузки»</string>
+</resources>

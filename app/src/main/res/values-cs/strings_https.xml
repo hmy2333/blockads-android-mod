@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cert_status_installed">Certifikát CA je nainstalován a důvěryhodný. Pokročilé blokování HTTPS je připraveno.</string>
+    <string name="cert_status_checking">Kontrola certifikátu v zabezpečeném úložišti…</string>
+    <string name="cert_status_not_installed">Certifikát BlockAds CA je vyžadován pro filtrování reklam v HTTPS spojeních.</string>
+    <string name="cert_action_check_again">Zkontrolovat znovu</string>
+    <string name="cert_action_reinstall">Přeinstalovat</string>
+    <string name="cert_action_install">Nainstalovat certifikát</string>
+    <string name="device_step_open_settings">Otevřete Nastavení systému</string>
+    <string name="device_step_samsung_security_privacy">Vyberte Zabezpečení a soukromí</string>
+    <string name="device_step_samsung_more_security">Přejděte dolů a vyberte Další nastavení zabezpečení</string>
+    <string name="device_step_samsung_install_from_storage">Vyberte Instalovat z úložiště zařízení</string>
+    <string name="device_step_samsung_ca_cert_confirm">Vyberte Certifikát CA a potvrďte \'Přesto instalovat\'</string>
+    <string name="device_step_select_downloaded_cert">Vyberte stažený soubor BlockAds-RootCA.crt</string>
+    <string name="device_step_samsung_biometrics">Vyberte Biometrika a zabezpečení</string>
+    <string name="device_step_samsung_other_security">Vyberte Další nastavení zabezpečení</string>
+    <string name="device_step_samsung_ca_cert_warn">Vyberte Certifikát CA a potvrďte varování</string>
+    <string name="device_step_samsung_other_sec_install_storage">Další nastavení zabezpečení &gt; Instalovat z úložiště</string>
+    <string name="device_step_select_ca_cert">Vyberte Certifikát CA</string>
+    <string name="device_step_google_security_privacy">Vyberte Zabezpečení a soukromí</string>
+    <string name="device_step_google_more_security">Vyberte Další nastavení zabezpečení</string>
+    <string name="device_step_google_encryption_credentials">Vyberte Šifrování a přihlašovací údaje</string>
+    <string name="device_step_google_install_ca_cert">Vyberte Instalovat certifikát &gt; Certifikát CA</string>
+    <string name="device_step_google_confirm_and_select">Klepněte na \'Přesto instalovat\' a vyberte BlockAds-RootCA.crt</string>
+    <string name="device_step_google_security_encryption">Zabezpečení &gt; Šifrování a přihlašovací údaje</string>
+    <string name="device_step_google_install_certificate">Vyberte Instalovat certifikát</string>
+    <string name="device_step_google_ca_cert_confirm">Vyberte Certifikát CA a potvrďte</string>
+    <string name="device_step_xiaomi_open_settings">Otevřete Nastavení</string>
+    <string name="device_step_xiaomi_passwords_security">Vyberte Hesla a zabezpečení</string>
+    <string name="device_step_xiaomi_privacy_encryption">Soukromí &gt; Šifrování a přihlašovací údaje</string>
+    <string name="device_step_xiaomi_install_ca">Instalovat certifikát &gt; Certifikát CA</string>
+    <string name="device_step_xiaomi_confirm_select">Potvrďte varování a vyberte BlockAds-RootCA.crt</string>
+    <string name="device_step_oppo_security_more">Zabezpečení &gt; Další nastavení zabezpečení</string>
+    <string name="device_step_oppo_credential_storage">Vyberte Úložiště přihlašovacích údajů</string>
+    <string name="device_step_oppo_install_ca">Instalovat z úložiště &gt; Certifikát CA</string>
+    <string name="device_step_vivo_security_encryption">Zabezpečení &gt; Šifrování a přihlašovací údaje</string>
+    <string name="device_step_vivo_install_ca">Instalovat certifikát &gt; Certifikát CA</string>
+    <string name="device_step_generic_search_certificate">V Nastavení vyhledejte \'Certifikát\'</string>
+    <string name="device_step_generic_choose_ca">Zvolte \'Certifikát CA\' nebo \'Instalovat z úložiště\'</string>
+    <string name="device_step_generic_confirm">Potvrďte \'Přesto instalovat\', pokud se zobrazí výzva</string>
+    <string name="device_step_generic_select_downloads">Ve složce Stažené soubory vyberte BlockAds-RootCA.crt</string>
+</resources>

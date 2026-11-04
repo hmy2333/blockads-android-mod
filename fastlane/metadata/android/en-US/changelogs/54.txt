@@ -1,0 +1,7 @@
+• Oblivious DoH (ODoH - RFC 9230) for zero-knowledge DNS privacy
+• Redesigned DNS Server screen with active hero card & tabs
+• Added DNSBunker resolver with Hagezi ad & malware blocking
+• Pure OLED black theme option for battery savings
+• Country flag icons in language settings
+• Edit & import support for custom domain rules
+• Samsung dual VPN compatibility improvements

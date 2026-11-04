@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cert_status_installed">CA証明書がインストールされ、信頼されています。高度なHTTPS広告ブロックが利用可能です。</string>
+    <string name="cert_status_checking">デバイスの保護されたストレージで証明書を確認中…</string>
+    <string name="cert_status_not_installed">HTTPS接続の広告を復号してブロックするには、BlockAds CA証明書が必要です。</string>
+    <string name="cert_action_check_again">再確認</string>
+    <string name="cert_action_reinstall">再インストール</string>
+    <string name="cert_action_install">証明書をインストール</string>
+    <string name="device_step_open_settings">システム設定を開く</string>
+    <string name="device_step_samsung_security_privacy">「セキュリティとプライバシー」を選択</string>
+    <string name="device_step_samsung_more_security">下へスクロールして「その他のセキュリティ設定」を選択</string>
+    <string name="device_step_samsung_install_from_storage">「端末ストレージからインストール」を選択</string>
+    <string name="device_step_samsung_ca_cert_confirm">「CA証明書」を選択し、「インストールする」を確認</string>
+    <string name="device_step_select_downloaded_cert">ダウンロードした BlockAds-RootCA.crt を選択</string>
+    <string name="device_step_samsung_biometrics">「生体認証とセキュリティ」を選択</string>
+    <string name="device_step_samsung_other_security">「その他のセキュリティ設定」を選択</string>
+    <string name="device_step_samsung_ca_cert_warn">「CA証明書」を選択し、警告を確認</string>
+    <string name="device_step_samsung_other_sec_install_storage">「その他のセキュリティ設定」&gt;「ストレージからインストール」を選択</string>
+    <string name="device_step_select_ca_cert">「CA証明書」を選択</string>
+    <string name="device_step_google_security_privacy">「セキュリティとプライバシー」を選択</string>
+    <string name="device_step_google_more_security">「その他のセキュリティ設定」を選択</string>
+    <string name="device_step_google_encryption_credentials">「暗号化と認証情報」を選択</string>
+    <string name="device_step_google_install_ca_cert">「証明書のインストール」&gt;「CA証明書」を選択</string>
+    <string name="device_step_google_confirm_and_select">「インストールする」をタップし BlockAds-RootCA.crt を選択</string>
+    <string name="device_step_google_security_encryption">「セキュリティ」&gt;「暗号化と認証情報」を選択</string>
+    <string name="device_step_google_install_certificate">「証明書のインストール」を選択</string>
+    <string name="device_step_google_ca_cert_confirm">「CA証明書」を選択して確認</string>
+    <string name="device_step_xiaomi_open_settings">「設定」を開く</string>
+    <string name="device_step_xiaomi_passwords_security">「パスワードとセキュリティ」を選択</string>
+    <string name="device_step_xiaomi_privacy_encryption">「プライバシー」&gt;「暗号化と認証情報」を選択</string>
+    <string name="device_step_xiaomi_install_ca">「証明書のインストール」&gt;「CA証明書」を選択</string>
+    <string name="device_step_xiaomi_confirm_select">警告を確認し BlockAds-RootCA.crt を選択</string>
+    <string name="device_step_oppo_security_more">「セキュリティ」&gt;「その他のセキュリティ設定」を選択</string>
+    <string name="device_step_oppo_credential_storage">「認証情報ストレージ」を選択</string>
+    <string name="device_step_oppo_install_ca">「ストレージからインストール」&gt;「CA証明書」を選択</string>
+    <string name="device_step_vivo_security_encryption">「セキュリティ」&gt;「暗号化と認証情報」を選択</string>
+    <string name="device_step_vivo_install_ca">「証明書のインストール」&gt;「CA証明書」を選択</string>
+    <string name="device_step_generic_search_certificate">設定の検索バーで「証明書」を検索</string>
+    <string name="device_step_generic_choose_ca">「CA証明書」または「ストレージからインストール」を選択</string>
+    <string name="device_step_generic_confirm">確認画面が表示されたら「インストールする」を選択</string>
+    <string name="device_step_generic_select_downloads">ダウンロードフォルダから BlockAds-RootCA.crt を選択</string>
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="support_bottom_sheet_title">זקוק לעזרה או לדיווח על תקלה?</string>
+    <string name="support_bottom_sheet_desc">אם אתה נתקל בבעיות או שמשהו לא עובד כצפוי, הודע לצוות שלנו כדי שנוכל לעזור.</string>
+    <string name="support_error_filter_title">הוספת המסנן נכשלה</string>
+    <string name="support_error_filter_desc">לא ניתן להוריד או לקמפל רשימת מסננים זו. הקישור עשוי להיות לא זמין או מכיל תחביר שאינו נתמך.</string>
+    <string name="support_error_subscription_title">עדכון המנוי נכשל</string>
+    <string name="support_channel_telegram_title">קהילת Telegram</string>
+    <string name="support_channel_telegram_desc">הצטרף לצ\'אט לקבלת תמיכה בזמן אמת מהמפתח והקהילה</string>
+    <string name="support_channel_github_title">דווח ב-GitHub</string>
+    <string name="support_channel_github_desc">פתח פנייה עם פרטי השגיאה והאבחון</string>
+    <string name="support_channel_email_title">תמיכה בדוא\"ל</string>
+    <string name="support_channel_email_desc">שלח פרטי שגיאה ישירות אל support@pwhs.app</string>
+    <string name="support_copy_details">העתק פרטי אבחון</string>
+    <string name="support_copied">פרטי האבחון הועתקו ללוח</string>
+    <string name="support_need_help">זקוק לעזרה?</string>
+    <string name="support_close">סגור</string>
+</resources>
