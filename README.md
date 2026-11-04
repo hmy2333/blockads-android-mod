@@ -92,6 +92,20 @@ cd .. && ./gradlew -Ptunnel.source=prebuilt :app:assembleFdroidRelease
 - 单元测试：Go（DNS-over-TCP 走代理、国内域名判定、GeoIP 分流判定）、Kotlin（Clash 解析 7 例，含 flow-style）
 - 端到端：Android 15 模拟器 + 真实 Shadowsocks 服务端 + 真实机场订阅（46 节点全部导入、Google 可达、国内站直连）
 
+## 开发方式与 AI 协作声明
+
+本修改版是**人机协作**产物，不隐瞒 AI 的参与：
+
+| 角色 | 负责 |
+|---|---|
+| **hmy2333**（人类） | 提出需求、确定取舍、真机验收、决定开源与合规处理、承担发布责任 |
+| **DeepSeek Harness（DSH）**（AI 助手运行环境） | 读上游源码定位根因、编写 Go/Kotlin 补丁与单元测试、搭建 gomobile + NDK + Gradle 构建链、在 Android 15 模拟器与真实 Shadowsocks 服务端/真实订阅上做端到端验证 |
+
+换句话说：**代码分析、补丁实现、构建与测试由 AI 完成，方向、取舍与验收由人完成。**
+AI 由人类逐轮驱动与审阅，不是全自动无人值守流程；所有结论都在真机/模拟器上复验过（见 [CHANGES.md](CHANGES.md#测试与验证)）。
+
+如果你不接受 AI 参与产生的代码，请使用[上游仓库](https://github.com/pass-with-high-score/blockads-android)。
+
 ## 许可证与来源
 
 - 代码：**GNU GPL-3.0**，见 [LICENSE](LICENSE)。上游版权归 Nguyen Quang Minh 及贡献者所有；本仓库的修改同样以 GPL-3.0 发布。

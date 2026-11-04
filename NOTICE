@@ -33,3 +33,14 @@ Not included on purpose
 - Signing keys (*.jks / *.keystore) and key.properties
 - local.properties (machine-specific SDK paths)
 - Any subscription URLs, tokens or credentials
+
+AI assistance (disclosed)
+-------------------------
+Analysis, patches, build setup and testing in this fork were produced in
+pair with an AI assistant environment:
+
+    DeepSeek Harness (DSH) — AI coding agent harness
+
+The work was driven, reviewed, verified on device and released by hmy2333.
+See the "开发方式与 AI 协作声明" section in README.md. This is disclosed on
+purpose: the modifications are AI-authored code, human-directed.
