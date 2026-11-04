@@ -65,6 +65,11 @@ type Resolver struct {
 	// instead of locally (see proxied.go).
 	proxyDial func(ctx context.Context, network, addr string) (net.Conn, error)
 
+	// Circuit breaker for the proxied path: after repeated failures the local
+	// resolver takes over until proxyDNSDownUntil passes.
+	proxyDNSFailures  int
+	proxyDNSDownUntil time.Time
+
 	// Resolver used for domestic domains while a proxy is active, so a Chinese
 	// CDN keeps answering with a Chinese edge.
 	domesticServer string
@@ -302,18 +307,21 @@ func (r *Resolver) Resolve(rawQuery []byte) ([]byte, error) {
 			if resp, err := r.queryPlain(rawQuery, domestic); err == nil {
 				return resp, nil
 			}
-		} else {
-			if resp, err := r.queryProxiedTCP(rawQuery, primary); err == nil {
-				return resp, nil
-			}
-			if fallback != "" && fallback != "none" && fallback != primary {
-				if resp, err := r.queryProxiedTCP(rawQuery, fallback); err == nil {
+		} else if r.proxyDNSAvailable() {
+			// Only resolvers that the exit node can actually reach: a carrier or
+			// LAN resolver tunnelled abroad never answers, and waiting for it
+			// stalls every single lookup.
+			for _, server := range r.proxyDNSCandidates(primary, fallback) {
+				resp, err := r.queryProxiedTCP(rawQuery, server)
+				if err == nil {
+					r.noteProxyDNSResult(true)
 					return resp, nil
 				}
 			}
+			r.noteProxyDNSResult(false)
 		}
-		// Proxy DNS unreachable (node down): fall through to local so domestic
-		// traffic keeps resolving instead of losing DNS entirely.
+		// Proxied DNS unavailable (node down / breaker open): fall through to
+		// local so domestic traffic keeps resolving instead of losing DNS.
 	}
 
 	resp, err := r.query(rawQuery, protocol, primary, dohURL)

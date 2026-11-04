@@ -2,7 +2,6 @@ package dns
 
 import (
 	"context"
-	"encoding/binary"
 	"io"
 	"net"
 	"testing"
@@ -20,9 +19,7 @@ func startDoTServer(t *testing.T, answer net.IP) (addr string, closeFn func()) {
 		t.Fatalf("listen: %v", err)
 	}
 
-	done := make(chan struct{})
 	go func() {
-		defer close(done)
 		for {
 			conn, err := ln.Accept()
 			if err != nil {
@@ -34,7 +31,7 @@ func startDoTServer(t *testing.T, answer net.IP) (addr string, closeFn func()) {
 				if _, err := io.ReadFull(c, lenBuf[:]); err != nil {
 					return
 				}
-				buf := make([]byte, binary.BigEndian.Uint16(lenBuf[:]))
+				buf := make([]byte, int(lenBuf[0])<<8|int(lenBuf[1]))
 				if _, err := io.ReadFull(c, buf); err != nil {
 					return
 				}
@@ -53,7 +50,8 @@ func startDoTServer(t *testing.T, answer net.IP) (addr string, closeFn func()) {
 					return
 				}
 				out := make([]byte, 2+len(packed))
-				binary.BigEndian.PutUint16(out[:2], uint16(len(packed)))
+				out[0] = byte(len(packed) >> 8)
+				out[1] = byte(len(packed))
 				copy(out[2:], packed)
 				_, _ = c.Write(out)
 			}(conn)
@@ -63,77 +61,107 @@ func startDoTServer(t *testing.T, answer net.IP) (addr string, closeFn func()) {
 	return ln.Addr().String(), func() { _ = ln.Close() }
 }
 
-func queryA(t *testing.T, r *Resolver, domain string) net.IP {
-	t.Helper()
+func TestQueryProxiedTCPFraming(t *testing.T) {
+	answer := net.ParseIP("203.0.113.7")
+	addr, closeFn := startDoTServer(t, answer)
+	defer closeFn()
+
+	r := NewResolver(nil)
+	defer r.Shutdown()
+	r.SetProxyDial(func(_ context.Context, network, target string) (net.Conn, error) {
+		if network != "tcp" {
+			t.Fatalf("expected tcp, got %q", network)
+		}
+		return net.DialTimeout("tcp", target, 2*time.Second)
+	})
 
 	msg := new(dns.Msg)
-	msg.SetQuestion(dns.Fqdn(domain), dns.TypeA)
-	msg.RecursionDesired = true
+	msg.SetQuestion("example.com.", dns.TypeA)
 	raw, err := msg.Pack()
 	if err != nil {
 		t.Fatalf("pack: %v", err)
 	}
 
-	respBytes, err := r.Resolve(raw)
+	respBytes, err := r.queryProxiedTCP(raw, addr)
 	if err != nil {
-		t.Fatalf("resolve: %v", err)
+		t.Fatalf("proxied query: %v", err)
 	}
-
 	var resp dns.Msg
 	if err := resp.Unpack(respBytes); err != nil {
 		t.Fatalf("unpack: %v", err)
 	}
-	for _, rr := range resp.Answer {
-		if a, ok := rr.(*dns.A); ok {
-			return a.A
-		}
+	if len(resp.Answer) == 0 {
+		t.Fatal("no answer")
 	}
-	t.Fatalf("no A record in answer")
-	return nil
-}
-
-func TestResolveUsesProxyDialWhenSet(t *testing.T) {
-	upstreamAnswer := net.ParseIP("203.0.113.7")
-	addr, closeFn := startDoTServer(t, upstreamAnswer)
-	defer closeFn()
-
-	// The upstream is given as host:port so the dialer does not need port 53.
-	r := NewResolver(nil)
-	defer r.Shutdown()
-	r.Configure(ProtocolPlain, addr, "none", "")
-
-	var dialed int
-	r.SetProxyDial(func(_ context.Context, network, target string) (net.Conn, error) {
-		dialed++
-		if network != "tcp" {
-			t.Fatalf("expected tcp network, got %q", network)
-		}
-		return net.DialTimeout("tcp", target, 2*time.Second)
-	})
-
-	got := queryA(t, r, "example.com")
-	if !got.Equal(upstreamAnswer) {
-		t.Fatalf("answer came from the wrong resolver: %v", got)
-	}
-	if dialed == 0 {
-		t.Fatal("proxy dialer was never used")
+	if a, ok := resp.Answer[0].(*dns.A); !ok || !a.A.Equal(answer) {
+		t.Fatalf("unexpected answer: %v", resp.Answer[0])
 	}
 }
 
-func TestResolveFallsBackWhenProxyDialFails(t *testing.T) {
-	addr, closeFn := startDoTServer(t, net.ParseIP("198.51.100.9"))
-	defer closeFn()
-
+func TestProxyDNSCandidates(t *testing.T) {
 	r := NewResolver(nil)
 	defer r.Shutdown()
-	// Plain UDP against a TCP-only listener fails, so a fallback that still
-	// answers proves the proxy path was skipped rather than swallowed.
-	r.Configure(ProtocolPlain, addr, "none", "")
+
+	cases := []struct {
+		name     string
+		primary  string
+		fallback string
+		want     []string
+	}{
+		{"public primary kept", "8.8.8.8", "1.1.1.1", []string{"8.8.8.8", "1.1.1.1"}},
+		{"carrier DNS replaced", "211.136.112.200", "211.136.112.201", []string{"1.1.1.1", "8.8.8.8"}},
+		{"public allow-listed kept", "223.5.5.5", "119.29.29.29", []string{"223.5.5.5", "119.29.29.29"}},
+		{"home router replaced", "192.168.0.1", "192.168.0.2", []string{"1.1.1.1", "8.8.8.8"}},
+		{"CGNAT replaced", "100.64.0.1", "none", []string{"1.1.1.1", "8.8.8.8"}},
+	}
+	for _, tc := range cases {
+		t.Run(tc.name, func(t *testing.T) {
+			got := r.proxyDNSCandidates(tc.primary, tc.fallback)
+			if len(got) != len(tc.want) {
+				t.Fatalf("got %v, want %v", got, tc.want)
+			}
+			for i := range got {
+				if got[i] != tc.want[i] {
+					t.Fatalf("got %v, want %v", got, tc.want)
+				}
+			}
+		})
+	}
+}
+
+func TestProxyDNSCircuitBreaker(t *testing.T) {
+	r := NewResolver(nil)
+	defer r.Shutdown()
 	r.SetProxyDial(func(context.Context, string, string) (net.Conn, error) {
 		return nil, io.ErrClosedPipe
 	})
 
-	if _, err := r.queryProxiedTCP([]byte{0, 1}, addr); err == nil {
-		t.Fatal("expected proxied query to fail")
+	if !r.proxyDNSAvailable() {
+		t.Fatal("breaker should start closed (path available)")
+	}
+	for i := 0; i < proxyDNSFailLimit; i++ {
+		r.noteProxyDNSResult(false)
+	}
+	if r.proxyDNSAvailable() {
+		t.Fatal("breaker should open after repeated failures")
+	}
+	r.noteProxyDNSResult(true)
+	if r.proxyDNSAvailable() {
+		t.Fatal("an open breaker must stay open until the cooldown elapses")
+	}
+}
+
+func TestIsRoutableDNS(t *testing.T) {
+	private := []string{"127.0.0.1", "10.0.0.1", "192.168.1.1", "172.16.0.1", "100.64.0.1", "169.254.1.1"}
+	public := []string{"8.8.8.8", "1.1.1.1", "223.5.5.5", "211.136.112.200"}
+	for _, s := range private {
+		if isRoutableDNS(net.ParseIP(s)) {
+			t.Errorf("%s should not be routable", s)
+		}
+	}
+	for _, s := range public {
+		if !isRoutableDNS(net.ParseIP(s)) {
+			t.Errorf("%s should be routable", s)
+		}
 	}
 }
