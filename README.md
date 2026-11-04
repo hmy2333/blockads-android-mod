@@ -106,6 +106,69 @@ AI 由人类逐轮驱动与审阅，不是全自动无人值守流程；所有�
 
 如果你不接受 AI 参与产生的代码，请使用[上游仓库](https://github.com/pass-with-high-score/blockads-android)。
 
+## 版本更新与发布
+
+### 手机端怎么收到更新
+
+App 内**没有更新检查**（上游也没有），所以不会自己弹升级。两条路：
+
+1. **Obtainium**（推荐，开源，零后端）
+   添加本仓库 `https://github.com/hmy2333/blockads-android-mod` → 它盯 Releases → 有新 tag 时通知并直接安装。
+   前提：新 APK 用**同一把 keystore** 签名，才能覆盖安装不丢数据。
+2. **手动**：关注 [Releases](https://github.com/hmy2333/blockads-android-mod/releases)，
+   或订阅 `https://github.com/hmy2333/blockads-android-mod/releases.atom`（RSS）。
+
+### 出包：本地一键
+
+```bash
+./scripts/release.sh v7.1.0-mod2 "修复 xxx；更新 yyy"
+```
+
+脚本做四件事：`gomobile bind` 重出 `tunnel.aar`（关键，否则没有本仓库的 Go 改动）→
+`assembleFdroidRelease` → 生成 `SHA256SUMS.txt` → `gh release create` 传 4 个 ABI 的 APK。
+前置要求与「构建」一节一致，另需 `gh auth login`。
+
+### 出包：GitHub Actions 自动
+
+`.github/workflows/release.yml`：**打 tag（`v*`）即自动构建并发布**，也可在 Actions 页面手动触发。
+
+首次使用要在 *Settings → Secrets and variables → Actions* 配 4 个 secret：
+
+| Secret | 内容 |
+|---|---|
+| `KEYSTORE_BASE64` | `base64 -w0 keystore.jks` 的输出 |
+| `KEYSTORE_PASSWORD` | storePassword |
+| `KEY_ALIAS` | keyAlias |
+| `KEY_PASSWORD` | keyPassword |
+
+没有这 4 个 secret 时工作流会在第一步明确失败——故意的：换一把密钥签出来的 APK 装不上。
+
+### 上游发新版了怎么合
+
+本仓库的改动集中在 12 个文件，合流是可预期的：
+
+```bash
+git remote add upstream https://github.com/pass-with-high-score/blockads-android.git
+git fetch upstream
+git rebase upstream/main      # 冲突通常只在下列文件
+```
+
+冲突高发文件：`ProxyProfile.kt`、`ProxyVpnViewModel.kt`、`GoTunnelAdapter.kt`、`ServiceController.kt`、
+`SubscriptionImporter.kt`、`tunnel/fulltunnel.go`、`tunnel/internal/dns/resolver.go`、
+`tunnel/internal/shadowsocks/config.go`。
+
+合完必须：① 若 `tunnel/` 有变动则重编 AAR；② 跑单元测试；③ 在真机/模拟器上过一遍
+「导入订阅 → 连上 → 开 google / 开 bilibili」；④ 打新 tag 发版。
+
+### 关于版本号与签名
+
+- `versionCode` / `versionName` 沿用上游（当前 `7.1.0 (57)`）。同签名覆盖安装时 versionCode 相等即可，
+  所以 mod 版本不需要为了"升级"去改它。
+- 想把 mod 版本区分开，可以把 `versionName` 改成 `7.1.0-mod2`（`app/build.gradle.kts`），
+  Obtainium 也能正常识别。
+- **keystore 必须保管好**（`D:\AndroidEnv\keys\blockads.jks`，别放进仓库、别丢）。
+  换了密钥 = 所有人必须卸载重装。
+
 ## 许可证与来源
 
 - 代码：**GNU GPL-3.0**，见 [LICENSE](LICENSE)。上游版权归 Nguyen Quang Minh 及贡献者所有；本仓库的修改同样以 GPL-3.0 发布。
@@ -114,7 +177,8 @@ AI 由人类逐轮驱动与审阅，不是全自动无人值守流程；所有�
   [sapics/ip-location-db](https://github.com/sapics/ip-location-db)（**CC0 1.0 Universal**）。
 - 广告过滤列表、浏览器注入资源等均沿用上游配置，未做改动。
 - 本仓库**移除了上游的 GitHub Actions workflows**（`deploy.yml` / `update_tunnel.yml` / `update_geoip.yml` / `ci.yml`），
-  因为它们依赖上游的 release 命名空间与仓库级 secrets，在本仓库直接运行只会失败或污染 release 列表。
+  因为它们依赖上游的 release 命名空间与仓库级 secrets，在本仓库直接运行只会失败或污染 release 列表；
+  只保留了本仓库自己的 `.github/workflows/release.yml`（打 tag 出包，用本仓库的 secret 签名）。
 - 本仓库不包含任何签名密钥、订阅链接或他人凭证。
 
 ## 免责声明
