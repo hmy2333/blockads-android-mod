@@ -45,38 +45,49 @@ jobs:
           echo "releasing $TAG"
 
       - name: Verify signing secrets
+        id: secrets
         env:
           KS: ${{ secrets.KEYSTORE_BASE64 }}
         run: |
           if [ -z "$KS" ]; then
-            echo "::error::缺少 KEYSTORE_BASE64 / KEYSTORE_PASSWORD / KEY_ALIAS / KEY_PASSWORD 四个 secret，见本文件头部注释"
-            exit 1
+            # Not an error: a fork that has not configured signing yet should
+            # not turn every tag into a red run. Release locally with
+            # scripts/release.sh instead.
+            echo "available=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::未配置签名 secrets，跳过自动发布（改用 scripts/release.sh 本地出包）"
+          else
+            echo "available=true" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Set up JDK 21
+        if: steps.secrets.outputs.available == 'true'
         uses: actions/setup-java@v4
         with:
           java-version: '21'
           distribution: 'temurin'
 
       - name: Set up Go
+        if: steps.secrets.outputs.available == 'true'
         uses: actions/setup-go@v5
         with:
           go-version: '1.26.1'
           cache-dependency-path: tunnel/go.sum
 
       - name: Install gomobile
+        if: steps.secrets.outputs.available == 'true'
         run: |
           go install github.com/sagernet/gomobile/cmd/gomobile@v0.1.12
           echo "$HOME/go/bin" >> $GITHUB_PATH
           "$HOME/go/bin/gomobile" init
 
       - name: Install Android NDK / platform
+        if: steps.secrets.outputs.available == 'true'
         run: |
           yes | sdkmanager --licenses > /dev/null || true
           sdkmanager "ndk;26.1.10909125" "platforms;android-37.0" "build-tools;37.0.0" "platform-tools"
 
       - name: Cache Gradle
+        if: steps.secrets.outputs.available == 'true'
         uses: actions/cache@v4
         with:
           path: |
@@ -86,6 +97,7 @@ jobs:
           restore-keys: gradle-${{ runner.os }}-
 
       - name: Write signing config
+        if: steps.secrets.outputs.available == 'true'
         env:
           KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
           KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
@@ -102,6 +114,7 @@ jobs:
           chmod 600 "$GITHUB_WORKSPACE/keystore.jks" key.properties
 
       - name: Build tunnel.aar
+        if: steps.secrets.outputs.available == 'true'
         env:
           GOFLAGS: -buildvcs=false
         run: |
@@ -113,13 +126,16 @@ jobs:
             -o ../build/tunnel/tunnel.aar github.com/nqmgaming/blockads-tunnel
 
       - name: Assemble release APKs
+        if: steps.secrets.outputs.available == 'true'
         run: ./gradlew -Ptunnel.source=prebuilt :app:assembleFdroidRelease --console=plain
 
       - name: Checksums
+        if: steps.secrets.outputs.available == 'true'
         working-directory: app/build/outputs/apk/fdroid/release
         run: sha256sum *.apk | tee SHA256SUMS.txt
 
       - name: Publish GitHub Release
+        if: steps.secrets.outputs.available == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TAG: ${{ steps.tag.outputs.tag }}
