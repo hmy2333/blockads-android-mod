@@ -36,6 +36,7 @@ func (e *Engine) Start(fd int, protector SocketProtector, wgConfigJSON string) {
 	e.resolver.Configure(ParseProtocol(e.protocol), e.primaryDNS, e.fallbackDNS, e.dohURL)
 	e.resolver.SetODoHRelay(e.odohRelayURL)
 	e.resolver.SetProxyDial(e.dnsProxyDial)
+	e.resolver.SetDomesticIPCheck(e.shouldBypassProxy)
 	e.mu.Unlock()
 
 	dupFd, err := syscall.Dup(fd)

@@ -23,6 +23,12 @@ var domesticSuffixes = []string{
 	"weibo.com", "sina.com.cn", "sinaimg.cn", "weibo.cn",
 	"163.com", "126.net", "127.net", "netease.com", "music.163.com",
 	"douyin.com", "bytedance.com", "ixigua.com", "feishu.cn", "douyinpic.com",
+	// ByteDance service/CDN endpoints: without these the app resolves through
+	// the proxy, gets a foreign edge, and video/comment APIs stall.
+	"amemv.com", "snssdk.com", "byteimg.com", "pstatp.com", "zijieapi.com",
+	"toutiao.com", "toutiaocdn.com", "douyinvod.com", "douyinstatic.com",
+	"volccdn.com", "volces.com", "volcengine.com", "bytednsdoc.com",
+	"pglstatp-toutiao.com", "isnssdk.com", "bytedance.net", "byted.org",
 	"kuaishou.com", "gifshow.com",
 	"xiaomi.com", "mi.com", "miui.com", "huawei.com", "hicloud.com", "vivo.com.cn", "oppo.com",
 	"meituan.com", "dianping.com", "sankuai.com",

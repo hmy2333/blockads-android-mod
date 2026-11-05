@@ -136,6 +136,7 @@ func (e *Engine) StartFull(fd int, protector SocketProtector) {
 	e.resolver.Configure(ParseProtocol(e.protocol), e.primaryDNS, e.fallbackDNS, e.dohURL)
 	e.resolver.SetODoHRelay(e.odohRelayURL)
 	e.resolver.SetProxyDial(e.dnsProxyDial)
+	e.resolver.SetDomesticIPCheck(e.shouldBypassProxy)
 
 	certMgr := e.stackCertMgr
 	filter := e.stackMitmFilter

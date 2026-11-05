@@ -74,6 +74,11 @@ type Resolver struct {
 	// CDN keeps answering with a Chinese edge.
 	domesticServer string
 
+	// Answers whether an address belongs to the domestic side. Used to decide
+	// per-answer (instead of per-domain-table) whether a name needs the proxy
+	// resolver at all.
+	domesticIPCheck func(net.IP) bool
+
 	// HTTP client for DoH and ODoH (reusable)
 	httpClient *http.Client
 	// HTTP/3 client for DoH3 (RFC 9114 over QUIC)
@@ -83,6 +88,11 @@ type Resolver struct {
 	quicConn   *quic.Conn
 	quicServer string
 }
+
+// How long the domestic probe waits before giving up and using the proxy
+// resolver. Kept short: on a censored name the local answer is either a fast
+// poisoned reply or nothing at all.
+const domesticProbeTimeout = 800 * time.Millisecond
 
 const (
 	connectTimeout  = 5 * time.Second
@@ -269,6 +279,62 @@ func (r *Resolver) queryPlainUnprotected(rawQuery []byte, server string) ([]byte
 	return buf[:n], nil
 }
 
+// SetDomesticIPCheck lets the engine decide, per answer, whether an address is
+// domestic. With it the split no longer depends on enumerating every domestic
+// domain: ask the local resolver first and keep the answer only when it points
+// at home.
+func (r *Resolver) SetDomesticIPCheck(fn func(net.IP) bool) {
+	r.mu.Lock()
+	defer r.mu.Unlock()
+	r.domesticIPCheck = fn
+}
+
+// localAnswerIfDomestic asks the configured upstream and returns the answer
+// when it can be used as-is: either the name is on the built-in domestic list,
+// or the address it resolves to is domestic. Anything else (poisoned, blocked,
+// or a foreign CDN edge) returns ok=false so the caller switches to the proxy
+// resolver.
+func (r *Resolver) localAnswerIfDomestic(rawQuery []byte, primary string) ([]byte, bool) {
+	r.mu.RLock()
+	check := r.domesticIPCheck
+	r.mu.RUnlock()
+
+	if primary == "" {
+		return nil, false
+	}
+
+	resp, err := r.queryPlainTimeout(rawQuery, primary, domesticProbeTimeout)
+	if err != nil {
+		return nil, false
+	}
+
+	// A name on the built-in list is trusted even if the answer looks odd.
+	if IsDomesticDomain(questionName(rawQuery)) {
+		return resp, true
+	}
+	if check == nil {
+		return nil, false
+	}
+
+	var msg miekgdns.Msg
+	if err := msg.Unpack(resp); err != nil {
+		return nil, false
+	}
+	for _, rr := range msg.Answer {
+		switch a := rr.(type) {
+		case *miekgdns.A:
+			if check(a.A) {
+				return resp, true
+			}
+		case *miekgdns.AAAA:
+			if check(a.AAAA) {
+				return resp, true
+			}
+		}
+	}
+	return nil, false
+}
+
 // Resolve sends a raw DNS query to the configured upstream server.
 func (r *Resolver) Resolve(rawQuery []byte) ([]byte, error) {
 	r.mu.RLock()
@@ -301,13 +367,11 @@ func (r *Resolver) Resolve(rawQuery []byte) ([]byte, error) {
 		domestic := r.domesticServer
 		r.mu.RUnlock()
 
-		if domestic != "" && IsDomesticDomain(questionName(rawQuery)) {
-			// Ask from inside China: an overseas answer would point at a foreign
-			// CDN edge and the IP split would then route the flow abroad.
-			if resp, err := r.queryPlain(rawQuery, domestic); err == nil {
-				return resp, nil
-			}
-		} else if r.proxyDNSAvailable() {
+		if resp, ok := r.localAnswerIfDomestic(rawQuery, primary); ok {
+			return resp, nil
+		}
+		_ = domestic
+		if r.proxyDNSAvailable() {
 			// Only resolvers that the exit node can actually reach: a carrier or
 			// LAN resolver tunnelled abroad never answers, and waiting for it
 			// stalls every single lookup.
@@ -363,6 +427,13 @@ func (r *Resolver) query(rawQuery []byte, protocol DNSProtocol, server, dohURL s
 
 // queryPlain sends a plain UDP DNS query with socket protection.
 func (r *Resolver) queryPlain(rawQuery []byte, server string) ([]byte, error) {
+	return r.queryPlainTimeout(rawQuery, server, queryTimeoutUDP)
+}
+
+// queryPlainTimeout is queryPlain with an explicit deadline. The domestic probe
+// uses a short one so a censored name does not stall the lookup for the full
+// default timeout before falling back to the proxy resolver.
+func (r *Resolver) queryPlainTimeout(rawQuery []byte, server string, timeout time.Duration) ([]byte, error) {
 	host := server
 	port := "53"
 	if h, p, err := net.SplitHostPort(server); err == nil {
@@ -390,7 +461,7 @@ func (r *Resolver) queryPlain(rawQuery []byte, server string) ([]byte, error) {
 		}
 	}
 
-	conn.SetDeadline(time.Now().Add(queryTimeoutUDP))
+	conn.SetDeadline(time.Now().Add(timeout))
 
 	if _, err := conn.WriteTo(rawQuery, udpAddr); err != nil {
 		return nil, fmt.Errorf("plain write: %w", err)
