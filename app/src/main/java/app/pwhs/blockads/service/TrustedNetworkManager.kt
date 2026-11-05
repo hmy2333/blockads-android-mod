@@ -49,6 +49,10 @@ class TrustedNetworkManager(
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
     private val lock = Mutex()
     private var registered = false
+    // Resume attempts can fail when the app is in the background (Android 12+
+    // refuses to start a foreground service from there). Throttle the retries
+    // instead of hammering startForegroundService every poll.
+    private var lastResumeAttemptMs = 0L
 
     private val callback = object : ConnectivityManager.NetworkCallback() {
         override fun onAvailable(network: Network) = evaluate()
@@ -137,6 +141,19 @@ class TrustedNetworkManager(
                             "onTrusted=$onTrusted running=$running pausedByUs=$pausedByUs"
                     )
 
+                    // An unreadable SSID is ambiguous: backgrounded apps get
+                    // "<unknown ssid>" on many ROMs, but "not on Wi-Fi at all"
+                    // also yields null. Treating both as "left the network"
+                    // resumed protection on its own (the "reconnects by itself
+                    // in background" bug); treating both as "unknown" would
+                    // never resume after leaving. So: still on Wi-Fi + no SSID
+                    // = hold the current state, otherwise fall through.
+                    if (ssid == null && isOnWifi(context)) {
+                        Log.i(TAG, "on Wi-Fi but SSID unreadable — keeping current state " +
+                            "(running=$running pausedByUs=$pausedByUs)")
+                        return@withLock
+                    }
+
                     when {
                         // Entered a trusted network while protected → pause.
                         onTrusted && running -> {
@@ -146,11 +163,18 @@ class TrustedNetworkManager(
                             showPausedNotification(ssid)
                         }
                         // Left the trusted network and we had paused → resume.
+                        // Keep the flag until the service actually reports
+                        // running: a background start can be refused by the
+                        // platform, and clearing it eagerly would leave the app
+                        // permanently paused with nothing retrying.
                         !onTrusted && pausedByUs && !running -> {
-                            Timber.d("Left trusted network (now '$ssid') — resuming BlockAds")
-                            appPrefs.setPausedByTrusted(false)
-                            cancelPausedNotification()
-                            ServiceController.requestStart(context)
+                            val now = android.os.SystemClock.elapsedRealtime()
+                            if (now - lastResumeAttemptMs >= RESUME_RETRY_MS) {
+                                lastResumeAttemptMs = now
+                                Log.i(TAG, "left trusted network (now '$ssid') — requesting start")
+                                cancelPausedNotification()
+                                ServiceController.requestStart(context)
+                            }
                         }
                         // User manually started while on a trusted net, or any
                         // other state — clear the stale pause flag.
@@ -232,6 +256,9 @@ class TrustedNetworkManager(
 
         /** How often the connected SSID is re-checked as a fallback. */
         private const val TRUSTED_POLL_INTERVAL_MS = 15_000L
+
+        /** Minimum gap between automatic resume attempts. */
+        private const val RESUME_RETRY_MS = 30_000L
 
         /** Connected to Wi-Fi, regardless of whether the SSID is readable. */
         fun isOnWifi(context: Context): Boolean = try {
