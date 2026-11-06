@@ -240,6 +240,32 @@ object TunnelRuleLoader {
         }
     }
 
+    /**
+     * Hands the bundled domestic name list to the Go engine. Without it the
+     * resolver only has a ~25 entry hand-written table and every other domestic
+     * host pays a probe round trip (or gets routed abroad when the probe judges
+     * the answer foreign).
+     */
+    fun loadDomesticDomains(context: Context, engine: tunnel.Engine) {
+        // AAPT stores *.gz assets decompressed, so the shipped name is normally
+        // the plain .txt; try both rather than depending on that behaviour.
+        val candidates = listOf("preset/cn_domains.txt", "preset/cn_domains.txt.gz")
+        for (asset in candidates) {
+            try {
+                val data = context.assets.open(asset).use { it.readBytes() }
+                val count = engine.setDomesticDomainsGz(data)
+                Timber.d("Domestic domain table loaded from $asset: $count entries (${data.size} bytes)")
+                return
+            } catch (e: java.io.FileNotFoundException) {
+                continue
+            } catch (e: Exception) {
+                Timber.w(e, "Failed to load domestic domain list from $asset")
+                return
+            }
+        }
+        Timber.d("No bundled domestic domain list, using the built-in suffix table")
+    }
+
     fun loadExtraPassthrough(context: Context, engine: tunnel.Engine) {
         try {
             val loaded = BlocklistInfo.fromAsset(context, "https_passthrough.txt")?.use { info ->

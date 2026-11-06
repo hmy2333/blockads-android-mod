@@ -41,6 +41,7 @@ class GoTunnelAdapter(
 
     init {
         TunnelRuleLoader.loadGeoIPDatabase(context, engine)
+        TunnelRuleLoader.loadDomesticDomains(context, engine)
     }
 
     /**

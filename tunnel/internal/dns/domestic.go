@@ -1,6 +1,13 @@
 package dns
 
-import "strings"
+import (
+	"bytes"
+	"compress/gzip"
+	"io"
+	"sort"
+	"strings"
+	"sync/atomic"
+)
 
 // domesticSuffixes marks domains that must be resolved from inside China:
 // asking an overseas resolver returns a foreign CDN edge, which then defeats
@@ -44,10 +51,86 @@ var domesticSuffixes = []string{
 }
 
 // IsDomesticDomain reports whether a domain belongs to the in-China resolution group.
+// The bundled list is what actually decides the split. The hand-written
+// suffixes above stay as a fallback for the case where no list was supplied.
+var domesticNames atomic.Value // []string, sorted
+
+// SetDomesticDomains replaces the matcher table with an explicit name list.
+// Names are matched as suffixes: "a.b.example.com" also matches "example.com",
+// which is how the source list encodes wildcards.
+func SetDomesticDomains(names []string) {
+	clean := make([]string, 0, len(names))
+	seen := make(map[string]struct{}, len(names))
+	for _, n := range names {
+		n = strings.TrimSuffix(strings.ToLower(strings.TrimSpace(n)), ".")
+		if n == "" || strings.ContainsAny(n, " 	/") {
+			continue
+		}
+		if _, dup := seen[n]; dup {
+			continue
+		}
+		seen[n] = struct{}{}
+		clean = append(clean, n)
+	}
+	sort.Strings(clean)
+	domesticNames.Store(clean)
+}
+
+// SetDomesticDomainsGz is the entry point used by the app: it hands over the
+// gzipped newline-separated list straight from the APK assets.
+func SetDomesticDomainsGz(data []byte) (int, error) {
+	// AAPT un-gzips *.gz assets into the APK, so the caller may hand over either
+	// the compressed bytes or the plain text. Detect instead of trusting the name.
+	raw := data
+	if len(data) >= 2 && data[0] == 0x1f && data[1] == 0x8b {
+		zr, err := gzip.NewReader(bytes.NewReader(data))
+		if err != nil {
+			return 0, err
+		}
+		defer zr.Close()
+		raw, err = io.ReadAll(zr)
+		if err != nil {
+			return 0, err
+		}
+	}
+	names := strings.Split(string(raw), string(rune(10)))
+	SetDomesticDomains(names)
+	return len(names), nil
+}
+
+// DomesticDomainCount reports how many entries the active table holds.
+func DomesticDomainCount() int {
+	if v, ok := domesticNames.Load().([]string); ok {
+		return len(v)
+	}
+	return 0
+}
+
+// lookupSuffix reports whether name, or any of its parent domains, is in the
+// table. Checks are binary searches over a sorted slice.
+func lookupSuffix(table []string, name string) bool {
+	rest := name
+	for {
+		if i := sort.SearchStrings(table, rest); i < len(table) && table[i] == rest {
+			return true
+		}
+		dot := strings.IndexByte(rest, '.')
+		if dot < 0 || dot == len(rest)-1 {
+			return false
+		}
+		rest = rest[dot+1:]
+	}
+}
+
 func IsDomesticDomain(domain string) bool {
 	name := strings.TrimSuffix(strings.ToLower(strings.TrimSpace(domain)), ".")
 	if name == "" {
 		return false
+	}
+	if table, ok := domesticNames.Load().([]string); ok && len(table) > 0 {
+		if lookupSuffix(table, name) {
+			return true
+		}
 	}
 	for _, suffix := range domesticSuffixes {
 		if name == suffix || strings.HasSuffix(name, "."+suffix) {

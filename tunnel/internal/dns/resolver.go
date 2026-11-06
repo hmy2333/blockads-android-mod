@@ -54,6 +54,9 @@ type Resolver struct {
 	dohURL          string
 	odohRelayURL    string
 	odohCache       odohConfigCache
+
+	// Answer cache; see cache.go.
+	answerCache *dnsCache
 	protocol        DNSProtocol
 	protectSocketFn func(fd int) bool
 
@@ -79,6 +82,10 @@ type Resolver struct {
 	// resolver at all.
 	domesticIPCheck func(net.IP) bool
 
+	// Names whose local probe failed, with the time the memory expires. Without
+	// it every visit to a blocked site waited out the full probe timeout again.
+	probeFailed map[string]time.Time
+
 	// HTTP client for DoH and ODoH (reusable)
 	httpClient *http.Client
 	// HTTP/3 client for DoH3 (RFC 9114 over QUIC)
@@ -92,7 +99,11 @@ type Resolver struct {
 // How long the domestic probe waits before giving up and using the proxy
 // resolver. Kept short: on a censored name the local answer is either a fast
 // poisoned reply or nothing at all.
-const domesticProbeTimeout = 800 * time.Millisecond
+const domesticProbeTimeout = 1500 * time.Millisecond
+
+// How long a failed local probe is remembered. Blocked names stay blocked for
+// the session, so re-probing them every lookup only adds latency.
+const domesticProbeFailTTL = 10 * time.Minute
 
 const (
 	connectTimeout  = 5 * time.Second
@@ -110,6 +121,8 @@ func NewResolver(protectFn func(fd int) bool) *Resolver {
 		fallbackServer:  "94.140.14.14",
 		domesticServer:  "223.5.5.5",
 		protectSocketFn: protectFn,
+		answerCache:     newDNSCache(),
+		probeFailed:     make(map[string]time.Time),
 	}
 
 	dialer := &protectedDialer{protectFn: protectFn, resolver: r}
@@ -295,9 +308,18 @@ func (r *Resolver) SetDomesticIPCheck(fn func(net.IP) bool) {
 // or a foreign CDN edge) returns ok=false so the caller switches to the proxy
 // resolver.
 func (r *Resolver) localAnswerIfDomestic(rawQuery []byte, primary string) ([]byte, bool) {
-	r.mu.RLock()
+	name := questionName(rawQuery)
+
+	r.mu.Lock()
+	if until, seen := r.probeFailed[name]; seen {
+		if time.Now().Before(until) {
+			r.mu.Unlock()
+			return nil, false // known to fail locally: go straight to the proxy
+		}
+		delete(r.probeFailed, name)
+	}
 	check := r.domesticIPCheck
-	r.mu.RUnlock()
+	r.mu.Unlock()
 
 	if primary == "" {
 		return nil, false
@@ -305,6 +327,17 @@ func (r *Resolver) localAnswerIfDomestic(rawQuery []byte, primary string) ([]byt
 
 	resp, err := r.queryPlainTimeout(rawQuery, primary, domesticProbeTimeout)
 	if err != nil {
+		r.mu.Lock()
+		if len(r.probeFailed) > 4096 {
+			now := time.Now()
+			for k, v := range r.probeFailed {
+				if now.After(v) {
+					delete(r.probeFailed, k)
+				}
+			}
+		}
+		r.probeFailed[name] = time.Now().Add(domesticProbeFailTTL)
+		r.mu.Unlock()
 		return nil, false
 	}
 
@@ -337,6 +370,24 @@ func (r *Resolver) localAnswerIfDomestic(rawQuery []byte, primary string) ([]byt
 
 // Resolve sends a raw DNS query to the configured upstream server.
 func (r *Resolver) Resolve(rawQuery []byte) ([]byte, error) {
+	key, cacheable := cacheKey(rawQuery)
+	if cacheable {
+		if resp, hit := r.answerCache.get(key); hit {
+			return resp, nil
+		}
+	}
+
+	resp, err := r.resolveUncached(rawQuery)
+	if err != nil {
+		return nil, err
+	}
+	if cacheable {
+		r.answerCache.put(key, resp)
+	}
+	return resp, nil
+}
+
+func (r *Resolver) resolveUncached(rawQuery []byte) ([]byte, error) {
 	r.mu.RLock()
 	protocol := r.protocol
 	primary := r.primaryServer

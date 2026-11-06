@@ -31,5 +31,13 @@ func (e *Engine) shouldBypassProxy(ip net.IP) bool {
 	if db == nil {
 		return false
 	}
-	return db.Lookup(ip) == "CN"
+	country := db.Lookup(ip)
+	if country == "" {
+		// Unknown range: go direct rather than abroad. Campus, corporate and
+		// some CDN ranges are missing from the compact database, and sending a
+		// domestic host through the tunnel is far worse than a blocked foreign
+		// host being dialled directly.
+		return true
+	}
+	return country == "CN"
 }
